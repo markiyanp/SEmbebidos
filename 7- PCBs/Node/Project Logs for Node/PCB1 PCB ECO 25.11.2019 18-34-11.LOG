@@ -1,0 +1,20 @@
+Added Component: Designator=R1(C 0603 / 1608)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R2(C 0603 / 1608)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R3(C 0603 / 1608)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R4(C 0603 / 1608)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=NetIC1_7 Pin=R1-1
+Added Pin To Net: NetName=VCC Pin=R1-2
+Added Pin To Net: NetName=NetC2_1 Pin=R2-1
+Added Pin To Net: NetName=NetC1_1 Pin=R2-2
+Added Pin To Net: NetName=GND Pin=R3-1
+Added Pin To Net: NetName=NetIC1_60 Pin=R3-2
+Added Pin To Net: NetName=GND Pin=R4-1
+Added Pin To Net: NetName=NetIC1_28 Pin=R4-2
+Added Member To Class: ClassName=Node Member=Component R1 4k7
+Added Member To Class: ClassName=Node Member=Component R2 10M
+Added Member To Class: ClassName=Node Member=Component R3 1k
+Added Member To Class: ClassName=Node Member=Component R4 1k

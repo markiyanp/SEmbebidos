@@ -1,0 +1,247 @@
+//*****************************************************************************
+//
+// freertos_demo.c - Simple FreeRTOS example.
+//
+// Copyright (c) 2012-2017 Texas Instruments Incorporated.  All rights reserved.
+// Software License Agreement
+// 
+// Texas Instruments (TI) is supplying this software for use solely and
+// exclusively on TI's microcontroller products. The software is owned by
+// TI and/or its suppliers, and is protected under applicable copyright
+// laws. You may not combine this software with "viral" open-source
+// software in order to form a larger program.
+// 
+// THIS SOFTWARE IS PROVIDED "AS IS" AND WITH ALL FAULTS.
+// NO WARRANTIES, WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDING, BUT
+// NOT LIMITED TO, IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+// A PARTICULAR PURPOSE APPLY TO THIS SOFTWARE. TI SHALL NOT, UNDER ANY
+// CIRCUMSTANCES, BE LIABLE FOR SPECIAL, INCIDENTAL, OR CONSEQUENTIAL
+// DAMAGES, FOR ANY REASON WHATSOEVER.
+// 
+// This is part of revision 2.1.4.178 of the EK-TM4C123GXL Firmware Package.
+//
+//*****************************************************************************
+
+#include <stdbool.h>
+#include <stdint.h>
+#include "driverlib/interrupt.h"
+#include "driverlib/fpu.h"
+#include "inc/hw_memmap.h"
+#include "inc/hw_types.h"
+#include "driverlib/gpio.h"
+#include "driverlib/pin_map.h"
+#include "driverlib/rom.h"
+#include "driverlib/sysctl.h"
+#include "driverlib/uart.h"
+#include "utils/uartstdio.h"
+#include "led_task.h"
+#include "switch_task.h"
+#include "FreeRTOS.h"
+#include "task.h"
+#include "queue.h"
+#include "semphr.h"
+#include "inc/hw_ints.h"
+#include <tasks/nrf/nrf_rcv_task.h>
+#include "tasks/nrf/nrf_snd_task.h"
+#include "nrf/nrf24l01.h"
+#include "at/at.h"
+#include "systick.h"
+#include "tasks/esp/esp_rcv_task.h"
+#include "esp/esp_uart.h"
+#include "tasks/config_task.h"
+#include "tasks/esp/esp_logic_task.h"
+#include "tasks/mqtt/mqtt_task.h"
+#include "mqtt/mqtt_client.h"
+#include "utils/uart_config.h"
+
+bool configurationRunning = true;
+/*
+struct nrf24l01p nrf;
+uint8_t addresses[][6] = { "1Node", "2Node", "3Node", "4Node" }; //1Node -tmp/hum sensor;
+//2Node -movm sensor;
+//3Node -reed switch;
+//4Node -relay module;*/
+
+//*****************************************************************************
+//
+// The mutex that protects concurrent access of UART from multiple tasks.
+//
+//*****************************************************************************
+xSemaphoreHandle g_pUARTSemaphore;
+
+//*****************************************************************************
+//
+// The error routine that is called if the driver library encounters an error.
+//
+//*****************************************************************************
+#ifdef DEBUG
+void
+__error__(char *pcFilename, uint32_t ui32Line)
+{
+}
+
+#endif
+
+//*****************************************************************************
+//
+// This hook is called by FreeRTOS when an stack overflow error is detected.
+//
+//*****************************************************************************
+void vApplicationStackOverflowHook(xTaskHandle *pxTask, char *pcTaskName)
+{
+    while (1)
+    {
+    }
+}
+
+//*****************************************************************************
+//
+// Configure the UART and its pins.  This must be called before UARTprintf().
+//
+//*****************************************************************************
+/*
+void ConfigureUART(void)
+{
+    ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_UART1);
+    ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOB);
+    ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_UART0);
+    ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOA);
+
+    ROM_IntMasterEnable();
+
+    GPIOPinConfigure(GPIO_PB0_U1RX);
+    GPIOPinConfigure(GPIO_PB1_U1TX);
+    GPIOPinConfigure(GPIO_PA0_U0RX);
+    GPIOPinConfigure(GPIO_PA1_U0TX);
+
+    ROM_GPIOPinTypeUART(GPIO_PORTB_BASE, GPIO_PIN_0 | GPIO_PIN_1);
+    ROM_GPIOPinTypeUART(GPIO_PORTA_BASE, GPIO_PIN_0 | GPIO_PIN_1);
+
+    ROM_UARTConfigSetExpClk(UART1_BASE, ROM_SysCtlClockGet(), 115200,
+                            (UART_CONFIG_WLEN_8 | UART_CONFIG_STOP_ONE |
+                            UART_CONFIG_PAR_NONE));
+
+    ROM_UARTConfigSetExpClk(UART0_BASE, ROM_SysCtlClockGet(), 115200,
+                            (UART_CONFIG_WLEN_8 | UART_CONFIG_STOP_ONE |
+                            UART_CONFIG_PAR_NONE));
+
+    ROM_UARTFIFODisable(UART1_BASE);
+    ROM_UARTIntEnable(UART1_BASE, UART_INT_RX | UART_INT_RT);
+    UARTIntRegister(UART1_BASE, &UARTInt1Handler);
+
+    ROM_UARTIntEnable(UART0_BASE, UART_INT_RX | UART_INT_RT);
+    ROM_UARTFIFOEnable(UART0_BASE);
+    UARTFIFOLevelSet(UART0_BASE, UART_FIFO_TX1_8, UART_FIFO_RX1_8);
+
+    UARTEnable(UART0_BASE);
+    UARTEnable(UART1_BASE);
+
+    UARTStdioConfig(0, 115200, 16000000);
+    g_pUARTSemaphore = xSemaphoreCreateMutex();
+}*/
+
+/*
+int configureRadio()
+{
+    if (!nrf24l01p_setup(&nrf, GPIO_PORTC_BASE, GPIO_PIN_4, SSI0_BASE))
+    {
+        return 1;
+    }
+    nrf24l01p_set_PA_level(&nrf, RF24_PA_LOW);
+    nrf24l01p_open_writing_pipe(&nrf, addresses[3]);
+    nrf24l01p_open_reading_pipe(&nrf, 1, addresses[0]);
+    nrf24l01p_open_reading_pipe(&nrf, 2, addresses[1]);
+    nrf24l01p_open_reading_pipe(&nrf, 3, addresses[2]);
+    nrf24l01p_open_reading_pipe(&nrf, 4, addresses[3]);
+    nrf24l01p_start_listening(&nrf);
+    return 0; //SUCSESS
+}*/
+
+//*****************************************************************************
+//
+// Initialize FreeRTOS and start the initial set of tasks.
+//
+//*****************************************************************************
+int main(void)
+{
+
+    ROM_FPUEnable();
+    ROM_FPULazyStackingEnable();
+
+    ROM_SysCtlClockSet(
+    SYSCTL_SYSDIV_1 | SYSCTL_USE_OSC | SYSCTL_OSC_MAIN | SYSCTL_XTAL_16MHZ);
+
+    ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOF);
+    ROM_GPIOPinTypeGPIOOutput(GPIO_PORTF_BASE, GPIO_PIN_2);
+
+    ConfigureUART();
+
+    UARTprintf("\nSTART LAUNCHING THE TASKS\n");
+
+    //ENABLE NRF
+    /*if (configureRadio() == 0)
+    {
+        UARTprintf("\nNRF CONFIGURED!\n");
+    }
+    else
+    {
+        UARTprintf("\nNRF NOT CONFIGURED!\n");
+        while (1)
+        {
+        }
+    }*/
+
+    /* if (NrfRcvTaskInit() != 0)
+     {
+     UARTprintf("\nERROR INITIALIZING NRF RECEIVE TASK!\n");
+     while (1)
+     {
+     }
+     }*/
+
+    /* if (NrfSndTaskInit() != 0)
+     {
+     UARTprintf("\nERROR INITIALIZING NRF SEND TASK!\n");
+     while (1)
+     {
+     }
+     }*/
+
+    if (MqttTaskInit() != 0)
+    {
+        UARTprintf("\nERROR INITIALIZING MQTT TASK!\n");
+        while (1)
+        {
+        }
+    }
+
+    if (EspLogicTaskInit() != 0)
+    {
+        UARTprintf("\nERROR INITIALIZING LOGIC TASK TASK!\n");
+        while (1)
+        {
+        }
+    }
+
+    if (EspRcvTaskInit() != 0)
+    {
+        UARTprintf("\nERROR INITIALIZING NRF SEND TASK!\n");
+        while (1)
+        {
+        }
+    }
+
+    if (ConfigTaskInit() != 0)
+    {
+        UARTprintf("\nERROR INITIALIZING CONFIG TASK!\n");
+        while (1)
+        {
+        }
+    }
+
+    vTaskStartScheduler();
+
+    while (1)
+    {
+    }
+}

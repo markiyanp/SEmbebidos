@@ -1,0 +1,254 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+SHELL = cmd.exe
+
+# Add inputs and outputs from these tool invocations to the build variables 
+C_SRCS += \
+C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/api_lib.c \
+C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/api_msg.c \
+C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/autoip.c \
+C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/def.c \
+C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/dhcp.c \
+C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/dns.c \
+C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/err.c \
+C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/etharp.c \
+C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/ethernetif.c \
+C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/icmp.c \
+C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/igmp.c \
+C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/inet.c \
+C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/inet_chksum.c \
+C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/init.c \
+C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/ip.c \
+C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/ip_addr.c \
+C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/ip_frag.c \
+C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/lwiplib.c \
+C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/mem.c \
+C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/memp.c \
+C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/netbuf.c \
+C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/netdb.c \
+C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/netif.c \
+C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/netifapi.c \
+C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/pbuf.c \
+C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/perf.c \
+C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/raw.c \
+C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/slipif.c \
+C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/sockets.c \
+C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/stats.c \
+C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/sys.c \
+C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/sys_arch.c \
+C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/tcp.c \
+C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/tcp_in.c \
+C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/tcp_out.c \
+C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/tcpip.c \
+C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/timers.c \
+C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/tiva-tm4c129.c \
+C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/udp.c 
+
+C_DEPS += \
+./utility/api_lib.d \
+./utility/api_msg.d \
+./utility/autoip.d \
+./utility/def.d \
+./utility/dhcp.d \
+./utility/dns.d \
+./utility/err.d \
+./utility/etharp.d \
+./utility/ethernetif.d \
+./utility/icmp.d \
+./utility/igmp.d \
+./utility/inet.d \
+./utility/inet_chksum.d \
+./utility/init.d \
+./utility/ip.d \
+./utility/ip_addr.d \
+./utility/ip_frag.d \
+./utility/lwiplib.d \
+./utility/mem.d \
+./utility/memp.d \
+./utility/netbuf.d \
+./utility/netdb.d \
+./utility/netif.d \
+./utility/netifapi.d \
+./utility/pbuf.d \
+./utility/perf.d \
+./utility/raw.d \
+./utility/slipif.d \
+./utility/sockets.d \
+./utility/stats.d \
+./utility/sys.d \
+./utility/sys_arch.d \
+./utility/tcp.d \
+./utility/tcp_in.d \
+./utility/tcp_out.d \
+./utility/tcpip.d \
+./utility/timers.d \
+./utility/tiva-tm4c129.d \
+./utility/udp.d 
+
+OBJS += \
+./utility/api_lib.o \
+./utility/api_msg.o \
+./utility/autoip.o \
+./utility/def.o \
+./utility/dhcp.o \
+./utility/dns.o \
+./utility/err.o \
+./utility/etharp.o \
+./utility/ethernetif.o \
+./utility/icmp.o \
+./utility/igmp.o \
+./utility/inet.o \
+./utility/inet_chksum.o \
+./utility/init.o \
+./utility/ip.o \
+./utility/ip_addr.o \
+./utility/ip_frag.o \
+./utility/lwiplib.o \
+./utility/mem.o \
+./utility/memp.o \
+./utility/netbuf.o \
+./utility/netdb.o \
+./utility/netif.o \
+./utility/netifapi.o \
+./utility/pbuf.o \
+./utility/perf.o \
+./utility/raw.o \
+./utility/slipif.o \
+./utility/sockets.o \
+./utility/stats.o \
+./utility/sys.o \
+./utility/sys_arch.o \
+./utility/tcp.o \
+./utility/tcp_in.o \
+./utility/tcp_out.o \
+./utility/tcpip.o \
+./utility/timers.o \
+./utility/tiva-tm4c129.o \
+./utility/udp.o 
+
+OBJS__QUOTED += \
+"utility\api_lib.o" \
+"utility\api_msg.o" \
+"utility\autoip.o" \
+"utility\def.o" \
+"utility\dhcp.o" \
+"utility\dns.o" \
+"utility\err.o" \
+"utility\etharp.o" \
+"utility\ethernetif.o" \
+"utility\icmp.o" \
+"utility\igmp.o" \
+"utility\inet.o" \
+"utility\inet_chksum.o" \
+"utility\init.o" \
+"utility\ip.o" \
+"utility\ip_addr.o" \
+"utility\ip_frag.o" \
+"utility\lwiplib.o" \
+"utility\mem.o" \
+"utility\memp.o" \
+"utility\netbuf.o" \
+"utility\netdb.o" \
+"utility\netif.o" \
+"utility\netifapi.o" \
+"utility\pbuf.o" \
+"utility\perf.o" \
+"utility\raw.o" \
+"utility\slipif.o" \
+"utility\sockets.o" \
+"utility\stats.o" \
+"utility\sys.o" \
+"utility\sys_arch.o" \
+"utility\tcp.o" \
+"utility\tcp_in.o" \
+"utility\tcp_out.o" \
+"utility\tcpip.o" \
+"utility\timers.o" \
+"utility\tiva-tm4c129.o" \
+"utility\udp.o" 
+
+C_DEPS__QUOTED += \
+"utility\api_lib.d" \
+"utility\api_msg.d" \
+"utility\autoip.d" \
+"utility\def.d" \
+"utility\dhcp.d" \
+"utility\dns.d" \
+"utility\err.d" \
+"utility\etharp.d" \
+"utility\ethernetif.d" \
+"utility\icmp.d" \
+"utility\igmp.d" \
+"utility\inet.d" \
+"utility\inet_chksum.d" \
+"utility\init.d" \
+"utility\ip.d" \
+"utility\ip_addr.d" \
+"utility\ip_frag.d" \
+"utility\lwiplib.d" \
+"utility\mem.d" \
+"utility\memp.d" \
+"utility\netbuf.d" \
+"utility\netdb.d" \
+"utility\netif.d" \
+"utility\netifapi.d" \
+"utility\pbuf.d" \
+"utility\perf.d" \
+"utility\raw.d" \
+"utility\slipif.d" \
+"utility\sockets.d" \
+"utility\stats.d" \
+"utility\sys.d" \
+"utility\sys_arch.d" \
+"utility\tcp.d" \
+"utility\tcp_in.d" \
+"utility\tcp_out.d" \
+"utility\tcpip.d" \
+"utility\timers.d" \
+"utility\tiva-tm4c129.d" \
+"utility\udp.d" 
+
+C_SRCS__QUOTED += \
+"C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/api_lib.c" \
+"C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/api_msg.c" \
+"C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/autoip.c" \
+"C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/def.c" \
+"C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/dhcp.c" \
+"C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/dns.c" \
+"C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/err.c" \
+"C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/etharp.c" \
+"C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/ethernetif.c" \
+"C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/icmp.c" \
+"C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/igmp.c" \
+"C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/inet.c" \
+"C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/inet_chksum.c" \
+"C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/init.c" \
+"C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/ip.c" \
+"C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/ip_addr.c" \
+"C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/ip_frag.c" \
+"C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/lwiplib.c" \
+"C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/mem.c" \
+"C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/memp.c" \
+"C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/netbuf.c" \
+"C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/netdb.c" \
+"C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/netif.c" \
+"C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/netifapi.c" \
+"C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/pbuf.c" \
+"C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/perf.c" \
+"C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/raw.c" \
+"C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/slipif.c" \
+"C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/sockets.c" \
+"C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/stats.c" \
+"C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/sys.c" \
+"C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/sys_arch.c" \
+"C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/tcp.c" \
+"C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/tcp_in.c" \
+"C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/tcp_out.c" \
+"C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/tcpip.c" \
+"C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/timers.c" \
+"C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/tiva-tm4c129.c" \
+"C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/utility/udp.c" 
+
+

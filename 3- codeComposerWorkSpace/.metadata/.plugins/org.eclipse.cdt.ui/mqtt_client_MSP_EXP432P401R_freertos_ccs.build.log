@@ -1,0 +1,3 @@
+Buildfile generation error occurred..
+Referenced project 'freertos_builds_MSP_EXP432P401R_release_ccs' does not exist in the workspace. Project 'mqtt_client_MSP_EXP432P401R_freertos_ccs' may not build as expected.
+Build stopped..

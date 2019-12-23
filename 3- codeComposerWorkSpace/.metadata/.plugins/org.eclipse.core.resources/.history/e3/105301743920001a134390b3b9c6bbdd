@@ -1,0 +1,200 @@
+#include <stdbool.h>
+#include <stdint.h>
+#include "stdlib.h"
+#include "inc/hw_memmap.h"
+#include "inc/hw_types.h"
+#include "inc/hw_gpio.h"
+#include "driverlib/sysctl.h"
+#include "driverlib/gpio.h"
+#include "driverlib/rom.h"
+#include "drivers/buttons.h"
+#include "utils/uartstdio.h"
+#include "switch_task.h"
+#include "led_task.h"
+#include "priorities.h"
+#include "FreeRTOS.h"
+#include "task.h"
+#include "queue.h"
+#include "semphr.h"
+#include "esp/esp_uart.h"
+#include "at/at.h"
+#include "driverlib/uart.h"
+#include <string.h>
+
+//*****************************************************************************
+//
+// The stack size for the display task.
+//
+//*****************************************************************************
+#define ESPTASKSTACKSIZE        512         // Stack size in words
+
+extern char ReceivedData[512];
+extern xSemaphoreHandle g_pUARTSemaphore;
+extern xQueueHandle g_pEspMqttRcvQueue;
+xQueueHandle g_pReceiveBufferQueue;
+extern xQueueHandle g_pEspRcvQueue;
+
+char receiveBuffer[128];
+int bufferPointer = 0;
+extern bool configurationRunning;
+
+struct Packet
+{
+    char line[128];
+    int pointer;
+} pack;
+
+char searchSequence[5] = { '+', 'I', 'P', 'D', ',' };
+int searchPointer = 0;
+int charsToRead = 0;
+bool captureLen = false;
+bool readMessage = false;
+int aux, aux1 = 0;
+
+void UARTInt1Handler()
+{
+    char a = UARTCharGet(UART1_BASE);
+    if (configurationRunning) //if configuration is running, we interpret the messages differently
+    {
+        if (a != '\r' && a != '\0')
+        {
+            if (a == '\n' && bufferPointer >= 1)
+            {
+                pack.pointer = bufferPointer;
+                strcpy(pack.line, receiveBuffer);
+                xQueueSend(g_pReceiveBufferQueue, &pack, 0);
+                bufferPointer = 0;
+            }
+            else if (a != '\n')
+            {
+                receiveBuffer[bufferPointer] = a;
+                bufferPointer++;
+            }
+        }
+    }
+    else //the configuration is not running, so we are ready to receive messages from server
+    {
+        /*if (captureLen) //capture the chars to read length
+        {
+            if (a == ':')
+            {
+                charsToRead = aux1 * 10 + aux;
+                captureLen = false;
+                readMessage = true;
+            }
+            else
+            {
+                aux1 = aux;
+                aux = a - '0';
+            }
+        }
+        else
+        {*/
+            if (!readMessage) //if we are not reading the message, we search for begin sequence
+            {
+                if (searchSequence[searchPointer] == a || searchPointer >= 4) //if the char matches what we expect
+                {
+                    receiveBuffer[bufferPointer] = a;
+                    bufferPointer++;
+                    searchPointer++;
+
+                    if(searchPointer == 4){
+                        readMessage = true;
+                    }
+                }
+                else
+                {
+                    searchPointer = 0;
+                    charsToRead = 0;
+                    bufferPointer = 0;
+                    captureLen = false;
+                    readMessage = false;
+                }
+            }
+            else
+            {
+                if (a != '\0')
+                {
+                    receiveBuffer[bufferPointer] = a;
+                    bufferPointer++;
+                }
+                else
+                {
+                    pack.pointer = bufferPointer;
+                    strcpy(pack.line, receiveBuffer);
+                    xQueueSend(g_pReceiveBufferQueue, &pack, 0);
+                    readMessage = false;
+                    bufferPointer = 0;
+                    searchPointer = 0;
+                }
+                /* if (charsToRead > 0)
+                 {
+                 receiveBuffer[bufferPointer] = a;
+                 bufferPointer++;
+                 charsToRead--;
+                 }
+                 if (charsToRead == 0)
+                 {
+                 pack.pointer = bufferPointer;
+                 strcpy(pack.line, receiveBuffer);
+                 xQueueSend(g_pReceiveBufferQueue, &pack, 0);
+                 readMessage = false;
+                 bufferPointer = 0;
+                 }
+                 */
+            }
+        }
+//    }
+}
+
+static void EspRcvTask(void *pvParameters)
+{
+    while (1)
+    {
+        struct Packet packetToAnalyze;
+        xQueueReceive(g_pReceiveBufferQueue, &packetToAnalyze, portMAX_DELAY);
+        char toprint[128];
+        strncpy(toprint, packetToAnalyze.line, packetToAnalyze.pointer);
+        int aux = packetToAnalyze.pointer;
+        while (aux != sizeof(packetToAnalyze.line))
+        {
+            toprint[aux] = '\0';
+            aux++;
+        }
+
+        taskENTER_CRITICAL();
+        if (configurationRunning)
+        {
+            xQueueSend(g_pEspRcvQueue, toprint, 0);
+        }
+        else
+        {
+            xQueueSend(g_pEspMqttRcvQueue, toprint, 0);
+        }
+        taskEXIT_CRITICAL();
+
+        //LEAVE THIS FOR DEBUG!
+        /*xSemaphoreTake(g_pUARTSemaphore, portMAX_DELAY);
+         UARTprintf("[");
+         UARTprintf(toprint);
+         UARTprintf("]\n");
+         xSemaphoreGive(g_pUARTSemaphore);*/
+    }
+
+}
+
+//*****************************************************************************
+//
+// Initializes the ESP RCV task.
+//
+//*****************************************************************************
+uint32_t EspRcvTaskInit(void)
+{
+    g_pReceiveBufferQueue = xQueueCreate(7, sizeof(struct Packet));
+    if (xTaskCreate(EspRcvTask, (const portCHAR *)"ESPRCV", ESPTASKSTACKSIZE, NULL,
+            tskIDLE_PRIORITY + PRIORITY_ESP_RCV_TASK, NULL) != pdTRUE)
+    {
+        return (1);
+    }
+    return (0);
+}

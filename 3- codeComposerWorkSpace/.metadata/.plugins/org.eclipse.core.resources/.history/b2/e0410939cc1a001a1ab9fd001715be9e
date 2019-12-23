@@ -1,0 +1,54 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+SHELL = cmd.exe
+
+# Add inputs and outputs from these tool invocations to the build variables 
+CMD_SRCS += \
+../freertos_demo_ccs.cmd \
+../tm4c123bh6pm.cmd 
+
+C_SRCS += \
+../freertos_demo.c \
+../led_task.c \
+../startup_ccs.c \
+../switch_task.c \
+../tm4c123bh6pm_startup_ccs.c 
+
+C_DEPS += \
+./freertos_demo.d \
+./led_task.d \
+./startup_ccs.d \
+./switch_task.d \
+./tm4c123bh6pm_startup_ccs.d 
+
+OBJS += \
+./freertos_demo.obj \
+./led_task.obj \
+./startup_ccs.obj \
+./switch_task.obj \
+./tm4c123bh6pm_startup_ccs.obj 
+
+OBJS__QUOTED += \
+"freertos_demo.obj" \
+"led_task.obj" \
+"startup_ccs.obj" \
+"switch_task.obj" \
+"tm4c123bh6pm_startup_ccs.obj" 
+
+C_DEPS__QUOTED += \
+"freertos_demo.d" \
+"led_task.d" \
+"startup_ccs.d" \
+"switch_task.d" \
+"tm4c123bh6pm_startup_ccs.d" 
+
+C_SRCS__QUOTED += \
+"../freertos_demo.c" \
+"../led_task.c" \
+"../startup_ccs.c" \
+"../switch_task.c" \
+"../tm4c123bh6pm_startup_ccs.c" 
+
+

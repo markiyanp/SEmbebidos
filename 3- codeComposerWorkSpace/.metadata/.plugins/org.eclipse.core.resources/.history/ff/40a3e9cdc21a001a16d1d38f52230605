@@ -1,0 +1,44 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+SHELL = cmd.exe
+
+# Add inputs and outputs from these tool invocations to the build variables 
+CPP_SRCS += \
+C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/Ethernet.cpp \
+C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/EthernetClient.cpp \
+C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/EthernetServer.cpp \
+C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/EthernetUdp.cpp 
+
+OBJS += \
+./Ethernet.o \
+./EthernetClient.o \
+./EthernetServer.o \
+./EthernetUdp.o 
+
+CPP_DEPS += \
+./Ethernet.d \
+./EthernetClient.d \
+./EthernetServer.d \
+./EthernetUdp.d 
+
+OBJS__QUOTED += \
+"Ethernet.o" \
+"EthernetClient.o" \
+"EthernetServer.o" \
+"EthernetUdp.o" 
+
+CPP_DEPS__QUOTED += \
+"Ethernet.d" \
+"EthernetClient.d" \
+"EthernetServer.d" \
+"EthernetUdp.d" 
+
+CPP_SRCS__QUOTED += \
+"C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/Ethernet.cpp" \
+"C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/EthernetClient.cpp" \
+"C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/EthernetServer.cpp" \
+"C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Ethernet/EthernetUdp.cpp" 
+
+

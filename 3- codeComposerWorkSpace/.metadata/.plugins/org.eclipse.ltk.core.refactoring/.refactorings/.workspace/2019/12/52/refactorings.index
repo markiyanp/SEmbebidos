@@ -1,0 +1,7 @@
+1577085930323	Rename resource 'freertos_demo'
+1577085970133	Delete resource 'tivac_EK-TM4C123GXL_WiFi'
+1577085978049	Delete resource 'tivac_EK-TM4C123GXL_MQTTClient'
+1577085985858	Delete resource 'tcpEchoCC3X00_EK_TM4C123GXL_TI'
+1577085991816	Delete resource 'blinky'
+1577085999418	Delete resource 'mqtt_client_MSP_EXP432P401R_freertos_ccs'
+1577086006170	Delete resource 'timers'

@@ -1,0 +1,26 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+SHELL = cmd.exe
+
+# Add inputs and outputs from these tool invocations to the build variables 
+C_SRCS += \
+C:/ti/CC3100SDK_1.3.0/cc3100-sdk/netapps/mqtt/platform/cc31xx_sl_net.c 
+
+C_DEPS += \
+./platform/cc31xx_sl_net.d 
+
+OBJS += \
+./platform/cc31xx_sl_net.obj 
+
+OBJS__QUOTED += \
+"platform\cc31xx_sl_net.obj" 
+
+C_DEPS__QUOTED += \
+"platform\cc31xx_sl_net.d" 
+
+C_SRCS__QUOTED += \
+"C:/ti/CC3100SDK_1.3.0/cc3100-sdk/netapps/mqtt/platform/cc31xx_sl_net.c" 
+
+

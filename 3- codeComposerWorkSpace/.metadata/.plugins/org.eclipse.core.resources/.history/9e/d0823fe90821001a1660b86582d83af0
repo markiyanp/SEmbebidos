@@ -1,0 +1,101 @@
+#include <stdbool.h>
+#include <stdint.h>
+#include <stdlib.h>
+#include "inc/hw_memmap.h"
+#include "inc/hw_types.h"
+#include "inc/hw_gpio.h"
+#include "driverlib/sysctl.h"
+#include "driverlib/gpio.h"
+#include "driverlib/rom.h"
+#include "drivers/buttons.h"
+#include "utils/uartstdio.h"
+#include "switch_task.h"
+#include "led_task.h"
+#include "priorities.h"
+#include "FreeRTOS.h"
+#include "task.h"
+#include "queue.h"
+#include "semphr.h"
+#include "mqtt/mqtt_client.h"
+#include "utils/uart_config.h"
+#include "nrf/nrf24l01.h"
+#include "string.h"
+
+//*****************************************************************************
+//
+// The stack size for the display task.
+//
+//*****************************************************************************
+#define MANAGERSTACKSIZE        128         // Stack size in words
+
+#define NRF_ITEM_SIZE           sizeof(data)
+#define NRF_QUEUE_SIZE          5
+
+extern xQueueHandle g_pRadioRcvQueue;
+extern xQueueHandle g_pManagerRadioToSendQueue;
+
+struct DATA
+{
+    uint8_t id;
+    uint8_t hum;
+    uint8_t tmp;
+} data;
+
+struct PubPacket
+{
+    char *topic;
+    char *message;
+} pub;
+
+static void ManagerTask(void *pvParameters)
+{
+    while (1)
+    {
+        if ((xQueueReceive(g_pRadioRcvQueue, &data, 0) != pdFALSE))
+        {
+            safePrintf(
+                    "RECEIVED DATA FROM RADIO RCV QUEUE... NOW ILL PUB IT...");
+            switch (data.id)
+            {
+            case 1:
+                char *str = malloc(10);
+                sprintf(str, "%d,%d", data.tmp, data.hum);
+//                sprintf(dataToSend, "%i,%i", data.tmp, data.hum);
+//                MQTT_PUB("semb/temphum", &dataToSend);
+                MQTT_PUB("semb/temphum", str);
+                break;
+            default:
+                break;
+            }
+//            if(!configurationRunning){}   OR EVEN CHECK FOR mQTT CONNECTION running
+
+//            pub.topic = "semb/temphum";
+//            pub.message = "1,22,80";
+            //TODO make parcing and...
+            //  xQueueSend(g_pEspMqttSndQueue, &pub,  0);
+
+        }
+        if ((xQueueReceive(g_pManagerRadioToSendQueue, &data, 0) != pdFALSE))
+        {
+            safePrintf(
+                    "RECEIVED DATA FROM MQTT RECEIVE TASK. ILL SEND IT TO THE RADIO");
+        }
+        // MQTT_PUB("semb/temphum", "temp/hum");
+    }
+}
+
+//*****************************************************************************
+//
+// Initializes the Manager Task
+//
+//*****************************************************************************
+uint32_t ManagerTaskInit(void)
+{
+    if (xTaskCreate(ManagerTask, (const portCHAR *)"MANAGE", MANAGERSTACKSIZE, NULL,
+            tskIDLE_PRIORITY + PRIORITY_MANAGER_TASK, NULL) != pdTRUE)
+    {
+        return (1);
+    }
+    return (0);
+}
+

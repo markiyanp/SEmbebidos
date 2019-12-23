@@ -1,0 +1,83 @@
+Added Component: Designator=BT1(CR2032 Holder _ "White")
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Availability"; Value = "Good"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "MPD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "BU2032SM-BT-GTR"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "0.64 USD"; VariantName = "[No Variations]"
+Added Component: Designator=C1(C 0603 / 1608)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C2(C 0603 / 1608)
+Add component. Clean all parameters for all variants
+Added Component: Designator=IC1(*QFP50P1200X1200X160-64N)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "STMicroelectronics"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "STM32F103RCT6"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "LQFP-64 STMicroelectronics"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/STM32F103RCT6/STMicroelectronics/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=P1(HDR1X4)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=P2(HDR1X4)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=Y1(*XTAL_ABLS2-12.288MHZ-D4Y-T)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Abracon"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "ABLS2-12.288MHZ-D4Y-T"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "HC49/US Abracon"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/ABLS2-12.288MHZ-D4Y-T/Abracon%20LLC/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=DHT_DATA Pin=IC1-15
+Added Pin To Net: NetName=DHT_DATA Pin=P1-2
+Added Net: Name=DHT_DATA
+Added Pin To Net: NetName=GND Pin=BT1-2
+Added Pin To Net: NetName=GND Pin=C1-2
+Added Pin To Net: NetName=GND Pin=C2-2
+Added Pin To Net: NetName=GND Pin=IC1-12
+Added Pin To Net: NetName=GND Pin=IC1-18
+Added Pin To Net: NetName=GND Pin=IC1-31
+Added Pin To Net: NetName=GND Pin=IC1-47
+Added Pin To Net: NetName=GND Pin=IC1-63
+Added Pin To Net: NetName=GND Pin=P1-4
+Added Pin To Net: NetName=GND Pin=P2-4
+Added Net: Name=GND
+Added Pin To Net: NetName=NetC1_1 Pin=C1-1
+Added Pin To Net: NetName=NetC1_1 Pin=IC1-5
+Added Pin To Net: NetName=NetC1_1 Pin=Y1-2
+Added Net: Name=NetC1_1
+Added Pin To Net: NetName=NetC2_1 Pin=C2-1
+Added Pin To Net: NetName=NetC2_1 Pin=IC1-6
+Added Pin To Net: NetName=NetC2_1 Pin=Y1-1
+Added Net: Name=NetC2_1
+Added Pin To Net: NetName=NetIC1_7 Pin=IC1-7
+Added Net: Name=NetIC1_7
+Added Pin To Net: NetName=NetIC1_28 Pin=IC1-28
+Added Net: Name=NetIC1_28
+Added Pin To Net: NetName=NetIC1_60 Pin=IC1-60
+Added Net: Name=NetIC1_60
+Added Pin To Net: NetName=SWCLK Pin=IC1-35
+Added Pin To Net: NetName=SWCLK Pin=P2-3
+Added Net: Name=SWCLK
+Added Pin To Net: NetName=SWDIO Pin=IC1-34
+Added Pin To Net: NetName=SWDIO Pin=P2-2
+Added Net: Name=SWDIO
+Added Pin To Net: NetName=VCC Pin=BT1-1
+Added Pin To Net: NetName=VCC Pin=IC1-1
+Added Pin To Net: NetName=VCC Pin=IC1-19
+Added Pin To Net: NetName=VCC Pin=IC1-32
+Added Pin To Net: NetName=VCC Pin=IC1-48
+Added Pin To Net: NetName=VCC Pin=IC1-64
+Added Pin To Net: NetName=VCC Pin=P1-1
+Added Pin To Net: NetName=VCC Pin=P2-1
+Added Net: Name=VCC
+Added Class: Name=Node

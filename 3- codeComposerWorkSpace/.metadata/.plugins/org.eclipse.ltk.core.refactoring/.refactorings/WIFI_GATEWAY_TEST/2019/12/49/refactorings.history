@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;WIFI_GATEWAY_TEST/commmon&apos; to &apos;common&apos;" description="Rename resource &apos;commmon&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="commmon" name="common" stamp="1575848558158" updateReferences="true"/>
+</session>

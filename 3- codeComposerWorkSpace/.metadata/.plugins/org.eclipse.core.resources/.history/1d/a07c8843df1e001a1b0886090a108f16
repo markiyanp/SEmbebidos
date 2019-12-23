@@ -1,0 +1,116 @@
+#include <stdbool.h>
+#include <stdint.h>
+#include "inc/hw_memmap.h"
+#include "inc/hw_types.h"
+#include "inc/hw_gpio.h"
+#include "driverlib/sysctl.h"
+#include "driverlib/gpio.h"
+#include "driverlib/rom.h"
+#include "drivers/buttons.h"
+#include "utils/uartstdio.h"
+#include "switch_task.h"
+#include "led_task.h"
+#include "priorities.h"
+#include "FreeRTOS.h"
+#include "task.h"
+#include "queue.h"
+#include "semphr.h"
+#include "esp/esp_uart.h"
+#include "at/at.h"
+#include "driverlib/uart.h"
+#include <string.h>
+
+//*****************************************************************************
+//
+// The stack size for the display task.
+//
+//*****************************************************************************
+#define ESPLOGICTASKSTACKSIZE        128         // Stack size in words
+
+extern char ReceivedData[512];
+extern bool configurationRunning;
+xQueueHandle g_pLogicTasksQueue;
+xQueueHandle g_pEspRcvQueue;
+char line[128];
+extern xSemaphoreHandle g_pATResponseSemaphore;
+struct Task
+{
+    char request[128];
+    char response[128];
+    int numRetries;
+} receivedTask;
+
+int checkIfContains(char *receivedLine, char *resp)
+{
+    int i;
+    for (i = 0; i <= strlen(receivedLine) - strlen(resp); i++)
+    {
+        int j;
+        for (j = 0; j < strlen(resp); j++)
+        {
+            if (resp[j] == receivedLine[i + j])
+            {
+                if (j == strlen(resp) - 1)
+                {
+                    return 0;
+                }
+            }
+            else
+            {
+                j = strlen(resp) + 2;
+            }
+        }
+    }
+    return (-1);
+}
+
+void SendATCommand(char *cmd)
+{
+    while (UARTBusy(UART1_BASE))
+        ;
+    while (*cmd != '\0')
+    {
+        UARTCharPut(UART1_BASE, *cmd++);
+    }
+    UARTCharPut(UART1_BASE, '\r'); //CR
+    UARTCharPut(UART1_BASE, '\n'); //LF
+}
+
+static void LogicTask(void *pvParameters)
+{
+    while (1)
+    {
+        if (configurationRunning)
+        {
+            xQueueReceive(g_pLogicTasksQueue, &receivedTask, portMAX_DELAY);
+            SendATCommand(receivedTask.request);
+            int i;
+            for (i = receivedTask.numRetries; i != 0; i--)
+            {
+                xQueueReceive(g_pEspRcvQueue, &line, (TickType_t ) 100);
+                if (checkIfContains(line, receivedTask.response) == 0)
+                {
+                    xSemaphoreGive(g_pATResponseSemaphore);
+                }
+            }
+        }
+    }
+
+}
+
+//*****************************************************************************
+//
+// Initializes the ESP RCV task.
+//
+//*****************************************************************************
+uint32_t EspLogicTaskInit(void)
+{
+    g_pLogicTasksQueue = xQueueCreate(1, sizeof(struct Task));
+    g_pEspRcvQueue = xQueueCreate(20, sizeof(line));
+    if (xTaskCreate(LogicTask, (const portCHAR *)"LOGIC", ESPLOGICTASKSTACKSIZE, NULL,
+            tskIDLE_PRIORITY + PRIORITY_LOGIC_TASK, NULL) != pdTRUE)
+    {
+        return (1);
+    }
+    return (0);
+}

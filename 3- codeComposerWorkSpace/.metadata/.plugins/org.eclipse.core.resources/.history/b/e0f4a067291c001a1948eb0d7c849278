@@ -1,0 +1,27 @@
+/*
+ * at.h
+ *
+ *  Created on: 11 дек. 2019 г.
+ *      Author: Admin
+ */
+
+#ifndef AT_AT_H_
+#define AT_AT_H_
+
+bool ATesp(void); //AT
+bool RSTesp(void); //RESET
+bool CWMODEesp(void); //MODE
+bool CWJAPesp(void);
+bool CWQAPesp(void);
+bool CIPMUXesp(void);
+bool ATGMResp(char *version);
+bool aCWMODEesp(char *list);
+bool aCWLAPesp(char *list);
+bool aCIFSResp(char *list);
+bool CIPSTOesp(void);
+bool CIPSTARTesp(void);
+bool CIPCLOSEesp(void);
+
+
+
+#endif /* AT_AT_H_ */

@@ -1,0 +1,75 @@
+#include <stdbool.h>
+#include <stdint.h>
+#include "stdio.h"
+#include "inc/hw_memmap.h"
+#include "inc/hw_types.h"
+#include "inc/hw_gpio.h"
+#include "driverlib/sysctl.h"
+#include "driverlib/gpio.h"
+#include "driverlib/rom.h"
+#include "drivers/buttons.h"
+#include "utils/uartstdio.h"
+#include "switch_task.h"
+#include "led_task.h"
+#include "priorities.h"
+#include "FreeRTOS.h"
+#include "task.h"
+#include "queue.h"
+#include "semphr.h"
+#include "string.h"
+#include "mqtt/mqtt_client.h"
+#include "utils/uart_config.h"
+#include "nrf/nrf24l01.h"
+
+//*****************************************************************************
+//
+// The stack size for the display task.
+//
+//*****************************************************************************
+#define NRFTASKSTACKSIZE        256         // Stack size in words
+
+#define NRF_ITEM_SIZE           sizeof(data)
+#define NRF_QUEUE_SIZE          10
+
+xQueueHandle g_pRadioSndQueue;
+extern struct nrf24l01p nrf;
+
+struct DATA
+{
+    uint8_t id;
+    uint8_t field1;
+    uint8_t field2;
+} data;
+
+static void NrfSndTask(void *pvParameters)
+{
+    while (1)
+    {
+        xQueueReceive(g_pRadioSndQueue, &data, portMAX_DELAY);
+        char *dataToSend = "";
+        sprintf(dataToSend, "%i,%i,%i", data.id, data.field1, data.field2);
+        nrf24l01p_stop_listening(&nrf);
+        vTaskDelay(10);
+        safePrintf("sending...");
+        nrf24l01p_write(&nrf, "1", 1);
+        vTaskDelay(10);
+        nrf24l01p_start_listening(&nrf);
+        //TODO RADIO send data to node
+    }
+}
+
+//*****************************************************************************
+//
+// Initializes the NRF SND task.
+//
+//*****************************************************************************
+uint32_t NrfSndTaskInit(void)
+{
+    g_pRadioSndQueue = xQueueCreate(NRF_QUEUE_SIZE, NRF_ITEM_SIZE);
+    if (xTaskCreate(NrfSndTask, (const portCHAR *)"SEND", NRFTASKSTACKSIZE, NULL,
+            tskIDLE_PRIORITY + PRIORITY_NRF_SND_TASK, NULL) != pdTRUE)
+    {
+        return (1);
+    }
+    return (0);
+}

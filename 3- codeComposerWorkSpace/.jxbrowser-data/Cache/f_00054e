@@ -1,0 +1,338 @@
+[
+  {
+    "downloadLink": "api/bundle?vid=com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22",
+    "removeofflineLink": "api/resources?id=6_MwZEvxgguxOw&path=Software/SimpleLink SDK Plugins/Connectivity/SimpleLink SDK WiFi Plugin/Examples/Development Tools/MSP432P401R LaunchPad - Red 2.x (Red)/Demos/mqtt_client/FreeRTOS/CCS Compiler/mqtt_client&removeoffline=true",
+    "_id": "6_MwZEvxgguxOw",
+    "advanced": {
+      "overrideProjectSpecDeviceId": true
+    },
+    "devtools": [
+      "MSP432P401R LaunchPad - Red 2.x (Red)"
+    ],
+    "link": "api/linkTo/6_MwZEvxgguxOw?extname=.h",
+    "linkType": "local",
+    "name": "Board.h",
+    "packageUId": "com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22",
+    "parentID": "6_M6ayfNOJTgxc",
+    "resourceType": "file",
+    "shortDescription": "mqtt_client",
+    "type": "resource",
+    "text": "Board.h",
+    "url": "/api/resources?devtool=MSP432P401R%20LaunchPad%20-%20Red%202.x%20(Red)&package=com.ti.SIMPLELINK_CC13X0_SDK__3.20.00.23::com.ti.SIMPLELINK_CC13X2_26X2_SDK__3.30.00.03::com.ti.SIMPLELINK_CC2640R2_SDK__3.30.00.20::com.ti.SIMPLELINK_MSP432_SDK__3.30.00.13::com.ti.SIMPLELINK_MSP432E4_SDK__3.30.00.22::com.ti.SIMPLELINK_CC32XX_SDK__3.30.01.02::com.ti.SIMPLELINK_CC2640R2_SDK_BLE_EXAMPLE_PACK__1.50.00.62::com.ti.SIMPLELINK_SDK_BLE_PLUGIN__3.20.00.24::com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22::com.ti.SIMPLELINK_SDK_VOICE_DETECTION_PLUGIN__1.50.00.15::com.ti.SIMPLELINK_SDK_TI_15_4_STACK_PLUGIN__2.20.00.05::com.ti.SIMPLELINK_ZIGBEE_SDK_PLUGIN__2.20.00.06::com.ti.AWS_CC32XX__3.30.00.03::com.ti.AWS_MSP432E4__3.30.00.03::com.ti.WATSON_MSP432E4__1.20.00.04::com.ti.WATSON_CC32XX__1.20.00.04::com.ti.SAIL__1.40.00.00::com.ti.AZURE_CC32XX__3.30.00.02::com.ti.AZURE_MSP432E4__3.30.00.02::com.ti.SIMPLELINK_SDK_NFC_PLUGIN__2.20.00.08::com.ti.mmwave_industrial_toolbox__4.1.0::com.ti.mmwave_automotive_toolbox__2.7.1::c2000ware_software_package__2.00.00.03::digital_power_c2000ware_sdk_software_package__2.00.01.00::motor_control_c2000ware_sdk_software_package__2.01.00.00::powerSUITE_software_package__2.05.01.00::msp430ware__3.80.07.00::energia.core__18.0.0::energia.tool.arm-none-eabi-gcc__6.3.1-20170620::energia.tool.ino2cpp__1.0.6::energia.boards.cc13xx__5.20.0::energia.boards.cc3220emt__5.6.2::energia.boards.msp432r__5.25.2::sitara__1.02.00.00::tm4c__2.1.4.178::tirtos_cc13xx_cc26xx__2.21.00.06::tirtos_tivac__2.16.00.08::xdctools__3.51.02.21::com.ti.SIMPLELINK_BLE_PLUGIN_AZURE_GATEWAY_EXAMPLE_PACK__3.20.00.22::com.ti.SIMPLELINK_SDK_LVGL_PLUGIN__3.20.00.19::com.ti.ti154stack_linux_x64__3.30.00.12&path=Software/SimpleLink%20SDK%20Plugins/Connectivity/SimpleLink%20SDK%20WiFi%20Plugin/Examples/Development%20Tools/MSP432P401R%20LaunchPad%20-%20Red%202.x%20(Red)/Demos/mqtt_client/FreeRTOS/CCS%20Compiler/mqtt_client",
+    "packageOrder": 101,
+    "offline": "true"
+  },
+  {
+    "downloadLink": "api/bundle?vid=com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22",
+    "removeofflineLink": "api/resources?id=6_Mb4hALML7Tls&path=Software/SimpleLink SDK Plugins/Connectivity/SimpleLink SDK WiFi Plugin/Examples/Development Tools/MSP432P401R LaunchPad - Red 2.x (Red)/Demos/mqtt_client/FreeRTOS/CCS Compiler/mqtt_client&removeoffline=true",
+    "_id": "6_Mb4hALML7Tls",
+    "advanced": {
+      "overrideProjectSpecDeviceId": true
+    },
+    "devtools": [
+      "MSP432P401R LaunchPad - Red 2.x (Red)"
+    ],
+    "link": "api/linkTo/6_Mb4hALML7Tls?extname=.c",
+    "linkType": "local",
+    "name": "MSP_EXP432P401R.c",
+    "packageUId": "com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22",
+    "parentID": "6_M6ayfNOJTgxc",
+    "resourceType": "file",
+    "shortDescription": "mqtt_client",
+    "type": "resource",
+    "text": "MSP_EXP432P401R.c",
+    "url": "/api/resources?devtool=MSP432P401R%20LaunchPad%20-%20Red%202.x%20(Red)&package=com.ti.SIMPLELINK_CC13X0_SDK__3.20.00.23::com.ti.SIMPLELINK_CC13X2_26X2_SDK__3.30.00.03::com.ti.SIMPLELINK_CC2640R2_SDK__3.30.00.20::com.ti.SIMPLELINK_MSP432_SDK__3.30.00.13::com.ti.SIMPLELINK_MSP432E4_SDK__3.30.00.22::com.ti.SIMPLELINK_CC32XX_SDK__3.30.01.02::com.ti.SIMPLELINK_CC2640R2_SDK_BLE_EXAMPLE_PACK__1.50.00.62::com.ti.SIMPLELINK_SDK_BLE_PLUGIN__3.20.00.24::com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22::com.ti.SIMPLELINK_SDK_VOICE_DETECTION_PLUGIN__1.50.00.15::com.ti.SIMPLELINK_SDK_TI_15_4_STACK_PLUGIN__2.20.00.05::com.ti.SIMPLELINK_ZIGBEE_SDK_PLUGIN__2.20.00.06::com.ti.AWS_CC32XX__3.30.00.03::com.ti.AWS_MSP432E4__3.30.00.03::com.ti.WATSON_MSP432E4__1.20.00.04::com.ti.WATSON_CC32XX__1.20.00.04::com.ti.SAIL__1.40.00.00::com.ti.AZURE_CC32XX__3.30.00.02::com.ti.AZURE_MSP432E4__3.30.00.02::com.ti.SIMPLELINK_SDK_NFC_PLUGIN__2.20.00.08::com.ti.mmwave_industrial_toolbox__4.1.0::com.ti.mmwave_automotive_toolbox__2.7.1::c2000ware_software_package__2.00.00.03::digital_power_c2000ware_sdk_software_package__2.00.01.00::motor_control_c2000ware_sdk_software_package__2.01.00.00::powerSUITE_software_package__2.05.01.00::msp430ware__3.80.07.00::energia.core__18.0.0::energia.tool.arm-none-eabi-gcc__6.3.1-20170620::energia.tool.ino2cpp__1.0.6::energia.boards.cc13xx__5.20.0::energia.boards.cc3220emt__5.6.2::energia.boards.msp432r__5.25.2::sitara__1.02.00.00::tm4c__2.1.4.178::tirtos_cc13xx_cc26xx__2.21.00.06::tirtos_tivac__2.16.00.08::xdctools__3.51.02.21::com.ti.SIMPLELINK_BLE_PLUGIN_AZURE_GATEWAY_EXAMPLE_PACK__3.20.00.22::com.ti.SIMPLELINK_SDK_LVGL_PLUGIN__3.20.00.19::com.ti.ti154stack_linux_x64__3.30.00.12&path=Software/SimpleLink%20SDK%20Plugins/Connectivity/SimpleLink%20SDK%20WiFi%20Plugin/Examples/Development%20Tools/MSP432P401R%20LaunchPad%20-%20Red%202.x%20(Red)/Demos/mqtt_client/FreeRTOS/CCS%20Compiler/mqtt_client",
+    "packageOrder": 101,
+    "offline": "true"
+  },
+  {
+    "downloadLink": "api/bundle?vid=com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22",
+    "removeofflineLink": "api/resources?id=6_MK_crhbOPNm4&path=Software/SimpleLink SDK Plugins/Connectivity/SimpleLink SDK WiFi Plugin/Examples/Development Tools/MSP432P401R LaunchPad - Red 2.x (Red)/Demos/mqtt_client/FreeRTOS/CCS Compiler/mqtt_client&removeoffline=true",
+    "_id": "6_MK_crhbOPNm4",
+    "advanced": {
+      "overrideProjectSpecDeviceId": true
+    },
+    "devtools": [
+      "MSP432P401R LaunchPad - Red 2.x (Red)"
+    ],
+    "link": "api/linkTo/6_MK_crhbOPNm4?extname=.h",
+    "linkType": "local",
+    "name": "MSP_EXP432P401R.h",
+    "packageUId": "com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22",
+    "parentID": "6_M6ayfNOJTgxc",
+    "resourceType": "file",
+    "shortDescription": "mqtt_client",
+    "type": "resource",
+    "text": "MSP_EXP432P401R.h",
+    "url": "/api/resources?devtool=MSP432P401R%20LaunchPad%20-%20Red%202.x%20(Red)&package=com.ti.SIMPLELINK_CC13X0_SDK__3.20.00.23::com.ti.SIMPLELINK_CC13X2_26X2_SDK__3.30.00.03::com.ti.SIMPLELINK_CC2640R2_SDK__3.30.00.20::com.ti.SIMPLELINK_MSP432_SDK__3.30.00.13::com.ti.SIMPLELINK_MSP432E4_SDK__3.30.00.22::com.ti.SIMPLELINK_CC32XX_SDK__3.30.01.02::com.ti.SIMPLELINK_CC2640R2_SDK_BLE_EXAMPLE_PACK__1.50.00.62::com.ti.SIMPLELINK_SDK_BLE_PLUGIN__3.20.00.24::com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22::com.ti.SIMPLELINK_SDK_VOICE_DETECTION_PLUGIN__1.50.00.15::com.ti.SIMPLELINK_SDK_TI_15_4_STACK_PLUGIN__2.20.00.05::com.ti.SIMPLELINK_ZIGBEE_SDK_PLUGIN__2.20.00.06::com.ti.AWS_CC32XX__3.30.00.03::com.ti.AWS_MSP432E4__3.30.00.03::com.ti.WATSON_MSP432E4__1.20.00.04::com.ti.WATSON_CC32XX__1.20.00.04::com.ti.SAIL__1.40.00.00::com.ti.AZURE_CC32XX__3.30.00.02::com.ti.AZURE_MSP432E4__3.30.00.02::com.ti.SIMPLELINK_SDK_NFC_PLUGIN__2.20.00.08::com.ti.mmwave_industrial_toolbox__4.1.0::com.ti.mmwave_automotive_toolbox__2.7.1::c2000ware_software_package__2.00.00.03::digital_power_c2000ware_sdk_software_package__2.00.01.00::motor_control_c2000ware_sdk_software_package__2.01.00.00::powerSUITE_software_package__2.05.01.00::msp430ware__3.80.07.00::energia.core__18.0.0::energia.tool.arm-none-eabi-gcc__6.3.1-20170620::energia.tool.ino2cpp__1.0.6::energia.boards.cc13xx__5.20.0::energia.boards.cc3220emt__5.6.2::energia.boards.msp432r__5.25.2::sitara__1.02.00.00::tm4c__2.1.4.178::tirtos_cc13xx_cc26xx__2.21.00.06::tirtos_tivac__2.16.00.08::xdctools__3.51.02.21::com.ti.SIMPLELINK_BLE_PLUGIN_AZURE_GATEWAY_EXAMPLE_PACK__3.20.00.22::com.ti.SIMPLELINK_SDK_LVGL_PLUGIN__3.20.00.19::com.ti.ti154stack_linux_x64__3.30.00.12&path=Software/SimpleLink%20SDK%20Plugins/Connectivity/SimpleLink%20SDK%20WiFi%20Plugin/Examples/Development%20Tools/MSP432P401R%20LaunchPad%20-%20Red%202.x%20(Red)/Demos/mqtt_client/FreeRTOS/CCS%20Compiler/mqtt_client",
+    "packageOrder": 101,
+    "offline": "true"
+  },
+  {
+    "downloadLink": "api/bundle?vid=com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22",
+    "removeofflineLink": "api/resources?id=6_MG0prKFlIrGk&path=Software/SimpleLink SDK Plugins/Connectivity/SimpleLink SDK WiFi Plugin/Examples/Development Tools/MSP432P401R LaunchPad - Red 2.x (Red)/Demos/mqtt_client/FreeRTOS/CCS Compiler/mqtt_client&removeoffline=true",
+    "_id": "6_MG0prKFlIrGk",
+    "advanced": {
+      "overrideProjectSpecDeviceId": true
+    },
+    "devtools": [
+      "MSP432P401R LaunchPad - Red 2.x (Red)"
+    ],
+    "link": "api/linkTo/6_MG0prKFlIrGk?extname=.cmd",
+    "linkType": "local",
+    "name": "MSP_EXP432P401R_FREERTOS.cmd",
+    "packageUId": "com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22",
+    "parentID": "6_M6ayfNOJTgxc",
+    "resourceType": "file",
+    "shortDescription": "mqtt_client",
+    "type": "resource",
+    "text": "MSP_EXP432P401R_FREERTOS.cmd",
+    "url": "/api/resources?devtool=MSP432P401R%20LaunchPad%20-%20Red%202.x%20(Red)&package=com.ti.SIMPLELINK_CC13X0_SDK__3.20.00.23::com.ti.SIMPLELINK_CC13X2_26X2_SDK__3.30.00.03::com.ti.SIMPLELINK_CC2640R2_SDK__3.30.00.20::com.ti.SIMPLELINK_MSP432_SDK__3.30.00.13::com.ti.SIMPLELINK_MSP432E4_SDK__3.30.00.22::com.ti.SIMPLELINK_CC32XX_SDK__3.30.01.02::com.ti.SIMPLELINK_CC2640R2_SDK_BLE_EXAMPLE_PACK__1.50.00.62::com.ti.SIMPLELINK_SDK_BLE_PLUGIN__3.20.00.24::com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22::com.ti.SIMPLELINK_SDK_VOICE_DETECTION_PLUGIN__1.50.00.15::com.ti.SIMPLELINK_SDK_TI_15_4_STACK_PLUGIN__2.20.00.05::com.ti.SIMPLELINK_ZIGBEE_SDK_PLUGIN__2.20.00.06::com.ti.AWS_CC32XX__3.30.00.03::com.ti.AWS_MSP432E4__3.30.00.03::com.ti.WATSON_MSP432E4__1.20.00.04::com.ti.WATSON_CC32XX__1.20.00.04::com.ti.SAIL__1.40.00.00::com.ti.AZURE_CC32XX__3.30.00.02::com.ti.AZURE_MSP432E4__3.30.00.02::com.ti.SIMPLELINK_SDK_NFC_PLUGIN__2.20.00.08::com.ti.mmwave_industrial_toolbox__4.1.0::com.ti.mmwave_automotive_toolbox__2.7.1::c2000ware_software_package__2.00.00.03::digital_power_c2000ware_sdk_software_package__2.00.01.00::motor_control_c2000ware_sdk_software_package__2.01.00.00::powerSUITE_software_package__2.05.01.00::msp430ware__3.80.07.00::energia.core__18.0.0::energia.tool.arm-none-eabi-gcc__6.3.1-20170620::energia.tool.ino2cpp__1.0.6::energia.boards.cc13xx__5.20.0::energia.boards.cc3220emt__5.6.2::energia.boards.msp432r__5.25.2::sitara__1.02.00.00::tm4c__2.1.4.178::tirtos_cc13xx_cc26xx__2.21.00.06::tirtos_tivac__2.16.00.08::xdctools__3.51.02.21::com.ti.SIMPLELINK_BLE_PLUGIN_AZURE_GATEWAY_EXAMPLE_PACK__3.20.00.22::com.ti.SIMPLELINK_SDK_LVGL_PLUGIN__3.20.00.19::com.ti.ti154stack_linux_x64__3.30.00.12&path=Software/SimpleLink%20SDK%20Plugins/Connectivity/SimpleLink%20SDK%20WiFi%20Plugin/Examples/Development%20Tools/MSP432P401R%20LaunchPad%20-%20Red%202.x%20(Red)/Demos/mqtt_client/FreeRTOS/CCS%20Compiler/mqtt_client",
+    "packageOrder": 101,
+    "offline": "true"
+  },
+  {
+    "downloadLink": "api/bundle?vid=com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22",
+    "removeofflineLink": "api/resources?id=6_MVjy_dcy-fq0&path=Software/SimpleLink SDK Plugins/Connectivity/SimpleLink SDK WiFi Plugin/Examples/Development Tools/MSP432P401R LaunchPad - Red 2.x (Red)/Demos/mqtt_client/FreeRTOS/CCS Compiler/mqtt_client&removeoffline=true",
+    "_id": "6_MVjy_dcy-fq0",
+    "advanced": {
+      "overrideProjectSpecDeviceId": true
+    },
+    "devtools": [
+      "MSP432P401R LaunchPad - Red 2.x (Red)"
+    ],
+    "link": "api/linkTo/6_MVjy_dcy-fq0?extname=.html",
+    "linkType": "local",
+    "name": "README.html",
+    "packageUId": "com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22",
+    "parentID": "6_M6ayfNOJTgxc",
+    "resourceType": "file",
+    "shortDescription": "mqtt_client",
+    "type": "resource",
+    "text": "README.html",
+    "url": "/api/resources?devtool=MSP432P401R%20LaunchPad%20-%20Red%202.x%20(Red)&package=com.ti.SIMPLELINK_CC13X0_SDK__3.20.00.23::com.ti.SIMPLELINK_CC13X2_26X2_SDK__3.30.00.03::com.ti.SIMPLELINK_CC2640R2_SDK__3.30.00.20::com.ti.SIMPLELINK_MSP432_SDK__3.30.00.13::com.ti.SIMPLELINK_MSP432E4_SDK__3.30.00.22::com.ti.SIMPLELINK_CC32XX_SDK__3.30.01.02::com.ti.SIMPLELINK_CC2640R2_SDK_BLE_EXAMPLE_PACK__1.50.00.62::com.ti.SIMPLELINK_SDK_BLE_PLUGIN__3.20.00.24::com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22::com.ti.SIMPLELINK_SDK_VOICE_DETECTION_PLUGIN__1.50.00.15::com.ti.SIMPLELINK_SDK_TI_15_4_STACK_PLUGIN__2.20.00.05::com.ti.SIMPLELINK_ZIGBEE_SDK_PLUGIN__2.20.00.06::com.ti.AWS_CC32XX__3.30.00.03::com.ti.AWS_MSP432E4__3.30.00.03::com.ti.WATSON_MSP432E4__1.20.00.04::com.ti.WATSON_CC32XX__1.20.00.04::com.ti.SAIL__1.40.00.00::com.ti.AZURE_CC32XX__3.30.00.02::com.ti.AZURE_MSP432E4__3.30.00.02::com.ti.SIMPLELINK_SDK_NFC_PLUGIN__2.20.00.08::com.ti.mmwave_industrial_toolbox__4.1.0::com.ti.mmwave_automotive_toolbox__2.7.1::c2000ware_software_package__2.00.00.03::digital_power_c2000ware_sdk_software_package__2.00.01.00::motor_control_c2000ware_sdk_software_package__2.01.00.00::powerSUITE_software_package__2.05.01.00::msp430ware__3.80.07.00::energia.core__18.0.0::energia.tool.arm-none-eabi-gcc__6.3.1-20170620::energia.tool.ino2cpp__1.0.6::energia.boards.cc13xx__5.20.0::energia.boards.cc3220emt__5.6.2::energia.boards.msp432r__5.25.2::sitara__1.02.00.00::tm4c__2.1.4.178::tirtos_cc13xx_cc26xx__2.21.00.06::tirtos_tivac__2.16.00.08::xdctools__3.51.02.21::com.ti.SIMPLELINK_BLE_PLUGIN_AZURE_GATEWAY_EXAMPLE_PACK__3.20.00.22::com.ti.SIMPLELINK_SDK_LVGL_PLUGIN__3.20.00.19::com.ti.ti154stack_linux_x64__3.30.00.12&path=Software/SimpleLink%20SDK%20Plugins/Connectivity/SimpleLink%20SDK%20WiFi%20Plugin/Examples/Development%20Tools/MSP432P401R%20LaunchPad%20-%20Red%202.x%20(Red)/Demos/mqtt_client/FreeRTOS/CCS%20Compiler/mqtt_client",
+    "packageOrder": 101,
+    "offline": "true"
+  },
+  {
+    "downloadLink": "api/bundle?vid=com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22",
+    "removeofflineLink": "api/resources?id=6_M9Wtwr8LQ_VE&path=Software/SimpleLink SDK Plugins/Connectivity/SimpleLink SDK WiFi Plugin/Examples/Development Tools/MSP432P401R LaunchPad - Red 2.x (Red)/Demos/mqtt_client/FreeRTOS/CCS Compiler/mqtt_client&removeoffline=true",
+    "_id": "6_M9Wtwr8LQ_VE",
+    "advanced": {
+      "overrideProjectSpecDeviceId": true
+    },
+    "devtools": [
+      "MSP432P401R LaunchPad - Red 2.x (Red)"
+    ],
+    "link": "api/linkTo/6_M9Wtwr8LQ_VE?extname=.c",
+    "linkType": "local",
+    "name": "client_cbs.c",
+    "packageUId": "com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22",
+    "parentID": "6_M6ayfNOJTgxc",
+    "resourceType": "file",
+    "shortDescription": "mqtt_client",
+    "type": "resource",
+    "text": "client_cbs.c",
+    "url": "/api/resources?devtool=MSP432P401R%20LaunchPad%20-%20Red%202.x%20(Red)&package=com.ti.SIMPLELINK_CC13X0_SDK__3.20.00.23::com.ti.SIMPLELINK_CC13X2_26X2_SDK__3.30.00.03::com.ti.SIMPLELINK_CC2640R2_SDK__3.30.00.20::com.ti.SIMPLELINK_MSP432_SDK__3.30.00.13::com.ti.SIMPLELINK_MSP432E4_SDK__3.30.00.22::com.ti.SIMPLELINK_CC32XX_SDK__3.30.01.02::com.ti.SIMPLELINK_CC2640R2_SDK_BLE_EXAMPLE_PACK__1.50.00.62::com.ti.SIMPLELINK_SDK_BLE_PLUGIN__3.20.00.24::com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22::com.ti.SIMPLELINK_SDK_VOICE_DETECTION_PLUGIN__1.50.00.15::com.ti.SIMPLELINK_SDK_TI_15_4_STACK_PLUGIN__2.20.00.05::com.ti.SIMPLELINK_ZIGBEE_SDK_PLUGIN__2.20.00.06::com.ti.AWS_CC32XX__3.30.00.03::com.ti.AWS_MSP432E4__3.30.00.03::com.ti.WATSON_MSP432E4__1.20.00.04::com.ti.WATSON_CC32XX__1.20.00.04::com.ti.SAIL__1.40.00.00::com.ti.AZURE_CC32XX__3.30.00.02::com.ti.AZURE_MSP432E4__3.30.00.02::com.ti.SIMPLELINK_SDK_NFC_PLUGIN__2.20.00.08::com.ti.mmwave_industrial_toolbox__4.1.0::com.ti.mmwave_automotive_toolbox__2.7.1::c2000ware_software_package__2.00.00.03::digital_power_c2000ware_sdk_software_package__2.00.01.00::motor_control_c2000ware_sdk_software_package__2.01.00.00::powerSUITE_software_package__2.05.01.00::msp430ware__3.80.07.00::energia.core__18.0.0::energia.tool.arm-none-eabi-gcc__6.3.1-20170620::energia.tool.ino2cpp__1.0.6::energia.boards.cc13xx__5.20.0::energia.boards.cc3220emt__5.6.2::energia.boards.msp432r__5.25.2::sitara__1.02.00.00::tm4c__2.1.4.178::tirtos_cc13xx_cc26xx__2.21.00.06::tirtos_tivac__2.16.00.08::xdctools__3.51.02.21::com.ti.SIMPLELINK_BLE_PLUGIN_AZURE_GATEWAY_EXAMPLE_PACK__3.20.00.22::com.ti.SIMPLELINK_SDK_LVGL_PLUGIN__3.20.00.19::com.ti.ti154stack_linux_x64__3.30.00.12&path=Software/SimpleLink%20SDK%20Plugins/Connectivity/SimpleLink%20SDK%20WiFi%20Plugin/Examples/Development%20Tools/MSP432P401R%20LaunchPad%20-%20Red%202.x%20(Red)/Demos/mqtt_client/FreeRTOS/CCS%20Compiler/mqtt_client",
+    "packageOrder": 101,
+    "offline": "true"
+  },
+  {
+    "downloadLink": "api/bundle?vid=com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22",
+    "removeofflineLink": "api/resources?id=6_MhWrD5ulN3xs&path=Software/SimpleLink SDK Plugins/Connectivity/SimpleLink SDK WiFi Plugin/Examples/Development Tools/MSP432P401R LaunchPad - Red 2.x (Red)/Demos/mqtt_client/FreeRTOS/CCS Compiler/mqtt_client&removeoffline=true",
+    "_id": "6_MhWrD5ulN3xs",
+    "advanced": {
+      "overrideProjectSpecDeviceId": true
+    },
+    "devtools": [
+      "MSP432P401R LaunchPad - Red 2.x (Red)"
+    ],
+    "link": "api/linkTo/6_MhWrD5ulN3xs?extname=.h",
+    "linkType": "local",
+    "name": "client_cbs.h",
+    "packageUId": "com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22",
+    "parentID": "6_M6ayfNOJTgxc",
+    "resourceType": "file",
+    "shortDescription": "mqtt_client",
+    "type": "resource",
+    "text": "client_cbs.h",
+    "url": "/api/resources?devtool=MSP432P401R%20LaunchPad%20-%20Red%202.x%20(Red)&package=com.ti.SIMPLELINK_CC13X0_SDK__3.20.00.23::com.ti.SIMPLELINK_CC13X2_26X2_SDK__3.30.00.03::com.ti.SIMPLELINK_CC2640R2_SDK__3.30.00.20::com.ti.SIMPLELINK_MSP432_SDK__3.30.00.13::com.ti.SIMPLELINK_MSP432E4_SDK__3.30.00.22::com.ti.SIMPLELINK_CC32XX_SDK__3.30.01.02::com.ti.SIMPLELINK_CC2640R2_SDK_BLE_EXAMPLE_PACK__1.50.00.62::com.ti.SIMPLELINK_SDK_BLE_PLUGIN__3.20.00.24::com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22::com.ti.SIMPLELINK_SDK_VOICE_DETECTION_PLUGIN__1.50.00.15::com.ti.SIMPLELINK_SDK_TI_15_4_STACK_PLUGIN__2.20.00.05::com.ti.SIMPLELINK_ZIGBEE_SDK_PLUGIN__2.20.00.06::com.ti.AWS_CC32XX__3.30.00.03::com.ti.AWS_MSP432E4__3.30.00.03::com.ti.WATSON_MSP432E4__1.20.00.04::com.ti.WATSON_CC32XX__1.20.00.04::com.ti.SAIL__1.40.00.00::com.ti.AZURE_CC32XX__3.30.00.02::com.ti.AZURE_MSP432E4__3.30.00.02::com.ti.SIMPLELINK_SDK_NFC_PLUGIN__2.20.00.08::com.ti.mmwave_industrial_toolbox__4.1.0::com.ti.mmwave_automotive_toolbox__2.7.1::c2000ware_software_package__2.00.00.03::digital_power_c2000ware_sdk_software_package__2.00.01.00::motor_control_c2000ware_sdk_software_package__2.01.00.00::powerSUITE_software_package__2.05.01.00::msp430ware__3.80.07.00::energia.core__18.0.0::energia.tool.arm-none-eabi-gcc__6.3.1-20170620::energia.tool.ino2cpp__1.0.6::energia.boards.cc13xx__5.20.0::energia.boards.cc3220emt__5.6.2::energia.boards.msp432r__5.25.2::sitara__1.02.00.00::tm4c__2.1.4.178::tirtos_cc13xx_cc26xx__2.21.00.06::tirtos_tivac__2.16.00.08::xdctools__3.51.02.21::com.ti.SIMPLELINK_BLE_PLUGIN_AZURE_GATEWAY_EXAMPLE_PACK__3.20.00.22::com.ti.SIMPLELINK_SDK_LVGL_PLUGIN__3.20.00.19::com.ti.ti154stack_linux_x64__3.30.00.12&path=Software/SimpleLink%20SDK%20Plugins/Connectivity/SimpleLink%20SDK%20WiFi%20Plugin/Examples/Development%20Tools/MSP432P401R%20LaunchPad%20-%20Red%202.x%20(Red)/Demos/mqtt_client/FreeRTOS/CCS%20Compiler/mqtt_client",
+    "packageOrder": 101,
+    "offline": "true"
+  },
+  {
+    "downloadLink": "api/bundle?vid=com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22",
+    "removeofflineLink": "api/resources?id=6_MEwhzfsibcaY&path=Software/SimpleLink SDK Plugins/Connectivity/SimpleLink SDK WiFi Plugin/Examples/Development Tools/MSP432P401R LaunchPad - Red 2.x (Red)/Demos/mqtt_client/FreeRTOS/CCS Compiler/mqtt_client&removeoffline=true",
+    "_id": "6_MEwhzfsibcaY",
+    "advanced": {
+      "overrideProjectSpecDeviceId": true
+    },
+    "devtools": [
+      "MSP432P401R LaunchPad - Red 2.x (Red)"
+    ],
+    "link": "api/linkTo/6_MEwhzfsibcaY?extname=.c",
+    "linkType": "local",
+    "name": "main_freertos.c",
+    "packageUId": "com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22",
+    "parentID": "6_M6ayfNOJTgxc",
+    "resourceType": "file",
+    "shortDescription": "mqtt_client",
+    "type": "resource",
+    "text": "main_freertos.c",
+    "url": "/api/resources?devtool=MSP432P401R%20LaunchPad%20-%20Red%202.x%20(Red)&package=com.ti.SIMPLELINK_CC13X0_SDK__3.20.00.23::com.ti.SIMPLELINK_CC13X2_26X2_SDK__3.30.00.03::com.ti.SIMPLELINK_CC2640R2_SDK__3.30.00.20::com.ti.SIMPLELINK_MSP432_SDK__3.30.00.13::com.ti.SIMPLELINK_MSP432E4_SDK__3.30.00.22::com.ti.SIMPLELINK_CC32XX_SDK__3.30.01.02::com.ti.SIMPLELINK_CC2640R2_SDK_BLE_EXAMPLE_PACK__1.50.00.62::com.ti.SIMPLELINK_SDK_BLE_PLUGIN__3.20.00.24::com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22::com.ti.SIMPLELINK_SDK_VOICE_DETECTION_PLUGIN__1.50.00.15::com.ti.SIMPLELINK_SDK_TI_15_4_STACK_PLUGIN__2.20.00.05::com.ti.SIMPLELINK_ZIGBEE_SDK_PLUGIN__2.20.00.06::com.ti.AWS_CC32XX__3.30.00.03::com.ti.AWS_MSP432E4__3.30.00.03::com.ti.WATSON_MSP432E4__1.20.00.04::com.ti.WATSON_CC32XX__1.20.00.04::com.ti.SAIL__1.40.00.00::com.ti.AZURE_CC32XX__3.30.00.02::com.ti.AZURE_MSP432E4__3.30.00.02::com.ti.SIMPLELINK_SDK_NFC_PLUGIN__2.20.00.08::com.ti.mmwave_industrial_toolbox__4.1.0::com.ti.mmwave_automotive_toolbox__2.7.1::c2000ware_software_package__2.00.00.03::digital_power_c2000ware_sdk_software_package__2.00.01.00::motor_control_c2000ware_sdk_software_package__2.01.00.00::powerSUITE_software_package__2.05.01.00::msp430ware__3.80.07.00::energia.core__18.0.0::energia.tool.arm-none-eabi-gcc__6.3.1-20170620::energia.tool.ino2cpp__1.0.6::energia.boards.cc13xx__5.20.0::energia.boards.cc3220emt__5.6.2::energia.boards.msp432r__5.25.2::sitara__1.02.00.00::tm4c__2.1.4.178::tirtos_cc13xx_cc26xx__2.21.00.06::tirtos_tivac__2.16.00.08::xdctools__3.51.02.21::com.ti.SIMPLELINK_BLE_PLUGIN_AZURE_GATEWAY_EXAMPLE_PACK__3.20.00.22::com.ti.SIMPLELINK_SDK_LVGL_PLUGIN__3.20.00.19::com.ti.ti154stack_linux_x64__3.30.00.12&path=Software/SimpleLink%20SDK%20Plugins/Connectivity/SimpleLink%20SDK%20WiFi%20Plugin/Examples/Development%20Tools/MSP432P401R%20LaunchPad%20-%20Red%202.x%20(Red)/Demos/mqtt_client/FreeRTOS/CCS%20Compiler/mqtt_client",
+    "packageOrder": 101,
+    "offline": "true"
+  },
+  {
+    "downloadLink": "api/bundle?vid=com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22",
+    "removeofflineLink": "api/resources?id=6_MS55YLE2dL7w&path=Software/SimpleLink SDK Plugins/Connectivity/SimpleLink SDK WiFi Plugin/Examples/Development Tools/MSP432P401R LaunchPad - Red 2.x (Red)/Demos/mqtt_client/FreeRTOS/CCS Compiler/mqtt_client&removeoffline=true",
+    "_id": "6_MS55YLE2dL7w",
+    "advanced": {
+      "overrideProjectSpecDeviceId": true
+    },
+    "devtools": [
+      "MSP432P401R LaunchPad - Red 2.x (Red)"
+    ],
+    "link": "api/linkTo/6_MS55YLE2dL7w?extname=.c",
+    "linkType": "local",
+    "name": "mqtt_client_app.c",
+    "packageUId": "com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22",
+    "parentID": "6_M6ayfNOJTgxc",
+    "resourceType": "file",
+    "shortDescription": "mqtt_client",
+    "type": "resource",
+    "text": "mqtt_client_app.c",
+    "url": "/api/resources?devtool=MSP432P401R%20LaunchPad%20-%20Red%202.x%20(Red)&package=com.ti.SIMPLELINK_CC13X0_SDK__3.20.00.23::com.ti.SIMPLELINK_CC13X2_26X2_SDK__3.30.00.03::com.ti.SIMPLELINK_CC2640R2_SDK__3.30.00.20::com.ti.SIMPLELINK_MSP432_SDK__3.30.00.13::com.ti.SIMPLELINK_MSP432E4_SDK__3.30.00.22::com.ti.SIMPLELINK_CC32XX_SDK__3.30.01.02::com.ti.SIMPLELINK_CC2640R2_SDK_BLE_EXAMPLE_PACK__1.50.00.62::com.ti.SIMPLELINK_SDK_BLE_PLUGIN__3.20.00.24::com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22::com.ti.SIMPLELINK_SDK_VOICE_DETECTION_PLUGIN__1.50.00.15::com.ti.SIMPLELINK_SDK_TI_15_4_STACK_PLUGIN__2.20.00.05::com.ti.SIMPLELINK_ZIGBEE_SDK_PLUGIN__2.20.00.06::com.ti.AWS_CC32XX__3.30.00.03::com.ti.AWS_MSP432E4__3.30.00.03::com.ti.WATSON_MSP432E4__1.20.00.04::com.ti.WATSON_CC32XX__1.20.00.04::com.ti.SAIL__1.40.00.00::com.ti.AZURE_CC32XX__3.30.00.02::com.ti.AZURE_MSP432E4__3.30.00.02::com.ti.SIMPLELINK_SDK_NFC_PLUGIN__2.20.00.08::com.ti.mmwave_industrial_toolbox__4.1.0::com.ti.mmwave_automotive_toolbox__2.7.1::c2000ware_software_package__2.00.00.03::digital_power_c2000ware_sdk_software_package__2.00.01.00::motor_control_c2000ware_sdk_software_package__2.01.00.00::powerSUITE_software_package__2.05.01.00::msp430ware__3.80.07.00::energia.core__18.0.0::energia.tool.arm-none-eabi-gcc__6.3.1-20170620::energia.tool.ino2cpp__1.0.6::energia.boards.cc13xx__5.20.0::energia.boards.cc3220emt__5.6.2::energia.boards.msp432r__5.25.2::sitara__1.02.00.00::tm4c__2.1.4.178::tirtos_cc13xx_cc26xx__2.21.00.06::tirtos_tivac__2.16.00.08::xdctools__3.51.02.21::com.ti.SIMPLELINK_BLE_PLUGIN_AZURE_GATEWAY_EXAMPLE_PACK__3.20.00.22::com.ti.SIMPLELINK_SDK_LVGL_PLUGIN__3.20.00.19::com.ti.ti154stack_linux_x64__3.30.00.12&path=Software/SimpleLink%20SDK%20Plugins/Connectivity/SimpleLink%20SDK%20WiFi%20Plugin/Examples/Development%20Tools/MSP432P401R%20LaunchPad%20-%20Red%202.x%20(Red)/Demos/mqtt_client/FreeRTOS/CCS%20Compiler/mqtt_client",
+    "packageOrder": 101,
+    "offline": "true"
+  },
+  {
+    "downloadLink": "api/bundle?vid=com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22",
+    "removeofflineLink": "api/resources?id=6_MuBTze6WeRO8&path=Software/SimpleLink SDK Plugins/Connectivity/SimpleLink SDK WiFi Plugin/Examples/Development Tools/MSP432P401R LaunchPad - Red 2.x (Red)/Demos/mqtt_client/FreeRTOS/CCS Compiler/mqtt_client&removeoffline=true",
+    "_id": "6_MuBTze6WeRO8",
+    "advanced": {
+      "overrideProjectSpecDeviceId": true
+    },
+    "devtools": [
+      "MSP432P401R LaunchPad - Red 2.x (Red)"
+    ],
+    "link": "api/linkTo/6_MuBTze6WeRO8?extname=.c",
+    "linkType": "local",
+    "name": "network_if.c",
+    "packageUId": "com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22",
+    "parentID": "6_M6ayfNOJTgxc",
+    "resourceType": "file",
+    "shortDescription": "mqtt_client",
+    "type": "resource",
+    "text": "network_if.c",
+    "url": "/api/resources?devtool=MSP432P401R%20LaunchPad%20-%20Red%202.x%20(Red)&package=com.ti.SIMPLELINK_CC13X0_SDK__3.20.00.23::com.ti.SIMPLELINK_CC13X2_26X2_SDK__3.30.00.03::com.ti.SIMPLELINK_CC2640R2_SDK__3.30.00.20::com.ti.SIMPLELINK_MSP432_SDK__3.30.00.13::com.ti.SIMPLELINK_MSP432E4_SDK__3.30.00.22::com.ti.SIMPLELINK_CC32XX_SDK__3.30.01.02::com.ti.SIMPLELINK_CC2640R2_SDK_BLE_EXAMPLE_PACK__1.50.00.62::com.ti.SIMPLELINK_SDK_BLE_PLUGIN__3.20.00.24::com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22::com.ti.SIMPLELINK_SDK_VOICE_DETECTION_PLUGIN__1.50.00.15::com.ti.SIMPLELINK_SDK_TI_15_4_STACK_PLUGIN__2.20.00.05::com.ti.SIMPLELINK_ZIGBEE_SDK_PLUGIN__2.20.00.06::com.ti.AWS_CC32XX__3.30.00.03::com.ti.AWS_MSP432E4__3.30.00.03::com.ti.WATSON_MSP432E4__1.20.00.04::com.ti.WATSON_CC32XX__1.20.00.04::com.ti.SAIL__1.40.00.00::com.ti.AZURE_CC32XX__3.30.00.02::com.ti.AZURE_MSP432E4__3.30.00.02::com.ti.SIMPLELINK_SDK_NFC_PLUGIN__2.20.00.08::com.ti.mmwave_industrial_toolbox__4.1.0::com.ti.mmwave_automotive_toolbox__2.7.1::c2000ware_software_package__2.00.00.03::digital_power_c2000ware_sdk_software_package__2.00.01.00::motor_control_c2000ware_sdk_software_package__2.01.00.00::powerSUITE_software_package__2.05.01.00::msp430ware__3.80.07.00::energia.core__18.0.0::energia.tool.arm-none-eabi-gcc__6.3.1-20170620::energia.tool.ino2cpp__1.0.6::energia.boards.cc13xx__5.20.0::energia.boards.cc3220emt__5.6.2::energia.boards.msp432r__5.25.2::sitara__1.02.00.00::tm4c__2.1.4.178::tirtos_cc13xx_cc26xx__2.21.00.06::tirtos_tivac__2.16.00.08::xdctools__3.51.02.21::com.ti.SIMPLELINK_BLE_PLUGIN_AZURE_GATEWAY_EXAMPLE_PACK__3.20.00.22::com.ti.SIMPLELINK_SDK_LVGL_PLUGIN__3.20.00.19::com.ti.ti154stack_linux_x64__3.30.00.12&path=Software/SimpleLink%20SDK%20Plugins/Connectivity/SimpleLink%20SDK%20WiFi%20Plugin/Examples/Development%20Tools/MSP432P401R%20LaunchPad%20-%20Red%202.x%20(Red)/Demos/mqtt_client/FreeRTOS/CCS%20Compiler/mqtt_client",
+    "packageOrder": 101,
+    "offline": "true"
+  },
+  {
+    "downloadLink": "api/bundle?vid=com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22",
+    "removeofflineLink": "api/resources?id=6_Myt3bnShqpO4&path=Software/SimpleLink SDK Plugins/Connectivity/SimpleLink SDK WiFi Plugin/Examples/Development Tools/MSP432P401R LaunchPad - Red 2.x (Red)/Demos/mqtt_client/FreeRTOS/CCS Compiler/mqtt_client&removeoffline=true",
+    "_id": "6_Myt3bnShqpO4",
+    "advanced": {
+      "overrideProjectSpecDeviceId": true
+    },
+    "devtools": [
+      "MSP432P401R LaunchPad - Red 2.x (Red)"
+    ],
+    "link": "api/linkTo/6_Myt3bnShqpO4?extname=.h",
+    "linkType": "local",
+    "name": "network_if.h",
+    "packageUId": "com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22",
+    "parentID": "6_M6ayfNOJTgxc",
+    "resourceType": "file",
+    "shortDescription": "mqtt_client",
+    "type": "resource",
+    "text": "network_if.h",
+    "url": "/api/resources?devtool=MSP432P401R%20LaunchPad%20-%20Red%202.x%20(Red)&package=com.ti.SIMPLELINK_CC13X0_SDK__3.20.00.23::com.ti.SIMPLELINK_CC13X2_26X2_SDK__3.30.00.03::com.ti.SIMPLELINK_CC2640R2_SDK__3.30.00.20::com.ti.SIMPLELINK_MSP432_SDK__3.30.00.13::com.ti.SIMPLELINK_MSP432E4_SDK__3.30.00.22::com.ti.SIMPLELINK_CC32XX_SDK__3.30.01.02::com.ti.SIMPLELINK_CC2640R2_SDK_BLE_EXAMPLE_PACK__1.50.00.62::com.ti.SIMPLELINK_SDK_BLE_PLUGIN__3.20.00.24::com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22::com.ti.SIMPLELINK_SDK_VOICE_DETECTION_PLUGIN__1.50.00.15::com.ti.SIMPLELINK_SDK_TI_15_4_STACK_PLUGIN__2.20.00.05::com.ti.SIMPLELINK_ZIGBEE_SDK_PLUGIN__2.20.00.06::com.ti.AWS_CC32XX__3.30.00.03::com.ti.AWS_MSP432E4__3.30.00.03::com.ti.WATSON_MSP432E4__1.20.00.04::com.ti.WATSON_CC32XX__1.20.00.04::com.ti.SAIL__1.40.00.00::com.ti.AZURE_CC32XX__3.30.00.02::com.ti.AZURE_MSP432E4__3.30.00.02::com.ti.SIMPLELINK_SDK_NFC_PLUGIN__2.20.00.08::com.ti.mmwave_industrial_toolbox__4.1.0::com.ti.mmwave_automotive_toolbox__2.7.1::c2000ware_software_package__2.00.00.03::digital_power_c2000ware_sdk_software_package__2.00.01.00::motor_control_c2000ware_sdk_software_package__2.01.00.00::powerSUITE_software_package__2.05.01.00::msp430ware__3.80.07.00::energia.core__18.0.0::energia.tool.arm-none-eabi-gcc__6.3.1-20170620::energia.tool.ino2cpp__1.0.6::energia.boards.cc13xx__5.20.0::energia.boards.cc3220emt__5.6.2::energia.boards.msp432r__5.25.2::sitara__1.02.00.00::tm4c__2.1.4.178::tirtos_cc13xx_cc26xx__2.21.00.06::tirtos_tivac__2.16.00.08::xdctools__3.51.02.21::com.ti.SIMPLELINK_BLE_PLUGIN_AZURE_GATEWAY_EXAMPLE_PACK__3.20.00.22::com.ti.SIMPLELINK_SDK_LVGL_PLUGIN__3.20.00.19::com.ti.ti154stack_linux_x64__3.30.00.12&path=Software/SimpleLink%20SDK%20Plugins/Connectivity/SimpleLink%20SDK%20WiFi%20Plugin/Examples/Development%20Tools/MSP432P401R%20LaunchPad%20-%20Red%202.x%20(Red)/Demos/mqtt_client/FreeRTOS/CCS%20Compiler/mqtt_client",
+    "packageOrder": 101,
+    "offline": "true"
+  },
+  {
+    "downloadLink": "api/bundle?vid=com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22",
+    "removeofflineLink": "api/resources?id=6_ME75j0NEn998&path=Software/SimpleLink SDK Plugins/Connectivity/SimpleLink SDK WiFi Plugin/Examples/Development Tools/MSP432P401R LaunchPad - Red 2.x (Red)/Demos/mqtt_client/FreeRTOS/CCS Compiler/mqtt_client&removeoffline=true",
+    "_id": "6_ME75j0NEn998",
+    "advanced": {
+      "overrideProjectSpecDeviceId": true
+    },
+    "devtools": [
+      "MSP432P401R LaunchPad - Red 2.x (Red)"
+    ],
+    "link": "api/linkTo/6_ME75j0NEn998?extname=.c",
+    "linkType": "local",
+    "name": "ti_drivers_net_wifi_Config.c",
+    "packageUId": "com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22",
+    "parentID": "6_M6ayfNOJTgxc",
+    "resourceType": "file",
+    "shortDescription": "mqtt_client",
+    "type": "resource",
+    "text": "ti_drivers_net_wifi_Config.c",
+    "url": "/api/resources?devtool=MSP432P401R%20LaunchPad%20-%20Red%202.x%20(Red)&package=com.ti.SIMPLELINK_CC13X0_SDK__3.20.00.23::com.ti.SIMPLELINK_CC13X2_26X2_SDK__3.30.00.03::com.ti.SIMPLELINK_CC2640R2_SDK__3.30.00.20::com.ti.SIMPLELINK_MSP432_SDK__3.30.00.13::com.ti.SIMPLELINK_MSP432E4_SDK__3.30.00.22::com.ti.SIMPLELINK_CC32XX_SDK__3.30.01.02::com.ti.SIMPLELINK_CC2640R2_SDK_BLE_EXAMPLE_PACK__1.50.00.62::com.ti.SIMPLELINK_SDK_BLE_PLUGIN__3.20.00.24::com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22::com.ti.SIMPLELINK_SDK_VOICE_DETECTION_PLUGIN__1.50.00.15::com.ti.SIMPLELINK_SDK_TI_15_4_STACK_PLUGIN__2.20.00.05::com.ti.SIMPLELINK_ZIGBEE_SDK_PLUGIN__2.20.00.06::com.ti.AWS_CC32XX__3.30.00.03::com.ti.AWS_MSP432E4__3.30.00.03::com.ti.WATSON_MSP432E4__1.20.00.04::com.ti.WATSON_CC32XX__1.20.00.04::com.ti.SAIL__1.40.00.00::com.ti.AZURE_CC32XX__3.30.00.02::com.ti.AZURE_MSP432E4__3.30.00.02::com.ti.SIMPLELINK_SDK_NFC_PLUGIN__2.20.00.08::com.ti.mmwave_industrial_toolbox__4.1.0::com.ti.mmwave_automotive_toolbox__2.7.1::c2000ware_software_package__2.00.00.03::digital_power_c2000ware_sdk_software_package__2.00.01.00::motor_control_c2000ware_sdk_software_package__2.01.00.00::powerSUITE_software_package__2.05.01.00::msp430ware__3.80.07.00::energia.core__18.0.0::energia.tool.arm-none-eabi-gcc__6.3.1-20170620::energia.tool.ino2cpp__1.0.6::energia.boards.cc13xx__5.20.0::energia.boards.cc3220emt__5.6.2::energia.boards.msp432r__5.25.2::sitara__1.02.00.00::tm4c__2.1.4.178::tirtos_cc13xx_cc26xx__2.21.00.06::tirtos_tivac__2.16.00.08::xdctools__3.51.02.21::com.ti.SIMPLELINK_BLE_PLUGIN_AZURE_GATEWAY_EXAMPLE_PACK__3.20.00.22::com.ti.SIMPLELINK_SDK_LVGL_PLUGIN__3.20.00.19::com.ti.ti154stack_linux_x64__3.30.00.12&path=Software/SimpleLink%20SDK%20Plugins/Connectivity/SimpleLink%20SDK%20WiFi%20Plugin/Examples/Development%20Tools/MSP432P401R%20LaunchPad%20-%20Red%202.x%20(Red)/Demos/mqtt_client/FreeRTOS/CCS%20Compiler/mqtt_client",
+    "packageOrder": 101,
+    "offline": "true"
+  },
+  {
+    "downloadLink": "api/bundle?vid=com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22",
+    "removeofflineLink": "api/resources?id=6_Mx3oueb3mIc4&path=Software/SimpleLink SDK Plugins/Connectivity/SimpleLink SDK WiFi Plugin/Examples/Development Tools/MSP432P401R LaunchPad - Red 2.x (Red)/Demos/mqtt_client/FreeRTOS/CCS Compiler/mqtt_client&removeoffline=true",
+    "_id": "6_Mx3oueb3mIc4",
+    "advanced": {
+      "overrideProjectSpecDeviceId": true
+    },
+    "devtools": [
+      "MSP432P401R LaunchPad - Red 2.x (Red)"
+    ],
+    "link": "api/linkTo/6_Mx3oueb3mIc4?extname=.c",
+    "linkType": "local",
+    "name": "uart_term.c",
+    "packageUId": "com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22",
+    "parentID": "6_M6ayfNOJTgxc",
+    "resourceType": "file",
+    "shortDescription": "mqtt_client",
+    "type": "resource",
+    "text": "uart_term.c",
+    "url": "/api/resources?devtool=MSP432P401R%20LaunchPad%20-%20Red%202.x%20(Red)&package=com.ti.SIMPLELINK_CC13X0_SDK__3.20.00.23::com.ti.SIMPLELINK_CC13X2_26X2_SDK__3.30.00.03::com.ti.SIMPLELINK_CC2640R2_SDK__3.30.00.20::com.ti.SIMPLELINK_MSP432_SDK__3.30.00.13::com.ti.SIMPLELINK_MSP432E4_SDK__3.30.00.22::com.ti.SIMPLELINK_CC32XX_SDK__3.30.01.02::com.ti.SIMPLELINK_CC2640R2_SDK_BLE_EXAMPLE_PACK__1.50.00.62::com.ti.SIMPLELINK_SDK_BLE_PLUGIN__3.20.00.24::com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22::com.ti.SIMPLELINK_SDK_VOICE_DETECTION_PLUGIN__1.50.00.15::com.ti.SIMPLELINK_SDK_TI_15_4_STACK_PLUGIN__2.20.00.05::com.ti.SIMPLELINK_ZIGBEE_SDK_PLUGIN__2.20.00.06::com.ti.AWS_CC32XX__3.30.00.03::com.ti.AWS_MSP432E4__3.30.00.03::com.ti.WATSON_MSP432E4__1.20.00.04::com.ti.WATSON_CC32XX__1.20.00.04::com.ti.SAIL__1.40.00.00::com.ti.AZURE_CC32XX__3.30.00.02::com.ti.AZURE_MSP432E4__3.30.00.02::com.ti.SIMPLELINK_SDK_NFC_PLUGIN__2.20.00.08::com.ti.mmwave_industrial_toolbox__4.1.0::com.ti.mmwave_automotive_toolbox__2.7.1::c2000ware_software_package__2.00.00.03::digital_power_c2000ware_sdk_software_package__2.00.01.00::motor_control_c2000ware_sdk_software_package__2.01.00.00::powerSUITE_software_package__2.05.01.00::msp430ware__3.80.07.00::energia.core__18.0.0::energia.tool.arm-none-eabi-gcc__6.3.1-20170620::energia.tool.ino2cpp__1.0.6::energia.boards.cc13xx__5.20.0::energia.boards.cc3220emt__5.6.2::energia.boards.msp432r__5.25.2::sitara__1.02.00.00::tm4c__2.1.4.178::tirtos_cc13xx_cc26xx__2.21.00.06::tirtos_tivac__2.16.00.08::xdctools__3.51.02.21::com.ti.SIMPLELINK_BLE_PLUGIN_AZURE_GATEWAY_EXAMPLE_PACK__3.20.00.22::com.ti.SIMPLELINK_SDK_LVGL_PLUGIN__3.20.00.19::com.ti.ti154stack_linux_x64__3.30.00.12&path=Software/SimpleLink%20SDK%20Plugins/Connectivity/SimpleLink%20SDK%20WiFi%20Plugin/Examples/Development%20Tools/MSP432P401R%20LaunchPad%20-%20Red%202.x%20(Red)/Demos/mqtt_client/FreeRTOS/CCS%20Compiler/mqtt_client",
+    "packageOrder": 101,
+    "offline": "true"
+  },
+  {
+    "downloadLink": "api/bundle?vid=com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22&download=true",
+    "makeofflineLink": "api/bundles?vids=com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22",
+    "removeofflineLink": "api/resources?id=6_MMdqNK8XbBl8&path=Software/SimpleLink SDK Plugins/Connectivity/SimpleLink SDK WiFi Plugin/Examples/Development Tools/MSP432P401R LaunchPad - Red 2.x (Red)/Demos/mqtt_client/FreeRTOS/CCS Compiler/mqtt_client&removeoffline=true",
+    "_id": "6_MMdqNK8XbBl8",
+    "advanced": {
+      "overrideProjectSpecDeviceId": true
+    },
+    "devtools": [
+      "MSP432P401R LaunchPad - Red 2.x (Red)"
+    ],
+    "link": "api/linkTo/6_MMdqNK8XbBl8?extname=.h",
+    "linkType": "local",
+    "name": "uart_term.h",
+    "packageUId": "com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22",
+    "parentID": "6_M6ayfNOJTgxc",
+    "resourceType": "file",
+    "shortDescription": "mqtt_client",
+    "type": "resource",
+    "text": "uart_term.h",
+    "url": "/api/resources?devtool=MSP432P401R%20LaunchPad%20-%20Red%202.x%20(Red)&package=com.ti.SIMPLELINK_CC13X0_SDK__3.20.00.23::com.ti.SIMPLELINK_CC13X2_26X2_SDK__3.30.00.03::com.ti.SIMPLELINK_CC2640R2_SDK__3.30.00.20::com.ti.SIMPLELINK_MSP432_SDK__3.30.00.13::com.ti.SIMPLELINK_MSP432E4_SDK__3.30.00.22::com.ti.SIMPLELINK_CC32XX_SDK__3.30.01.02::com.ti.SIMPLELINK_CC2640R2_SDK_BLE_EXAMPLE_PACK__1.50.00.62::com.ti.SIMPLELINK_SDK_BLE_PLUGIN__3.20.00.24::com.ti.SIMPLELINK_MSP432_SDK_WIFI_PLUGIN__2.40.00.22::com.ti.SIMPLELINK_SDK_VOICE_DETECTION_PLUGIN__1.50.00.15::com.ti.SIMPLELINK_SDK_TI_15_4_STACK_PLUGIN__2.20.00.05::com.ti.SIMPLELINK_ZIGBEE_SDK_PLUGIN__2.20.00.06::com.ti.AWS_CC32XX__3.30.00.03::com.ti.AWS_MSP432E4__3.30.00.03::com.ti.WATSON_MSP432E4__1.20.00.04::com.ti.WATSON_CC32XX__1.20.00.04::com.ti.SAIL__1.40.00.00::com.ti.AZURE_CC32XX__3.30.00.02::com.ti.AZURE_MSP432E4__3.30.00.02::com.ti.SIMPLELINK_SDK_NFC_PLUGIN__2.20.00.08::com.ti.mmwave_industrial_toolbox__4.1.0::com.ti.mmwave_automotive_toolbox__2.7.1::c2000ware_software_package__2.00.00.03::digital_power_c2000ware_sdk_software_package__2.00.01.00::motor_control_c2000ware_sdk_software_package__2.01.00.00::powerSUITE_software_package__2.05.01.00::msp430ware__3.80.07.00::energia.core__18.0.0::energia.tool.arm-none-eabi-gcc__6.3.1-20170620::energia.tool.ino2cpp__1.0.6::energia.boards.cc13xx__5.20.0::energia.boards.cc3220emt__5.6.2::energia.boards.msp432r__5.25.2::sitara__1.02.00.00::tm4c__2.1.4.178::tirtos_cc13xx_cc26xx__2.21.00.06::tirtos_tivac__2.16.00.08::xdctools__3.51.02.21::com.ti.SIMPLELINK_BLE_PLUGIN_AZURE_GATEWAY_EXAMPLE_PACK__3.20.00.22::com.ti.SIMPLELINK_SDK_LVGL_PLUGIN__3.20.00.19::com.ti.ti154stack_linux_x64__3.30.00.12&path=Software/SimpleLink%20SDK%20Plugins/Connectivity/SimpleLink%20SDK%20WiFi%20Plugin/Examples/Development%20Tools/MSP432P401R%20LaunchPad%20-%20Red%202.x%20(Red)/Demos/mqtt_client/FreeRTOS/CCS%20Compiler/mqtt_client",
+    "packageOrder": 101,
+    "offline": "true"
+  }
+]

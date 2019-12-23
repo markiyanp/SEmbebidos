@@ -1,0 +1,117 @@
+#include <stdint.h>
+#include <stdbool.h>
+#include <string.h>
+
+#include "inc/hw_gpio.h"
+#include "inc/hw_types.h"
+#include "inc/hw_memmap.h"
+#include "inc/hw_ints.h"
+#include "driverlib/fpu.h"
+#include "driverlib/debug.h"
+#include "driverlib/sysctl.h"
+#include "driverlib/pin_map.h"
+#include "driverlib/gpio.h"
+#include "driverlib/pwm.h"
+#include "driverlib/timer.h"
+#include "driverlib/adc.h"
+
+#include "utils/uartstdio.h"
+#include "utils/cmdline.h"
+//#include "driverlib/uart.h"
+//#include "driverlib/interrupt.h"
+//#include "DelayTimer.h"
+
+#include "esp/esp_uart.h"
+
+extern char ReceivedData[512];
+
+bool ATesp(void)
+{
+    memset(ReceivedData, 0, sizeof(ReceivedData));
+    SendATCommand("AT");
+    return recvFind("OK", 5000, true);
+}
+
+bool RSTesp(void)
+{
+    memset(ReceivedData, 0, sizeof(ReceivedData));
+    SendATCommand("AT+RST");
+    return recvFind("OK", 5000, true);
+}
+
+bool CWMODEesp(void)
+{
+    memset(ReceivedData, 0, sizeof(ReceivedData));
+    SendATCommand("AT+CWMODE=1");
+    return recvFind("OK", 50000, true);
+}
+
+bool CWJAPesp(void)
+{
+    memset(ReceivedData, 0, sizeof(ReceivedData));
+    SendATCommand("AT+CWJAP=\"Magellan\",\"1234567890\""); //Your Wifi: NetworkName, Password
+    return recvFind("OK", 10000, true);
+}
+
+bool CWQAPesp(void)
+{
+    memset(ReceivedData, 0, sizeof(ReceivedData));
+    SendATCommand("AT+CWQAP");
+    return recvFind("OK", 10000, true);
+}
+
+bool CIPMUXesp(void)
+{
+    memset(ReceivedData, 0, sizeof(ReceivedData));
+    SendATCommand("AT+CIPMUX=0");
+    return recvFind("OK", 5000, true);
+}
+
+bool ATGMResp(char *version)
+{
+    memset(ReceivedData, 0, sizeof(ReceivedData));
+    SendATCommand("AT+GMR");
+    return recvFindAndFilter("OK", "\r\r\n", "\r\n\r\nOK", version, 10000);
+}
+
+bool aCWMODEesp(char *list)
+{
+    memset(ReceivedData, 0, sizeof(ReceivedData));
+    SendATCommand("AT+CWMODE=?");
+    return recvFindAndFilter("OK", "+CWMODE:(", ")\r\n\r\nOK", list, 10000);
+}
+
+bool aCWLAPesp(char *list)
+{
+    memset(ReceivedData, 0, sizeof(ReceivedData));
+    SendATCommand("AT+CWLAP");
+    return recvFindAndFilter("OK", "\r\r\n", "\r\n\r\nOK", list, 15000);
+}
+
+bool aCIFSResp(char *list)
+{
+    memset(ReceivedData, 0, sizeof(ReceivedData));
+    SendATCommand("AT+CIFSR");
+    return recvFindAndFilter("OK", "\r\r\n", "\r\n\r\nOK", list, 15000);
+}
+
+bool CIPSTOesp(void)
+{
+    memset(ReceivedData, 0, sizeof(ReceivedData));
+    SendATCommand("AT+CIPSTO=10000");
+    return recvFind("OK", 2000, true);
+}
+
+bool CIPSTARTesp(void)
+{
+    memset(ReceivedData, 0, sizeof(ReceivedData));
+    SendATCommand("AT+CIPSTART=\"TCP\",\"paho.eclipse.org\",1883"); //Server IP and Port: such as 192.255.0.100, 9999
+    return recvFind("OK", 2000, true);
+}
+
+bool CIPCLOSEesp(void)
+{
+    memset(ReceivedData, 0, sizeof(ReceivedData));
+    SendATCommand("AT+CIPCLOSE");
+    return recvFind("OK", 5000, true);
+}

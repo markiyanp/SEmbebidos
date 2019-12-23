@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;MQTT/MyGuiDef.h&apos; to &apos;MyGuidDef.h&apos;" description="Rename resource &apos;MyGuiDef.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="MyGuiDef.h" name="MyGuidDef.h" stamp="1575904276592" updateReferences="true"/>
+</session>

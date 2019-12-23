@@ -1,0 +1,38 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+SHELL = cmd.exe
+
+# Add inputs and outputs from these tool invocations to the build variables 
+C_SRCS += \
+../CC3100_board.c \
+../CC3100_spi.c \
+../wifi_task.c 
+
+C_DEPS += \
+./CC3100_board.d \
+./CC3100_spi.d \
+./wifi_task.d 
+
+OBJS += \
+./CC3100_board.obj \
+./CC3100_spi.obj \
+./wifi_task.obj 
+
+OBJS__QUOTED += \
+"CC3100_board.obj" \
+"CC3100_spi.obj" \
+"wifi_task.obj" 
+
+C_DEPS__QUOTED += \
+"CC3100_board.d" \
+"CC3100_spi.d" \
+"wifi_task.d" 
+
+C_SRCS__QUOTED += \
+"../CC3100_board.c" \
+"../CC3100_spi.c" \
+"../wifi_task.c" 
+
+

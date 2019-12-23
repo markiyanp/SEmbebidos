@@ -1,0 +1,71 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+SHELL = cmd.exe
+
+# Add inputs and outputs from these tool invocations to the build variables 
+CMD_SRCS += \
+../freertos_demo_ccs.cmd 
+
+C_SRCS += \
+../DelayTimer.c \
+../esp_rcv_task.c \
+../freertos_demo.c \
+../led_task.c \
+../nrf_rcv_task.c \
+../nrf_snd_task.c \
+../startup_ccs.c \
+../switch_task.c 
+
+C_DEPS += \
+./DelayTimer.d \
+./esp_rcv_task.d \
+./freertos_demo.d \
+./led_task.d \
+./nrf_rcv_task.d \
+./nrf_snd_task.d \
+./startup_ccs.d \
+./switch_task.d 
+
+OBJS += \
+./DelayTimer.obj \
+./esp_rcv_task.obj \
+./freertos_demo.obj \
+./led_task.obj \
+./nrf_rcv_task.obj \
+./nrf_snd_task.obj \
+./startup_ccs.obj \
+./switch_task.obj 
+
+OBJS__QUOTED += \
+"DelayTimer.obj" \
+"esp_rcv_task.obj" \
+"freertos_demo.obj" \
+"led_task.obj" \
+"nrf_rcv_task.obj" \
+"nrf_snd_task.obj" \
+"startup_ccs.obj" \
+"switch_task.obj" 
+
+C_DEPS__QUOTED += \
+"DelayTimer.d" \
+"esp_rcv_task.d" \
+"freertos_demo.d" \
+"led_task.d" \
+"nrf_rcv_task.d" \
+"nrf_snd_task.d" \
+"startup_ccs.d" \
+"switch_task.d" 
+
+C_SRCS__QUOTED += \
+"../DelayTimer.c" \
+"../esp_rcv_task.c" \
+"../freertos_demo.c" \
+"../led_task.c" \
+"../nrf_rcv_task.c" \
+"../nrf_snd_task.c" \
+"../startup_ccs.c" \
+"../switch_task.c" 
+
+

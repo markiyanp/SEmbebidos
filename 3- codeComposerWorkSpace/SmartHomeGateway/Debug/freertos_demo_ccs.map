@@ -1,0 +1,1026 @@
+******************************************************************************
+                  TI ARM Linker PC v18.12.3                    
+******************************************************************************
+>> Linked Mon Dec 23 07:26:02 2019
+
+OUTPUT FILE NAME:   <SmartHomeGateway.out>
+ENTRY POINT SYMBOL: "_c_int00_noargs"  address: 00004cf9
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  FLASH                 00000000   00040000  00005818  0003a7e8  R  X
+  SRAM                  20000000   00008000  00005ad4  0000252c  RW X
+
+
+SEGMENT ALLOCATION MAP
+
+run origin  load origin   length   init length attrs members
+----------  ----------- ---------- ----------- ----- -------
+00000000    00000000    00005818   00005818    r-x
+  00000000    00000000    0000026c   0000026c    r-- .intvecs
+  0000026c    0000026c    000051b0   000051b0    r-x .text
+  0000541c    0000541c    00000374   00000374    r-- .const
+  00005790    00005790    00000088   00000088    r-- .cinit
+20000000    20000000    00005ad8   00000000    rw-
+  20000000    20000000    0000026c   00000000    rw- .vtable
+  2000026c    2000026c    000055c8   00000000    rw- .bss
+  20005838    20005838    00000200   00000000    rw- .stack
+  20005a38    20005a38    000000a0   00000000    rw- .data
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.intvecs   0    00000000    0000026c     
+                  00000000    0000026c     startup_ccs.obj (.intvecs)
+
+.text      0    0000026c    000051b0     
+                  0000026c    00000a4e     rtsv7M4_T_le_v4SPD16_eabi.lib : _printfi.c.obj (.text:__TI_printfi)
+                  00000cba    00000002     startup_ccs.obj (.text:FaultISR)
+                  00000cbc    00000270     rtsv7M4_T_le_v4SPD16_eabi.lib : _printfi.c.obj (.text:_pconv_a)
+                  00000f2c    000001ee     uartstdio.obj (.text:UARTvprintf)
+                  0000111a    00000002     startup_ccs.obj (.text:IntDefaultHandler)
+                  0000111c    000001ec     esp_rcv_task.obj (.text:UARTInt1Handler)
+                  00001308    000001d0     rtsv7M4_T_le_v4SPD16_eabi.lib : _printfi.c.obj (.text:_pconv_g)
+                  000014d8    000001b6                                   : fd_add_t2.asm.obj (.text)
+                  0000168e    00000002     startup_ccs.obj (.text:NmiSR)
+                  00001690    00000154     mqtt_client.obj (.text:MQTT_CONNECT)
+                  000017e4    00000150     nrf24l01.obj (.text:nrf24l01p_setup)
+                  00001934    0000013c     rtsv7M4_T_le_v4SPD16_eabi.lib : _printfi.c.obj (.text:_pconv_e)
+                  00001a70    00000138     manager_task.obj (.text:ManagerTask)
+                  00001ba8    00000136     rtsv7M4_T_le_v4SPD16_eabi.lib : fd_div_t2.asm.obj (.text)
+                  00001cde    00000132     driverlib.lib : gpio.obj (.text:GPIOPadConfigSet)
+                  00001e10    0000012c     uart_config.obj (.text:ConfigureUART)
+                  00001f3c    00000124     rtsv7M4_T_le_v4SPD16_eabi.lib : _printfi.c.obj (.text:fcvt)
+                  00002060    00000118     config_task.obj (.text:configESP)
+                  00002178    00000118     queue.obj (.text:xQueueGenericReceive)
+                  00002290    00000110     driverlib.lib : sysctl.obj (.text:SysCtlClockGet)
+                  000023a0    00000110     rtsv7M4_T_le_v4SPD16_eabi.lib : s_scalbn.c.obj (.text:scalbn)
+                  000024b0    00000104     tasks.obj (.text:xTaskIncrementTick)
+                  000025b4    00000100     tasks.obj (.text:xTaskGenericCreate)
+                  000026b4    000000fc     rtsv7M4_T_le_v4SPD16_eabi.lib : fd_mul_t2.asm.obj (.text)
+                  000027b0    000000e8     queue.obj (.text:xQueueGenericSend)
+                  00002898    000000e4     tasks.obj (.text:xTaskResumeAll)
+                  0000297c    000000e0     mqtt_rcv_task.obj (.text:MqttRcvTask)
+                  00002a5c    000000d2     portasm.obj (.text)
+                  00002b2e    00000002     rtsv7M4_T_le_v4SPD16_eabi.lib : div0.asm.obj (.text)
+                  00002b30    000000b4     tasks.obj (.text:vTaskDelete)
+                  00002be4    000000b1     rtsv7M4_T_le_v4SPD16_eabi.lib : _printfi.c.obj (.text:_ltostr)
+                  00002c95    00000001     --HOLE-- [fill = 0]
+                  00002c96    00000002     freertos_demo.obj (.text:vApplicationStackOverflowHook)
+                  00002c98    000000ac     heap_2.obj (.text:pvPortMalloc)
+                  00002d44    000000a4     mqtt_client.obj (.text:MQTT_PUB)
+                  00002de8    000000a0     nrf_rcv_task.obj (.text:NrfRcvTask)
+                  00002e88    0000009c     rtsv7M4_T_le_v4SPD16_eabi.lib : memcpy_t2.asm.obj (.text)
+                  00002f24    00000098     mqtt_client.obj (.text:MQTT_SUB)
+                  00002fbc    00000096     rtsv7M4_T_le_v4SPD16_eabi.lib : ull_div_t2.asm.obj (.text)
+                  00003052    00000002     --HOLE-- [fill = 0]
+                  00003054    00000094     freertos_demo.obj (.text:main)
+                  000030e8    00000090     config_task.obj (.text:ConfigTask)
+                  00003178    00000090     tasks.obj (.text:vTaskPriorityInherit)
+                  00003208    0000008c     esp_logic_task.obj (.text:EspLogicTask)
+                  00003294    0000008c     nrf_snd_task.obj (.text:NrfSndTask)
+                  00003320    0000008c     tasks.obj (.text:vTaskSwitchContext)
+                  000033ac    00000086     rtsv7M4_T_le_v4SPD16_eabi.lib : fd_cmp_t2.asm.obj (.text:__aeabi_cdcmple)
+                  00003432    00000086                                   : fd_cmp_t2.asm.obj (.text:__aeabi_cdrcmple)
+                  000034b8    00000084     tasks.obj (.text:vTaskDelayUntil)
+                  0000353c    00000084     queue.obj (.text:xQueueGenericReset)
+                  000035c0    0000007a     rtsv7M4_T_le_v4SPD16_eabi.lib : memset_t2.asm.obj (.text)
+                  0000363a    00000002     --HOLE-- [fill = 0]
+                  0000363c    00000078     nrf24l01.obj (.text:nrf24l01p_stop_listening)
+                  000036b4    00000078     nrf24l01.obj (.text:nrf24l01p_write_payload)
+                  0000372c    00000078     tasks.obj (.text:xTaskPriorityDisinherit)
+                  000037a4    00000074     esp_rcv_task.obj (.text:EspRcvTask)
+                  00003818    00000074     nrf24l01.obj (.text:nrf24l01p_read_payload)
+                  0000388c    00000074     tasks.obj (.text:xTaskRemoveFromEventList)
+                  00003900    00000072     queue.obj (.text:prvCopyDataToQueue)
+                  00003972    0000006e     rtsv7M4_T_le_v4SPD16_eabi.lib : _printfi.c.obj (.text:_mcpy)
+                  000039e0    0000006c     at.obj (.text:CIPSENDesp)
+                  00003a4c    0000006c     ping_task.obj (.text:EspPingTask)
+                  00003ab8    00000068     driverlib.lib : interrupt.obj (.text:IntEnable)
+                  00003b20    00000068     rtsv7M4_T_le_v4SPD16_eabi.lib : copy_decompress_lzss.c.obj (.text:decompress:lzss:__TI_decompress_lzss)
+                  00003b88    00000068     nrf24l01.obj (.text:nrf24l01p_open_reading_pipe)
+                  00003bf0    00000064     mqtt_rcv_task.obj (.text:MqttRcvTaskInit)
+                  00003c54    00000064     rtsv7M4_T_le_v4SPD16_eabi.lib : s_frexp.c.obj (.text:frexp)
+                  00003cb8    00000064     tasks.obj (.text:vTaskPlaceOnEventList)
+                  00003d1c    00000062     queue.obj (.text:prvUnlockQueue)
+                  00003d7e    00000002     --HOLE-- [fill = 0]
+                  00003d80    00000060     esp_logic_task.obj (.text:EspLogicTaskInit)
+                  00003de0    00000060     uartstdio.obj (.text:UARTStdioConfig)
+                  00003e40    00000060     tasks.obj (.text:prvInitialiseTaskLists)
+                  00003ea0    00000060     tasks.obj (.text:vTaskStartScheduler)
+                  00003f00    0000005e     esp_logic_task.obj (.text:indexOfMessageEnd)
+                  00003f5e    0000005c     nrf24l01.obj (.text:nrf24l01p_start_listening)
+                  00003fba    00000002     --HOLE-- [fill = 0]
+                  00003fbc    0000005c     tasks.obj (.text:vTaskDelay)
+                  00004018    00000058     esp_rcv_task.obj (.text:EspRcvTaskInit)
+                  00004070    00000058     esp_logic_task.obj (.text:checkIfContains)
+                  000040c8    00000058     tasks.obj (.text:prvCheckTasksWaitingTermination)
+                  00004120    00000056     rtsv7M4_T_le_v4SPD16_eabi.lib : _printfi.c.obj (.text:_pconv_f)
+                  00004176    00000056     tasks.obj (.text:prvInitialiseTCBVariables)
+                  000041cc    00000054     rtsv7M4_T_le_v4SPD16_eabi.lib : ltoa.c.obj (.text:ltoa)
+                  00004220    00000054     esp_uart.obj (.text:makeRequest)
+                  00004274    00000054     tasks.obj (.text:xTaskCheckForTimeOut)
+                  000042c8    00000052     rtsv7M4_T_le_v4SPD16_eabi.lib : _printfi.c.obj (.text:_ecpy)
+                  0000431a    00000050     nrf24l01.obj (.text:nrf24l01p_set_data_rate)
+                  0000436a    0000004e     queue.obj (.text:xQueueCreateMutex)
+                  000043b8    0000004c     config_task.obj (.text:ConfigTaskInit)
+                  00004404    0000004c     mqtt_snd_task.obj (.text:MqttSndTaskInit)
+                  00004450    0000004c     nrf_rcv_task.obj (.text:NrfRcvTaskInit)
+                  0000449c    0000004c     rtsv7M4_T_le_v4SPD16_eabi.lib : atoi.c.obj (.text:atoi)
+                  000044e8    0000004c     nrf24l01.obj (.text:configureRadio)
+                  00004534    0000004c     tasks.obj (.text:prvAddCurrentTaskToDelayedList)
+                  00004580    00000048     driverlib.lib : gpio.obj (.text:GPIOPinConfigure)
+                  000045c8    00000048     nrf_snd_task.obj (.text:NrfSndTaskInit)
+                  00004610    00000048     uartstdio.obj (.text:UARTwrite)
+                  00004658    00000048     rtsv7M4_T_le_v4SPD16_eabi.lib : fd_toi_t2.asm.obj (.text)
+                  000046a0    00000044                                   : autoinit.c.obj (.text:__TI_auto_init_nobinit_nopinit:__TI_auto_init_nobinit_nopinit)
+                  000046e4    00000044     nrf24l01.obj (.text:nrf24l01p_read_register)
+                  00004728    00000044     heap_2.obj (.text:vPortFree)
+                  0000476c    00000042     freertos_demo.obj (.text:ConfigureRADIO)
+                  000047ae    00000002     --HOLE-- [fill = 0]
+                  000047b0    00000040     mqtt_snd_task.obj (.text:MqttSndTask)
+                  000047f0    00000040     driverlib.lib : uart.obj (.text:_UARTIntNumberGet)
+                  00004830    00000040     rtsv7M4_T_le_v4SPD16_eabi.lib : u_divt2.asm.obj (.text)
+                  00004870    00000040     uart_config.obj (.text:safePrintf)
+                  000048b0    00000040     rtsv7M4_T_le_v4SPD16_eabi.lib : sprintf.c.obj (.text:sprintf)
+                  000048f0    00000040     port.obj (.text:xPortStartScheduler)
+                  00004930    0000003f     at.obj (.text:CIPSTARTesp)
+                  0000496f    00000001     --HOLE-- [fill = 0]
+                  00004970    0000003e     rtsv7M4_T_le_v4SPD16_eabi.lib : _printfi.c.obj (.text:_fcpy)
+                  000049ae    0000003c     driverlib.lib : ssi.obj (.text:SSIConfigSetExpClk)
+                  000049ea    0000003c     nrf24l01.obj (.text:nrf24l01p_write)
+                  00004a26    0000003c     queue.obj (.text:xQueueGenericCreate)
+                  00004a62    0000003a     nrf24l01.obj (.text:nrf24l01p_write_buffer)
+                  00004a9c    0000003a     tasks.obj (.text:prvAllocateTCBAndStack)
+                  00004ad6    00000002     --HOLE-- [fill = 0]
+                  00004ad8    00000038     manager_task.obj (.text:ManagerTaskInit)
+                  00004b10    00000038     at.obj (.text:SendATCommand)
+                  00004b48    00000038     nrf24l01.obj (.text:nrf24l01p_set_PA_level)
+                  00004b80    00000038     list.obj (.text:vListInsert)
+                  00004bb8    00000037     at.obj (.text:CWJAPesp)
+                  00004bef    00000001     --HOLE-- [fill = 0]
+                  00004bf0    00000036     nrf24l01.obj (.text:nrf24l01p_write_register)
+                  00004c26    00000036     rtsv7M4_T_le_v4SPD16_eabi.lib : strncpy.c.obj (.text:strncpy)
+                  00004c5c    00000034     ping_task.obj (.text:EspPingTaskInit)
+                  00004c90    00000034     driverlib.lib : interrupt.obj (.text:IntRegister)
+                  00004cc4    00000034                   : sysctl.obj (.text:SysCtlPeripheralEnable)
+                  00004cf8    00000034     rtsv7M4_T_le_v4SPD16_eabi.lib : boot_cortex_m.c.obj (.text:_c_int00_noargs:_c_int00_noargs)
+                  00004d2c    00000030     nrf24l01.obj (.text:nrf24l01p_close_reading_pipe)
+                  00004d5c    00000030     heap_2.obj (.text:prvHeapInit)
+                  00004d8c    0000002e     nrf24l01.obj (.text:nrf24l01p_power_up)
+                  00004dba    0000002e     rtsv7M4_T_le_v4SPD16_eabi.lib : i_tofd_t2.asm.obj (.text)
+                  00004de8    0000002c     port.obj (.text:xPortSysTickHandler)
+                  00004e14    0000002a     driverlib.lib : gpio.obj (.text:GPIODirModeSet)
+                  00004e3e    0000002a     nrf24l01.obj (.text:nrf24l01p_flush_rx)
+                  00004e68    0000002a     nrf24l01.obj (.text:nrf24l01p_flush_tx)
+                  00004e92    0000002a     nrf24l01.obj (.text:nrf24l01p_open_writing_pipe)
+                  00004ebc    00000028     esp_uart.obj (.text:SendCharSequence)
+                  00004ee4    00000028     nrf24l01.obj (.text:nrf24l01p_end_transaction)
+                  00004f0c    00000028     tasks.obj (.text:prvResetNextTaskUnblockTime)
+                  00004f34    00000028     port.obj (.text:pxPortInitialiseStack)
+                  00004f5c    00000026     nrf24l01.obj (.text:nrf24l01p_set_channel)
+                  00004f82    00000026     queue.obj (.text:prvCopyDataFromQueue)
+                  00004fa8    00000022     nrf24l01.obj (.text:nrf24l01p_toggle_features)
+                  00004fca    00000020     list.obj (.text:uxListRemove)
+                  00004fea    00000002     --HOLE-- [fill = 0]
+                  00004fec    0000001f     at.obj (.text:CIPMODEEesp)
+                  0000500b    00000001     --HOLE-- [fill = 0]
+                  0000500c    0000001e     nrf24l01.obj (.text:nrf24l01p_read)
+                  0000502a    0000001e     nrf24l01.obj (.text:nrf24l01p_start_fast_write)
+                  00005048    0000001c     esp_logic_task.obj (.text:clearReceiveQueue)
+                  00005064    0000001c     rtsv7M4_T_le_v4SPD16_eabi.lib : memccpy.c.obj (.text:memccpy)
+                  00005080    0000001c     nrf24l01.obj (.text:nrf24l01p_begin_transaction)
+                  0000509c    0000001c     queue.obj (.text:prvIsQueueFull)
+                  000050b8    0000001c     port.obj (.text:vPortEnterCritical)
+                  000050d4    0000001b     at.obj (.text:CIPMUXesp)
+                  000050ef    00000001     --HOLE-- [fill = 0]
+                  000050f0    0000001b     at.obj (.text:CWMODEesp)
+                  0000510b    00000001     --HOLE-- [fill = 0]
+                  0000510c    0000001a     uartstdio.obj (.text:UARTprintf)
+                  00005126    0000001a     rtsv7M4_T_le_v4SPD16_eabi.lib : s_copysign.c.obj (.text:copysign)
+                  00005140    0000001a     queue.obj (.text:prvIsQueueEmpty)
+                  0000515a    00000018     driverlib.lib : gpio.obj (.text:GPIOPinTypeGPIOOutput)
+                  00005172    00000018                   : uart.obj (.text:UARTIntRegister)
+                  0000518a    00000018     rtsv7M4_T_le_v4SPD16_eabi.lib : sprintf.c.obj (.text:_outs)
+                  000051a2    00000002     --HOLE-- [fill = 0]
+                  000051a4    00000018     mqtt_rcv_task.obj (.text:clearTheRest)
+                  000051bc    00000018     tasks.obj (.text:pvTaskIncrementMutexHeldCount)
+                  000051d4    00000018     list.obj (.text:vListInsertEnd)
+                  000051ec    00000018     port.obj (.text:vPortExitCritical)
+                  00005204    00000018     tasks.obj (.text:vTaskSetTimeOutState)
+                  0000521c    00000016     rtsv7M4_T_le_v4SPD16_eabi.lib : strchr.c.obj (.text:strchr)
+                  00005232    00000016     list.obj (.text:vListInitialise)
+                  00005248    00000014     driverlib.lib : uart.obj (.text:UARTEnable)
+                  0000525c    00000014     rtsv7M4_T_le_v4SPD16_eabi.lib : strcpy.c.obj (.text:strcpy)
+                  00005270    00000014                                   : strlen.c.obj (.text:strlen)
+                  00005284    00000014     port.obj (.text:vPortSetupTimerInterrupt)
+                  00005298    00000013     at.obj (.text:ATesp)
+                  000052ab    00000001     --HOLE-- [fill = 0]
+                  000052ac    00000013     at.obj (.text:RSTesp)
+                  000052bf    00000001     --HOLE-- [fill = 0]
+                  000052c0    00000012     driverlib.lib : gpio.obj (.text:GPIOPinTypeSSI)
+                  000052d2    00000012                   : ssi.obj (.text:SSIDataGetNonBlocking)
+                  000052e4    00000012     nrf24l01.obj (.text:nrf24l01p_available)
+                  000052f6    00000012     nrf24l01.obj (.text:nrf24l01p_ce)
+                  00005308    00000012     tasks.obj (.text:prvDeleteTCB)
+                  0000531a    00000012     rtsv7M4_T_le_v4SPD16_eabi.lib : wcslen.c.obj (.text:wcslen)
+                  0000532c    00000010     nrf24l01.obj (.text:nrf24l01p_set_retries)
+                  0000533c    00000010     port.obj (.text:prvTaskExitError)
+                  0000534c    00000010     tasks.obj (.text:vTaskSuspendAll)
+                  0000535c    0000000e     rtsv7M4_T_le_v4SPD16_eabi.lib : copy_decompress_none.c.obj (.text:decompress:none:__TI_decompress_none)
+                  0000536a    0000000c     driverlib.lib : ssi.obj (.text:SSIDataGet)
+                  00005376    0000000c     rtsv7M4_T_le_v4SPD16_eabi.lib : copy_zero_init.c.obj (.text:decompress:ZI:__TI_zero_init)
+                  00005382    00000002     --HOLE-- [fill = 0]
+                  00005384    0000000c     tasks.obj (.text:vTaskMissedYield)
+                  00005390    0000000c     tasks.obj (.text:xTaskGetTickCount)
+                  0000539c    0000000a     driverlib.lib : ssi.obj (.text:SSIDataPut)
+                  000053a6    0000000a                   : ssi.obj (.text:SSIEnable)
+                  000053b0    0000000a                   : uart.obj (.text:UARTCharGet)
+                  000053ba    0000000a                   : uart.obj (.text:UARTCharPut)
+                  000053c4    0000000a     rtsv7M4_T_le_v4SPD16_eabi.lib : sprintf.c.obj (.text:_outc)
+                  000053ce    00000008     driverlib.lib : ssi.obj (.text:SSIBusy)
+                  000053d6    00000008                   : uart.obj (.text:UARTBusy)
+                  000053de    00000002     --HOLE-- [fill = 0]
+                  000053e0    00000008     rtsv7M4_T_le_v4SPD16_eabi.lib : errno.c.obj (.text:__aeabi_errno_addr)
+                  000053e8    00000008     tasks.obj (.text:prvIdleTask)
+                  000053f0    00000006     driverlib.lib : gpio.obj (.text:GPIOPinWrite)
+                  000053f6    00000006     startup_ccs.obj (.text:ResetISR)
+                  000053fc    00000006     driverlib.lib : sysctl.obj (.text:SysCtlDelay)
+                  00005402    00000006                   : uart.obj (.text:UARTFIFOLevelSet)
+                  00005408    00000006     nrf24l01.obj (.text:nrf24l01p_get_status)
+                  0000540e    00000006     list.obj (.text:vListInitialiseItem)
+                  00005414    00000004     rtsv7M4_T_le_v4SPD16_eabi.lib : pre_init.c.obj (.text:_system_pre_init)
+                  00005418    00000004                                   : exit.c.obj (.text:abort:abort)
+
+.const     0    0000541c    00000374     
+                  0000541c    00000101     rtsv7M4_T_le_v4SPD16_eabi.lib : ctype.c.obj (.const:.string:_ctypes_)
+                  0000551d    00000003     --HOLE-- [fill = 0]
+                  00005520    00000090     driverlib.lib : gpio.obj (.const:g_pui32GPIOBaseAddrs)
+                  000055b0    00000070                   : interrupt.obj (.const)
+                  00005620    0000006c                   : sysctl.obj (.const:g_pui32Xtals)
+                  0000568c    00000046     mqtt_client.obj (.const:.string)
+                  000056d2    00000002     --HOLE-- [fill = 0]
+                  000056d4    00000040     driverlib.lib : uart.obj (.const:g_ppui32UARTIntMap)
+                  00005714    00000040                   : uart.obj (.const:g_ppui32UARTIntMapSnowflake)
+                  00005754    0000000c     mqtt_rcv_task.obj (.const:.string)
+                  00005760    0000000c     uartstdio.obj (.const:g_ui32UARTBase)
+                  0000576c    0000000c     uartstdio.obj (.const:g_ui32UARTPeriph)
+                  00005778    00000006     nrf24l01.obj (.const:.string:child_payload_size)
+                  0000577e    00000006     nrf24l01.obj (.const:.string:child_pipe)
+                  00005784    00000006     nrf24l01.obj (.const:.string:child_pipe_enable)
+                  0000578a    00000002     --HOLE-- [fill = 0]
+                  0000578c    00000004     port.obj (.const)
+
+.cinit     0    00005790    00000088     
+                  00005790    0000004e     (.cinit..data.load) [load image, compression = lzss]
+                  000057de    00000002     --HOLE-- [fill = 0]
+                  000057e0    0000000c     (__TI_handler_table)
+                  000057ec    00000004     --HOLE-- [fill = 0]
+                  000057f0    00000008     (.cinit..bss.load) [load image, compression = zero_init]
+                  000057f8    00000008     (.cinit..vtable.load) [load image, compression = zero_init]
+                  00005800    00000018     (__TI_cinit_table)
+
+.init_array 
+*          0    00000000    00000000     UNINITIALIZED
+
+.vtable    0    20000000    0000026c     UNINITIALIZED
+                  20000000    0000026c     driverlib.lib : interrupt.obj (.vtable)
+
+.bss       0    2000026c    000055c8     UNINITIALIZED
+                  2000026c    00004e20     heap_2.obj (.bss:ucHeap)
+                  2000508c    00000140     tasks.obj (.bss:pxReadyTasksLists)
+                  200051cc    00000104     (.common:Receivedtask)
+                  200052d0    00000104     (.common:task)
+                  200053d4    00000100     (.common:nrfsnd)
+                  200054d4    00000084     (.common:pack)
+                  20005558    00000080     (.common:brokermessage)
+                  200055d8    00000080     (.common:payload)
+                  20005658    00000080     (.common:receiveBuffer)
+                  200056d8    00000080     (.common:topic)
+                  20005758    0000001c     (.common:nrf)
+                  20005774    00000014     tasks.obj (.bss:xDelayedTaskList1)
+                  20005788    00000014     tasks.obj (.bss:xDelayedTaskList2)
+                  2000579c    00000014     tasks.obj (.bss:xPendingReadyList)
+                  200057b0    00000014     tasks.obj (.bss:xSuspendedTaskList)
+                  200057c4    00000014     tasks.obj (.bss:xTasksWaitingTermination)
+                  200057d8    00000008     tasks.obj (.bss)
+                  200057e0    00000008     heap_2.obj (.bss:xEnd)
+                  200057e8    00000008     heap_2.obj (.bss:xStart)
+                  200057f0    00000008     (.common:pubPack)
+                  200057f8    00000004     (.common:aux)
+                  200057fc    00000004     (.common:g_pATResponseSemaphore)
+                  20005800    00000004     (.common:g_pCanTransmitMqttSemaphore)
+                  20005804    00000004     (.common:g_pEspMqttRcvQueue)
+                  20005808    00000004     (.common:g_pEspMqttSndQueue)
+                  2000580c    00000004     (.common:g_pEspRcvQueue)
+                  20005810    00000004     (.common:g_pLogicTasksQueue)
+                  20005814    00000004     (.common:g_pManagerRadioToSendQueue)
+                  20005818    00000004     (.common:g_pRadioRcvQueue)
+                  2000581c    00000004     (.common:g_pRadioSndQueue)
+                  20005820    00000004     (.common:g_pReceiveBufferQueue)
+                  20005824    00000004     (.common:g_pUART1TXSemaphore)
+                  20005828    00000004     (.common:g_pUARTSemaphore)
+                  2000582c    00000003     (.common:data)
+                  2000582f    00000001     (.common:at)
+                  20005830    00000001     (.common:cipmode)
+                  20005831    00000001     (.common:cipstart)
+                  20005832    00000001     (.common:cwjap)
+                  20005833    00000001     (.common:cwmode)
+
+.data      0    20005a38    000000a0     UNINITIALIZED
+                  20005a38    00000030     tasks.obj (.data)
+                  20005a68    00000018     nrf24l01.obj (.data:addresses)
+                  20005a80    00000018     mqtt_client.obj (.data)
+                  20005a98    00000014     esp_rcv_task.obj (.data)
+                  20005aac    00000008     heap_2.obj (.data)
+                  20005ab4    00000005     config_task.obj (.data)
+                  20005ab9    00000005     esp_rcv_task.obj (.data:searchSequence)
+                  20005abe    00000002     freertos_demo.obj (.data)
+                  20005ac0    00000005     uartstdio.obj (.data)
+                  20005ac5    00000003     --HOLE--
+                  20005ac8    00000004     mqtt_rcv_task.obj (.data)
+                  20005acc    00000004     nrf_snd_task.obj (.data)
+                  20005ad0    00000004     port.obj (.data)
+                  20005ad4    00000004     rtsv7M4_T_le_v4SPD16_eabi.lib : errno.c.obj (.data)
+
+.stack     0    20005838    00000200     UNINITIALIZED
+                  20005838    00000004     rtsv7M4_T_le_v4SPD16_eabi.lib : boot_cortex_m.c.obj (.stack)
+                  2000583c    000001fc     --HOLE--
+
+MODULE SUMMARY
+
+       Module                       code    ro data   rw data
+       ------                       ----    -------   -------
+    .\
+       startup_ccs.obj              12      620       0      
+       freertos_demo.obj            216     0         10     
+    +--+----------------------------+-------+---------+---------+
+       Total:                       228     620       10     
+                                                             
+    .\at\
+       at.obj                       405     0         0      
+    +--+----------------------------+-------+---------+---------+
+       Total:                       405     0         0      
+                                                             
+    .\esp\
+       esp_uart.obj                 124     0         260    
+    +--+----------------------------+-------+---------+---------+
+       Total:                       124     0         260    
+                                                             
+    .\mqtt\
+       mqtt_client.obj              656     70        24     
+    +--+----------------------------+-------+---------+---------+
+       Total:                       656     70        24     
+                                                             
+    .\nrf\
+       nrf24l01.obj                 1818    18        52     
+    +--+----------------------------+-------+---------+---------+
+       Total:                       1818    18        52     
+                                                             
+    .\tasks\esp\
+       esp_rcv_task.obj             696     0         169    
+       esp_logic_task.obj           446     0         396    
+    +--+----------------------------+-------+---------+---------+
+       Total:                       1142    0         565    
+                                                             
+    .\tasks\mqtt\
+       mqtt_rcv_task.obj            348     12        652    
+       ping_task.obj                160     0         0      
+       mqtt_snd_task.obj            140     0         12     
+    +--+----------------------------+-------+---------+---------+
+       Total:                       648     12        664    
+                                                             
+    .\tasks\nrf\
+       nrf_rcv_task.obj             236     0         7      
+       nrf_snd_task.obj             212     0         8      
+    +--+----------------------------+-------+---------+---------+
+       Total:                       448     0         15     
+                                                             
+    .\tasks\tiva\
+       config_task.obj              500     0         14     
+       manager_task.obj             368     0         0      
+    +--+----------------------------+-------+---------+---------+
+       Total:                       868     0         14     
+                                                             
+    .\third_party\FreeRTOS\Source\
+       tasks.obj                    2506    0         476    
+       queue.obj                    1086    0         0      
+       list.obj                     140     0         0      
+    +--+----------------------------+-------+---------+---------+
+       Total:                       3732    0         476    
+                                                             
+    .\third_party\FreeRTOS\Source\portable\CCS\ARM_CM4F\
+       port.obj                     236     4         4      
+       portasm.obj                  210     0         0      
+    +--+----------------------------+-------+---------+---------+
+       Total:                       446     4         4      
+                                                             
+    .\third_party\FreeRTOS\Source\portable\MemMang\
+       heap_2.obj                   288     0         20024  
+    +--+----------------------------+-------+---------+---------+
+       Total:                       288     0         20024  
+                                                             
+    .\utils\
+       uartstdio.obj                688     24        5      
+       uart_config.obj              364     0         0      
+    +--+----------------------------+-------+---------+---------+
+       Total:                       1052    24        5      
+                                                             
+    C:/TI/tivaware_c_series_2_1_4_178/driverlib/ccs/Debug/driverlib.lib
+       interrupt.obj                156     112       620    
+       gpio.obj                     468     144       0      
+       sysctl.obj                   330     108       0      
+       uart.obj                     142     128       0      
+       ssi.obj                      118     0         0      
+    +--+----------------------------+-------+---------+---------+
+       Total:                       1214    492       620    
+                                                             
+    C:\TI\ccs920\ccs\tools\compiler\ti-cgt-arm_18.12.3.LTS\lib\rtsv7M4_T_le_v4SPD16_eabi.lib
+       _printfi.c.obj               4851    0         0      
+       fd_add_t2.asm.obj            438     0         0      
+       fd_div_t2.asm.obj            310     0         0      
+       s_scalbn.c.obj               272     0         0      
+       fd_cmp_t2.asm.obj            268     0         0      
+       ctype.c.obj                  0       257       0      
+       fd_mul_t2.asm.obj            252     0         0      
+       memcpy_t2.asm.obj            156     0         0      
+       ull_div_t2.asm.obj           150     0         0      
+       memset_t2.asm.obj            122     0         0      
+       copy_decompress_lzss.c.obj   104     0         0      
+       s_frexp.c.obj                100     0         0      
+       sprintf.c.obj                98      0         0      
+       ltoa.c.obj                   84      0         0      
+       atoi.c.obj                   76      0         0      
+       fd_toi_t2.asm.obj            72      0         0      
+       autoinit.c.obj               68      0         0      
+       u_divt2.asm.obj              64      0         0      
+       strncpy.c.obj                54      0         0      
+       boot_cortex_m.c.obj          52      0         0      
+       i_tofd_t2.asm.obj            46      0         0      
+       memccpy.c.obj                28      0         0      
+       s_copysign.c.obj             26      0         0      
+       strchr.c.obj                 22      0         0      
+       strcpy.c.obj                 20      0         0      
+       strlen.c.obj                 20      0         0      
+       wcslen.c.obj                 18      0         0      
+       copy_decompress_none.c.obj   14      0         0      
+       copy_zero_init.c.obj         12      0         0      
+       errno.c.obj                  8       0         4      
+       exit.c.obj                   4       0         0      
+       pre_init.c.obj               4       0         0      
+       div0.asm.obj                 2       0         0      
+    +--+----------------------------+-------+---------+---------+
+       Total:                       7815    257       4      
+                                                             
+       Stack:                       0       0         512    
+       Linker Generated:            0       130       0      
+    +--+----------------------------+-------+---------+---------+
+       Grand Total:                 20884   1627      23249  
+
+
+LINKER GENERATED COPY TABLES
+
+__TI_cinit_table @ 00005800 records: 3, size/record: 8, table size: 24
+	.data: load addr=00005790, load size=0000004e bytes, run addr=20005a38, run size=000000a0 bytes, compression=lzss
+	.bss: load addr=000057f0, load size=00000008 bytes, run addr=2000026c, run size=000055c8 bytes, compression=zero_init
+	.vtable: load addr=000057f8, load size=00000008 bytes, run addr=20000000, run size=0000026c bytes, compression=zero_init
+
+
+LINKER GENERATED HANDLER TABLE
+
+__TI_handler_table @ 000057e0 records: 3, size/record: 4, table size: 12
+	index: 0, handler: __TI_zero_init
+	index: 1, handler: __TI_decompress_lzss
+	index: 2, handler: __TI_decompress_none
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address   name                          
+-------   ----                          
+00005299  ATesp                         
+20005a90  BROKER_IP                     
+20005a94  BROKER_PORT                   
+00005419  C$$EXIT                       
+00004fed  CIPMODEEesp                   
+000050d5  CIPMUXesp                     
+000039e1  CIPSENDesp                    
+00004931  CIPSTARTesp                   
+00004bb9  CWJAPesp                      
+000050f1  CWMODEesp                     
+000043b9  ConfigTaskInit                
+0000476d  ConfigureRADIO                
+00001e11  ConfigureUART                 
+00003d81  EspLogicTaskInit              
+00004c5d  EspPingTaskInit               
+00004019  EspRcvTaskInit                
+00004e15  GPIODirModeSet                
+00001cdf  GPIOPadConfigSet              
+00004581  GPIOPinConfigure              
+0000515b  GPIOPinTypeGPIOOutput         
+000052c1  GPIOPinTypeSSI                
+000053f1  GPIOPinWrite                  
+00003ab9  IntEnable                     
+00004c91  IntRegister                   
+20005a8c  MQTT_CID                      
+00001691  MQTT_CONNECT                  
+00002d45  MQTT_PUB                      
+00002f25  MQTT_SUB                      
+20005a84  MQTT_pass                     
+20005a88  MQTT_type                     
+20005a80  MQTT_user                     
+00004ad9  ManagerTaskInit               
+00003bf1  MqttRcvTaskInit               
+00004405  MqttSndTaskInit               
+00004451  NrfRcvTaskInit                
+000045c9  NrfSndTaskInit                
+000052ad  RSTesp                        
+200051cc  Receivedtask                  
+000053f7  ResetISR                      
+000053cf  SSIBusy                       
+000049af  SSIConfigSetExpClk            
+0000536b  SSIDataGet                    
+000052d3  SSIDataGetNonBlocking         
+0000539d  SSIDataPut                    
+000053a7  SSIEnable                     
+00004b11  SendATCommand                 
+00004ebd  SendCharSequence              
+00002291  SysCtlClockGet                
+000053fd  SysCtlDelay                   
+00004cc5  SysCtlPeripheralEnable        
+000053d7  UARTBusy                      
+000053b1  UARTCharGet                   
+000053bb  UARTCharPut                   
+00005249  UARTEnable                    
+00005403  UARTFIFOLevelSet              
+0000111d  UARTInt1Handler               
+00005173  UARTIntRegister               
+00003de1  UARTStdioConfig               
+0000510d  UARTprintf                    
+00000f2d  UARTvprintf                   
+00004611  UARTwrite                     
+20005a38  __STACK_END                   
+00000200  __STACK_SIZE                  
+20005a38  __STACK_TOP                   
+00005800  __TI_CINIT_Base               
+00005818  __TI_CINIT_Limit              
+000057e0  __TI_Handler_Table_Base       
+000057ec  __TI_Handler_Table_Limit      
+000046a1  __TI_auto_init_nobinit_nopinit
+00003b21  __TI_decompress_lzss          
+0000535d  __TI_decompress_none          
+ffffffff  __TI_pprof_out_hndl           
+0000026d  __TI_printfi                  
+ffffffff  __TI_prof_data_size           
+ffffffff  __TI_prof_data_start          
+00000000  __TI_static_base__            
+00005377  __TI_zero_init                
+000033ad  __aeabi_cdcmpeq               
+000033ad  __aeabi_cdcmple               
+00003433  __aeabi_cdrcmple              
+00004659  __aeabi_d2iz                  
+000014e3  __aeabi_dadd                  
+00001ba9  __aeabi_ddiv                  
+000026b5  __aeabi_dmul                  
+000014d9  __aeabi_dsub                  
+000053e1  __aeabi_errno_addr            
+00004dbb  __aeabi_i2d                   
+00002b2f  __aeabi_idiv0                 
+00002b2f  __aeabi_ldiv0                 
+000035c1  __aeabi_memclr                
+000035c1  __aeabi_memclr4               
+000035c1  __aeabi_memclr8               
+00002e89  __aeabi_memcpy                
+00002e89  __aeabi_memcpy4               
+00002e89  __aeabi_memcpy8               
+000035c3  __aeabi_memset                
+000035c3  __aeabi_memset4               
+000035c3  __aeabi_memset8               
+00004831  __aeabi_uidiv                 
+00004831  __aeabi_uidivmod              
+00002fbd  __aeabi_uldivmod              
+ffffffff  __binit__                     
+ffffffff  __c_args__                    
+UNDEFED   __mpu_init                    
+20005838  __stack                       
+00004cf9  _c_int00_noargs               
+0000541c  _ctypes_                      
+UNDEFED   _system_post_cinit            
+00005415  _system_pre_init              
+00005419  abort                         
+20005a68  addresses                     
+2000582f  at                            
+0000449d  atoi                          
+200057f8  aux                           
+20005aa8  aux1                          
+ffffffff  binit                         
+20005abe  brokerConnection              
+20005558  brokermessage                 
+20005a98  bufferPointer                 
+20005aa4  captureLen                    
+20005aa0  charsToRead                   
+00004071  checkIfContains               
+20005830  cipmode                       
+20005ab8  cipmux                        
+20005831  cipstart                      
+00005049  clearReceiveQueue             
+000051a5  clearTheRest                  
+00002061  configESP                     
+20005abf  configurationRunning          
+000044e9  configureRadio                
+00005127  copysign                      
+00005127  copysignl                     
+20005832  cwjap                         
+20005833  cwmode                        
+2000582c  data                          
+20005ad4  errno                         
+00003c55  frexp                         
+00003c55  frexpl                        
+200057fc  g_pATResponseSemaphore        
+20005800  g_pCanTransmitMqttSemaphore   
+20005804  g_pEspMqttRcvQueue            
+20005808  g_pEspMqttSndQueue            
+2000580c  g_pEspRcvQueue                
+20005810  g_pLogicTasksQueue            
+20005814  g_pManagerRadioToSendQueue    
+20005818  g_pRadioRcvQueue              
+2000581c  g_pRadioSndQueue              
+20005820  g_pReceiveBufferQueue         
+20005824  g_pUART1TXSemaphore           
+20005828  g_pUARTSemaphore              
+20000000  g_pfnRAMVectors               
+00000000  g_pfnVectors                  
+20005acc  got_time                      
+00003f01  indexOfMessageEnd             
+000023a1  ldexp                         
+000023a1  ldexpl                        
+000041cd  ltoa                          
+00003055  main                          
+00004221  makeRequest                   
+00005065  memccpy                       
+00002e89  memcpy                        
+000035c9  memset                        
+20005758  nrf                           
+000052e5  nrf24l01p_available           
+00005081  nrf24l01p_begin_transaction   
+000052f7  nrf24l01p_ce                  
+00004d2d  nrf24l01p_close_reading_pipe  
+00004ee5  nrf24l01p_end_transaction     
+00004e3f  nrf24l01p_flush_rx            
+00004e69  nrf24l01p_flush_tx            
+00005409  nrf24l01p_get_status          
+00003b89  nrf24l01p_open_reading_pipe   
+00004e93  nrf24l01p_open_writing_pipe   
+00004d8d  nrf24l01p_power_up            
+0000500d  nrf24l01p_read                
+00003819  nrf24l01p_read_payload        
+000046e5  nrf24l01p_read_register       
+00004b49  nrf24l01p_set_PA_level        
+00004f5d  nrf24l01p_set_channel         
+0000431b  nrf24l01p_set_data_rate       
+0000532d  nrf24l01p_set_retries         
+000017e5  nrf24l01p_setup               
+0000502b  nrf24l01p_start_fast_write    
+00003f5f  nrf24l01p_start_listening     
+0000363d  nrf24l01p_stop_listening      
+00004fa9  nrf24l01p_toggle_features     
+000049eb  nrf24l01p_write               
+00004a63  nrf24l01p_write_buffer        
+000036b5  nrf24l01p_write_payload       
+00004bf1  nrf24l01p_write_register      
+200053d4  nrfsnd                        
+200054d4  pack                          
+200055d8  payload                       
+200057f0  pubPack                       
+00002c99  pvPortMalloc                  
+000051bd  pvTaskIncrementMutexHeldCount 
+20005a38  pxCurrentTCB                  
+00004f35  pxPortInitialiseStack         
+20005aa5  readMessage                   
+20005658  receiveBuffer                 
+00004871  safePrintf                    
+000023a1  scalbn                        
+000023a1  scalbnl                       
+20005aa6  searchForMessage              
+20005a9c  searchPointer                 
+20005ab9  searchSequence                
+000048b1  sprintf                       
+0000521d  strchr                        
+0000525d  strcpy                        
+00005271  strlen                        
+00004c27  strncpy                       
+20005ac8  subscribedTopic               
+200052d0  task                          
+200056d8  topic                         
+0000578c  ulMaxSyscallInterruptPriority 
+00002a6d  ulPortGetIPSR                 
+00004fcb  uxListRemove                  
+00002c97  vApplicationStackOverflowHook 
+00005233  vListInitialise               
+0000540f  vListInitialiseItem           
+00004b81  vListInsert                   
+000051d5  vListInsertEnd                
+00002b21  vPortEnableVFP                
+000050b9  vPortEnterCritical            
+000051ed  vPortExitCritical             
+00004729  vPortFree                     
+00002ae5  vPortSVCHandler               
+00005285  vPortSetupTimerInterrupt      
+00002b05  vPortStartFirstTask           
+00003fbd  vTaskDelay                    
+000034b9  vTaskDelayUntil               
+00002b31  vTaskDelete                   
+00005385  vTaskMissedYield              
+00003cb9  vTaskPlaceOnEventList         
+00003179  vTaskPriorityInherit          
+00005205  vTaskSetTimeOutState          
+00003ea1  vTaskStartScheduler           
+0000534d  vTaskSuspendAll               
+00003321  vTaskSwitchContext            
+0000531b  wcslen                        
+20005ab4  xHandle                       
+00002a85  xPortPendSVHandler            
+000048f1  xPortStartScheduler           
+00004de9  xPortSysTickHandler           
+0000436b  xQueueCreateMutex             
+00004a27  xQueueGenericCreate           
+00002179  xQueueGenericReceive          
+0000353d  xQueueGenericReset            
+000027b1  xQueueGenericSend             
+00004275  xTaskCheckForTimeOut          
+000025b5  xTaskGenericCreate            
+00005391  xTaskGetTickCount             
+000024b1  xTaskIncrementTick            
+0000372d  xTaskPriorityDisinherit       
+0000388d  xTaskRemoveFromEventList      
+00002899  xTaskResumeAll                
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address   name                          
+-------   ----                          
+00000000  __TI_static_base__            
+00000000  g_pfnVectors                  
+00000200  __STACK_SIZE                  
+0000026d  __TI_printfi                  
+00000f2d  UARTvprintf                   
+0000111d  UARTInt1Handler               
+000014d9  __aeabi_dsub                  
+000014e3  __aeabi_dadd                  
+00001691  MQTT_CONNECT                  
+000017e5  nrf24l01p_setup               
+00001ba9  __aeabi_ddiv                  
+00001cdf  GPIOPadConfigSet              
+00001e11  ConfigureUART                 
+00002061  configESP                     
+00002179  xQueueGenericReceive          
+00002291  SysCtlClockGet                
+000023a1  ldexp                         
+000023a1  ldexpl                        
+000023a1  scalbn                        
+000023a1  scalbnl                       
+000024b1  xTaskIncrementTick            
+000025b5  xTaskGenericCreate            
+000026b5  __aeabi_dmul                  
+000027b1  xQueueGenericSend             
+00002899  xTaskResumeAll                
+00002a6d  ulPortGetIPSR                 
+00002a85  xPortPendSVHandler            
+00002ae5  vPortSVCHandler               
+00002b05  vPortStartFirstTask           
+00002b21  vPortEnableVFP                
+00002b2f  __aeabi_idiv0                 
+00002b2f  __aeabi_ldiv0                 
+00002b31  vTaskDelete                   
+00002c97  vApplicationStackOverflowHook 
+00002c99  pvPortMalloc                  
+00002d45  MQTT_PUB                      
+00002e89  __aeabi_memcpy                
+00002e89  __aeabi_memcpy4               
+00002e89  __aeabi_memcpy8               
+00002e89  memcpy                        
+00002f25  MQTT_SUB                      
+00002fbd  __aeabi_uldivmod              
+00003055  main                          
+00003179  vTaskPriorityInherit          
+00003321  vTaskSwitchContext            
+000033ad  __aeabi_cdcmpeq               
+000033ad  __aeabi_cdcmple               
+00003433  __aeabi_cdrcmple              
+000034b9  vTaskDelayUntil               
+0000353d  xQueueGenericReset            
+000035c1  __aeabi_memclr                
+000035c1  __aeabi_memclr4               
+000035c1  __aeabi_memclr8               
+000035c3  __aeabi_memset                
+000035c3  __aeabi_memset4               
+000035c3  __aeabi_memset8               
+000035c9  memset                        
+0000363d  nrf24l01p_stop_listening      
+000036b5  nrf24l01p_write_payload       
+0000372d  xTaskPriorityDisinherit       
+00003819  nrf24l01p_read_payload        
+0000388d  xTaskRemoveFromEventList      
+000039e1  CIPSENDesp                    
+00003ab9  IntEnable                     
+00003b21  __TI_decompress_lzss          
+00003b89  nrf24l01p_open_reading_pipe   
+00003bf1  MqttRcvTaskInit               
+00003c55  frexp                         
+00003c55  frexpl                        
+00003cb9  vTaskPlaceOnEventList         
+00003d81  EspLogicTaskInit              
+00003de1  UARTStdioConfig               
+00003ea1  vTaskStartScheduler           
+00003f01  indexOfMessageEnd             
+00003f5f  nrf24l01p_start_listening     
+00003fbd  vTaskDelay                    
+00004019  EspRcvTaskInit                
+00004071  checkIfContains               
+000041cd  ltoa                          
+00004221  makeRequest                   
+00004275  xTaskCheckForTimeOut          
+0000431b  nrf24l01p_set_data_rate       
+0000436b  xQueueCreateMutex             
+000043b9  ConfigTaskInit                
+00004405  MqttSndTaskInit               
+00004451  NrfRcvTaskInit                
+0000449d  atoi                          
+000044e9  configureRadio                
+00004581  GPIOPinConfigure              
+000045c9  NrfSndTaskInit                
+00004611  UARTwrite                     
+00004659  __aeabi_d2iz                  
+000046a1  __TI_auto_init_nobinit_nopinit
+000046e5  nrf24l01p_read_register       
+00004729  vPortFree                     
+0000476d  ConfigureRADIO                
+00004831  __aeabi_uidiv                 
+00004831  __aeabi_uidivmod              
+00004871  safePrintf                    
+000048b1  sprintf                       
+000048f1  xPortStartScheduler           
+00004931  CIPSTARTesp                   
+000049af  SSIConfigSetExpClk            
+000049eb  nrf24l01p_write               
+00004a27  xQueueGenericCreate           
+00004a63  nrf24l01p_write_buffer        
+00004ad9  ManagerTaskInit               
+00004b11  SendATCommand                 
+00004b49  nrf24l01p_set_PA_level        
+00004b81  vListInsert                   
+00004bb9  CWJAPesp                      
+00004bf1  nrf24l01p_write_register      
+00004c27  strncpy                       
+00004c5d  EspPingTaskInit               
+00004c91  IntRegister                   
+00004cc5  SysCtlPeripheralEnable        
+00004cf9  _c_int00_noargs               
+00004d2d  nrf24l01p_close_reading_pipe  
+00004d8d  nrf24l01p_power_up            
+00004dbb  __aeabi_i2d                   
+00004de9  xPortSysTickHandler           
+00004e15  GPIODirModeSet                
+00004e3f  nrf24l01p_flush_rx            
+00004e69  nrf24l01p_flush_tx            
+00004e93  nrf24l01p_open_writing_pipe   
+00004ebd  SendCharSequence              
+00004ee5  nrf24l01p_end_transaction     
+00004f35  pxPortInitialiseStack         
+00004f5d  nrf24l01p_set_channel         
+00004fa9  nrf24l01p_toggle_features     
+00004fcb  uxListRemove                  
+00004fed  CIPMODEEesp                   
+0000500d  nrf24l01p_read                
+0000502b  nrf24l01p_start_fast_write    
+00005049  clearReceiveQueue             
+00005065  memccpy                       
+00005081  nrf24l01p_begin_transaction   
+000050b9  vPortEnterCritical            
+000050d5  CIPMUXesp                     
+000050f1  CWMODEesp                     
+0000510d  UARTprintf                    
+00005127  copysign                      
+00005127  copysignl                     
+0000515b  GPIOPinTypeGPIOOutput         
+00005173  UARTIntRegister               
+000051a5  clearTheRest                  
+000051bd  pvTaskIncrementMutexHeldCount 
+000051d5  vListInsertEnd                
+000051ed  vPortExitCritical             
+00005205  vTaskSetTimeOutState          
+0000521d  strchr                        
+00005233  vListInitialise               
+00005249  UARTEnable                    
+0000525d  strcpy                        
+00005271  strlen                        
+00005285  vPortSetupTimerInterrupt      
+00005299  ATesp                         
+000052ad  RSTesp                        
+000052c1  GPIOPinTypeSSI                
+000052d3  SSIDataGetNonBlocking         
+000052e5  nrf24l01p_available           
+000052f7  nrf24l01p_ce                  
+0000531b  wcslen                        
+0000532d  nrf24l01p_set_retries         
+0000534d  vTaskSuspendAll               
+0000535d  __TI_decompress_none          
+0000536b  SSIDataGet                    
+00005377  __TI_zero_init                
+00005385  vTaskMissedYield              
+00005391  xTaskGetTickCount             
+0000539d  SSIDataPut                    
+000053a7  SSIEnable                     
+000053b1  UARTCharGet                   
+000053bb  UARTCharPut                   
+000053cf  SSIBusy                       
+000053d7  UARTBusy                      
+000053e1  __aeabi_errno_addr            
+000053f1  GPIOPinWrite                  
+000053f7  ResetISR                      
+000053fd  SysCtlDelay                   
+00005403  UARTFIFOLevelSet              
+00005409  nrf24l01p_get_status          
+0000540f  vListInitialiseItem           
+00005415  _system_pre_init              
+00005419  C$$EXIT                       
+00005419  abort                         
+0000541c  _ctypes_                      
+0000578c  ulMaxSyscallInterruptPriority 
+000057e0  __TI_Handler_Table_Base       
+000057ec  __TI_Handler_Table_Limit      
+00005800  __TI_CINIT_Base               
+00005818  __TI_CINIT_Limit              
+20000000  g_pfnRAMVectors               
+200051cc  Receivedtask                  
+200052d0  task                          
+200053d4  nrfsnd                        
+200054d4  pack                          
+20005558  brokermessage                 
+200055d8  payload                       
+20005658  receiveBuffer                 
+200056d8  topic                         
+20005758  nrf                           
+200057f0  pubPack                       
+200057f8  aux                           
+200057fc  g_pATResponseSemaphore        
+20005800  g_pCanTransmitMqttSemaphore   
+20005804  g_pEspMqttRcvQueue            
+20005808  g_pEspMqttSndQueue            
+2000580c  g_pEspRcvQueue                
+20005810  g_pLogicTasksQueue            
+20005814  g_pManagerRadioToSendQueue    
+20005818  g_pRadioRcvQueue              
+2000581c  g_pRadioSndQueue              
+20005820  g_pReceiveBufferQueue         
+20005824  g_pUART1TXSemaphore           
+20005828  g_pUARTSemaphore              
+2000582c  data                          
+2000582f  at                            
+20005830  cipmode                       
+20005831  cipstart                      
+20005832  cwjap                         
+20005833  cwmode                        
+20005838  __stack                       
+20005a38  __STACK_END                   
+20005a38  __STACK_TOP                   
+20005a38  pxCurrentTCB                  
+20005a68  addresses                     
+20005a80  MQTT_user                     
+20005a84  MQTT_pass                     
+20005a88  MQTT_type                     
+20005a8c  MQTT_CID                      
+20005a90  BROKER_IP                     
+20005a94  BROKER_PORT                   
+20005a98  bufferPointer                 
+20005a9c  searchPointer                 
+20005aa0  charsToRead                   
+20005aa4  captureLen                    
+20005aa5  readMessage                   
+20005aa6  searchForMessage              
+20005aa8  aux1                          
+20005ab4  xHandle                       
+20005ab8  cipmux                        
+20005ab9  searchSequence                
+20005abe  brokerConnection              
+20005abf  configurationRunning          
+20005ac8  subscribedTopic               
+20005acc  got_time                      
+20005ad4  errno                         
+ffffffff  __TI_pprof_out_hndl           
+ffffffff  __TI_prof_data_size           
+ffffffff  __TI_prof_data_start          
+ffffffff  __binit__                     
+ffffffff  __c_args__                    
+ffffffff  binit                         
+UNDEFED   __mpu_init                    
+UNDEFED   _system_post_cinit            
+
+[256 symbols]

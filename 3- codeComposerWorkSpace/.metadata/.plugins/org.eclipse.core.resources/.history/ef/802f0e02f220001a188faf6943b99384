@@ -1,0 +1,15 @@
+/*
+ * mqtt_rcv_task.h
+ *
+ *  Created on: 17 дек. 2019 г.
+ *      Author: Admin
+ */
+
+#ifndef TASKS_MQTT_MQTT_RCV_TASK_H_
+#define TASKS_MQTT_MQTT_RCV_TASK_H_
+
+
+
+
+
+#endif /* TASKS_MQTT_MQTT_RCV_TASK_H_ */

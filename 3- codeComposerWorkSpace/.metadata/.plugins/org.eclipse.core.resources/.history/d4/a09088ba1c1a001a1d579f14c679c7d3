@@ -1,0 +1,53 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+SHELL = cmd.exe
+
+# Add inputs and outputs from these tool invocations to the build variables 
+CMD_SRCS += \
+../tm4c123bh6pm.cmd 
+
+C_SRCS += \
+../led_task.c \
+../smart_home_gateway.c \
+../startup_ccs.c \
+../switch_task.c \
+../tm4c123gh6pm_startup_ccs.c 
+
+C_DEPS += \
+./led_task.d \
+./smart_home_gateway.d \
+./startup_ccs.d \
+./switch_task.d \
+./tm4c123gh6pm_startup_ccs.d 
+
+OBJS += \
+./led_task.obj \
+./smart_home_gateway.obj \
+./startup_ccs.obj \
+./switch_task.obj \
+./tm4c123gh6pm_startup_ccs.obj 
+
+OBJS__QUOTED += \
+"led_task.obj" \
+"smart_home_gateway.obj" \
+"startup_ccs.obj" \
+"switch_task.obj" \
+"tm4c123gh6pm_startup_ccs.obj" 
+
+C_DEPS__QUOTED += \
+"led_task.d" \
+"smart_home_gateway.d" \
+"startup_ccs.d" \
+"switch_task.d" \
+"tm4c123gh6pm_startup_ccs.d" 
+
+C_SRCS__QUOTED += \
+"../led_task.c" \
+"../smart_home_gateway.c" \
+"../startup_ccs.c" \
+"../switch_task.c" \
+"../tm4c123gh6pm_startup_ccs.c" 
+
+

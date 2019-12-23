@@ -1,0 +1,131 @@
+#include <stdint.h>
+#include <stdbool.h>
+#include <string.h>
+
+#include "esp/esp_uart.h"
+#include "DelayTimer.h"
+
+extern char ReceivedData[512];
+extern char str[128];
+bool ATesp(void)
+{
+    memset(ReceivedData, 0, sizeof(ReceivedData));
+    ClearReceiveBuffer();
+    SendATCommand("AT");
+    return recvFind("OK",1000, true);
+}
+
+bool RSTesp(void)
+{
+    memset(ReceivedData, 0, sizeof(ReceivedData));
+    ClearReceiveBuffer();
+    SendATCommand("AT+RST");
+    return recvFind("OK",5000, false);
+}
+
+bool CWMODEesp(void)
+{
+    memset(ReceivedData, 0, sizeof(ReceivedData));
+    ClearReceiveBuffer();
+    SendATCommand("AT+CWMODE=1");
+    return recvFind("OK",5000, true);
+}
+
+bool CWJAPesp(void)
+{
+    memset(ReceivedData, 0, sizeof(ReceivedData));
+    ClearReceiveBuffer();
+    SendATCommand("AT+CWJAP=\"Magellan\",\"1234567890\""); //Your Wifi: NetworkName, Password
+    return recvFind("OK",100, true);
+}
+
+bool CWQAPesp(void)
+{
+    memset(ReceivedData, 0, sizeof(ReceivedData));
+    ClearReceiveBuffer();
+    SendATCommand("AT+CWQAP");
+    return recvFind("OK",10000, true);
+}
+
+bool CIPMUXesp(void)
+{
+    memset(ReceivedData, 0, sizeof(ReceivedData));
+    ClearReceiveBuffer();
+    SendATCommand("AT+CIPMUX=0");
+    return recvFind("OK",5000, true);
+}
+
+bool ATGMResp(char *version)
+{
+    memset(ReceivedData, 0, sizeof(ReceivedData));
+    ClearReceiveBuffer();
+    SendATCommand("AT+GMR");
+    return recvFindAndFilter("OK", "\r\r\n", "\r\n\r\nOK", version,10000);
+}
+
+bool aCWMODEesp(char *list)
+{
+    memset(ReceivedData, 0, sizeof(ReceivedData));
+    ClearReceiveBuffer();
+    SendATCommand("AT+CWMODE=?");
+    return recvFindAndFilter("OK", "+CWMODE:(", ")\r\n\r\nOK", list,10000);
+}
+
+bool aCWLAPesp(char *list)
+{
+    memset(ReceivedData, 0, sizeof(ReceivedData));
+    ClearReceiveBuffer();
+    SendATCommand("AT+CWLAP");
+    return recvFindAndFilter("OK","\r\r\n", "\r\n\r\nOK", list,15000);
+}
+
+bool aCIFSResp(char *list)
+{
+    memset(ReceivedData, 0, sizeof(ReceivedData));
+    ClearReceiveBuffer();
+    SendATCommand("AT+CIFSR");
+    return recvFindAndFilter("OK","\r\r\n", "\r\n\r\nOK", list,15000);
+}
+
+bool CIPSTOesp(void)
+{
+    memset(ReceivedData, 0, sizeof(ReceivedData));
+    ClearReceiveBuffer();
+    SendATCommand("AT+CIPSTO=10000");
+    return recvFind("OK",2000, true);
+}
+
+bool CIPSTARTesp(void)
+{
+    memset(ReceivedData, 0, sizeof(ReceivedData));
+    ClearReceiveBuffer();
+    SendATCommand("AT+CIPSTART=\"TCP\",\"194.210.220.14\",21"); //Server IP and Port: such as 192.255.0.100, 9999
+    return recvFind("OK",50000, true);
+}
+
+bool CIPCLOSEesp(void)
+{
+    memset(ReceivedData, 0, sizeof(ReceivedData));
+    ClearReceiveBuffer();
+    SendATCommand("AT+CIPCLOSE");
+    return recvFind("OK",5000, true);
+}
+
+bool CIPSENDesp(char *text)
+{
+    int len = strlen(text)+2;
+
+    itoa(len,str);
+
+    char* AT_CMD_SEND = "AT+CIPSEND=";
+    char CMD_TEXT[128];
+    strcpy(CMD_TEXT,AT_CMD_SEND);
+    strcat(CMD_TEXT,str);
+
+    memset(ReceivedData, 0, sizeof(ReceivedData));
+    ClearReceiveBuffer();
+    SendATCommand(CMD_TEXT);
+    delay(100);
+    SendATCommand(text);
+    return recvFind("SEND OK",2000, true);
+}

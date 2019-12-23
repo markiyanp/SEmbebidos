@@ -1,0 +1,53 @@
+
+**** Build of configuration Debug for project hello_EK_TM4C123GXL_TI ****
+
+"C:\\ti\\ccs910\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../hello.cfg"
+Invoking: XDCtools
+"C:/ti/xdctools_3_32_00_06_core/xs" --xdcpath="C:/ti/tirtos_tivac_2_16_00_08/packages;C:/ti/tirtos_tivac_2_16_00_08/products/tidrivers_tivac_2_16_00_08/packages;C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages;C:/ti/tirtos_tivac_2_16_00_08/products/ndk_2_25_00_09/packages;C:/ti/tirtos_tivac_2_16_00_08/products/uia_2_00_05_50/packages;C:/ti/tirtos_tivac_2_16_00_08/products/ns_1_11_00_10/packages;" xdc.tools.configuro -o configPkg -t ti.targets.arm.elf.M4F -p ti.platforms.tiva:TM4C123GH6PM -r release -c "C:/ti/ccs910/ccs/tools/compiler/ti-cgt-arm_18.12.2.LTS" --compileOptions "-mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path=\"C:/Users/Admin/Desktop/TECNICO/1-Semestre/SEMB/IOT Project/3- codeComposerWorkSpace/hello_EK_TM4C123GXL_TI\" --include_path=\"C:/Users/Admin/Desktop/TECNICO/1-Semestre/SEMB/IOT Project/3- codeComposerWorkSpace/hello_EK_TM4C123GXL_TI\" --include_path=\"C:/ti/tirtos_tivac_2_16_00_08/products/TivaWare_C_Series-2.1.1.71b\" --include_path=\"C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/posix\" --include_path=\"C:/ti/ccs910/ccs/tools/compiler/ti-cgt-arm_18.12.2.LTS/include\" --define=ccs=\"ccs\" --define=PART_TM4C123GH6PM --define=ccs --define=TIVAWARE -g --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on --abi=eabi  " "../hello.cfg"
+making package.mak (because of package.bld) ...
+generating interfaces for package configPkg (because package/package.xdc.inc is older than package.xdc) ...
+configuring hello.xem4f from package/cfg/hello_pem4f.cfg ...
+generating custom ti.sysbios library makefile ... 
+Starting build of library sources ...
+making C:/Users/Admin/Desktop/TECNICO/1-SEME~1/SEMB/IOTPRO~1/3-CODE~1/hello_EK_TM4C123GXL_TI/src/sysbios/sysbios.aem4f ...
+gmake[1]: Entering directory `C:/Users/Admin/Desktop/TECNICO/1-SEME~1/SEMB/IOTPRO~1/3-CODE~1/hello_EK_TM4C123GXL_TI/src/sysbios'
+clem4f C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/BIOS.c ...
+asmem4f C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/family/arm/m3/Hwi_asm.sv7M ...
+asmem4f C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/family/arm/m3/Hwi_asm_switch.sv7M ...
+asmem4f C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/family/arm/m3/IntrinsicsSupport_asm.sv7M ...
+asmem4f C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/family/arm/m3/TaskSupport_asm.sv7M ...
+arem4f BIOS.obj m3_Hwi_asm.obj m3_Hwi_asm_switch.obj m3_IntrinsicsSupport_asm.obj m3_TaskSupport_asm.obj ...
+gmake[1]: Leaving directory `C:/Users/Admin/Desktop/TECNICO/1-SEME~1/SEMB/IOTPRO~1/3-CODE~1/hello_EK_TM4C123GXL_TI/src/sysbios'
+Build of libraries done.
+clem4f package/cfg/hello_pem4f.c ...
+"package/cfg/hello_pem4f.c", line 15099: warning #112-D: statement is unreachable
+"package/cfg/hello_pem4f.c", line 15585: warning #112-D: statement is unreachable
+"package/cfg/hello_pem4f.c", line 15859: warning #112-D: statement is unreachable
+"package/cfg/hello_pem4f.c", line 16040: warning #112-D: statement is unreachable
+Finished building: "../hello.cfg"
+ 
+Скопировано файлов:         1.
+making ../src/sysbios/sysbios.aem4f ...
+gmake[1]: Nothing to be done for 'all'.
+Building file: "../hello.c"
+Invoking: ARM Compiler
+"C:/ti/ccs910/ccs/tools/compiler/ti-cgt-arm_18.12.2.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Admin/Desktop/TECNICO/1-Semestre/SEMB/IOT Project/3- codeComposerWorkSpace/hello_EK_TM4C123GXL_TI" --include_path="C:/Users/Admin/Desktop/TECNICO/1-Semestre/SEMB/IOT Project/3- codeComposerWorkSpace/hello_EK_TM4C123GXL_TI" --include_path="C:/ti/tirtos_tivac_2_16_00_08/products/TivaWare_C_Series-2.1.1.71b" --include_path="C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/posix" --include_path="C:/ti/ccs910/ccs/tools/compiler/ti-cgt-arm_18.12.2.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM --define=ccs --define=TIVAWARE -g --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on --abi=eabi --preproc_with_compile --preproc_dependency="hello.d_raw" --cmd_file="configPkg/compiler.opt" "../hello.c"
+Finished building: "../hello.c"
+ 
+Building file: "../EK_TM4C123GXL.c"
+Invoking: ARM Compiler
+"C:/ti/ccs910/ccs/tools/compiler/ti-cgt-arm_18.12.2.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Admin/Desktop/TECNICO/1-Semestre/SEMB/IOT Project/3- codeComposerWorkSpace/hello_EK_TM4C123GXL_TI" --include_path="C:/Users/Admin/Desktop/TECNICO/1-Semestre/SEMB/IOT Project/3- codeComposerWorkSpace/hello_EK_TM4C123GXL_TI" --include_path="C:/ti/tirtos_tivac_2_16_00_08/products/TivaWare_C_Series-2.1.1.71b" --include_path="C:/ti/tirtos_tivac_2_16_00_08/products/bios_6_45_01_29/packages/ti/sysbios/posix" --include_path="C:/ti/ccs910/ccs/tools/compiler/ti-cgt-arm_18.12.2.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM --define=ccs --define=TIVAWARE -g --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on --abi=eabi --preproc_with_compile --preproc_dependency="EK_TM4C123GXL.d_raw" --cmd_file="configPkg/compiler.opt" "../EK_TM4C123GXL.c"
+Finished building: "../EK_TM4C123GXL.c"
+ 
+making ../src/sysbios/sysbios.aem4f ...
+gmake[2]: Nothing to be done for 'all'.
+Building target: "hello_EK_TM4C123GXL_TI.out"
+Invoking: ARM Linker
+"C:/ti/ccs910/ccs/tools/compiler/ti-cgt-arm_18.12.2.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM --define=ccs --define=TIVAWARE -g --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on --abi=eabi -z -m"hello_EK_TM4C123GXL_TI.map" --heap_size=0 --stack_size=512 -i"C:/ti/ccs910/ccs/tools/compiler/ti-cgt-arm_18.12.2.LTS/lib" -i"C:/ti/ccs910/ccs/tools/compiler/ti-cgt-arm_18.12.2.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="hello_EK_TM4C123GXL_TI_linkInfo.xml" --rom_model -o "hello_EK_TM4C123GXL_TI.out" "./EK_TM4C123GXL.obj" "./hello.obj" "../EK_TM4C123GXL.cmd" -l"configPkg/linker.cmd" -l"C:/ti/tirtos_tivac_2_16_00_08/products/TivaWare_C_Series-2.1.1.71b/grlib/ccs/Debug/grlib.lib" -l"C:/ti/tirtos_tivac_2_16_00_08/products/TivaWare_C_Series-2.1.1.71b/usblib/ccs/Debug/usblib.lib" -l"C:/ti/tirtos_tivac_2_16_00_08/products/TivaWare_C_Series-2.1.1.71b/driverlib/ccs/Debug/driverlib.lib" -llibc.a 
+<Linking>
+Finished building target: "hello_EK_TM4C123GXL_TI.out"
+ 
+
+**** Build Finished ****

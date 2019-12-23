@@ -1,0 +1,7 @@
+#ifndef ESP_LOGIC_TASK_H_
+#define ESP_LOGIC_TASK_H_
+
+uint32_t EspLogicTaskInit(void);
+int checkIfContains(char *receivedLine, char *resp);
+
+#endif /* ESP_LOGIC_TASK_H_ */

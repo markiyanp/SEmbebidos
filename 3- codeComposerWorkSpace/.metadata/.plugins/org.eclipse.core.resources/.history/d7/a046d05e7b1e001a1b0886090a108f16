@@ -1,0 +1,80 @@
+#include <stdbool.h>
+#include <stdint.h>
+#include "inc/hw_memmap.h"
+#include "inc/hw_types.h"
+#include "inc/hw_gpio.h"
+#include "driverlib/sysctl.h"
+#include "driverlib/gpio.h"
+#include "driverlib/rom.h"
+#include "drivers/buttons.h"
+#include "utils/uartstdio.h"
+#include "switch_task.h"
+#include "led_task.h"
+#include "priorities.h"
+#include "FreeRTOS.h"
+#include "task.h"
+#include "queue.h"
+#include "semphr.h"
+#include "esp/esp_uart.h"
+#include "at/at.h"
+#include "driverlib/uart.h"
+#include <string.h>
+
+//*****************************************************************************
+//
+// The stack size for the display task.
+//
+//*****************************************************************************
+#define ESPTASKSTACKSIZE        128         // Stack size in words
+
+extern char ReceivedData[512];
+
+xQueueHandle g_pLogicQueue;
+xQueueHandle g_pEspRcvQueue;
+
+TaskHandle_t xHandle = NULL;
+bool at, cwmode, cwjap, cipstart = false;
+
+static void LogicTask(void *pvParameters)
+{
+    while (!(at && cwmode && cwjap && cipstart))
+    {
+        at = false;
+        cwmode = false;
+        cipstart = false;
+
+        while (!at)
+        {
+            at = ATesp();
+            vTaskDelay(100);
+        }
+
+        while (!cwmode)
+        {
+            cwmode = CWMODEesp();
+            vTaskDelay(100);
+        }
+    }
+    GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1, 0x00);
+    GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_2, 0x04);
+    // Use the handle to delete the task.
+    if (xHandle != NULL)
+    {
+        vTaskDelete(xHandle);
+    }
+}
+
+//*****************************************************************************
+//
+// Initializes the ESP RCV task.
+//
+//*****************************************************************************
+uint32_t LogicTaskInit(void)
+{
+    if (xTaskCreate(LogicTask, (const portCHAR *)"LOGIC", ESPTASKSTACKSIZE, NULL,
+            tskIDLE_PRIORITY + PRIORITY_LOGIC_TASK, &xHandle) != pdTRUE)
+    {
+        return (1);
+    }
+    return (0);
+}

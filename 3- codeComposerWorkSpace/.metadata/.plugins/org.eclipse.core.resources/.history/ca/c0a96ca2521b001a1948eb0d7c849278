@@ -1,0 +1,196 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+SHELL = cmd.exe
+
+CG_TOOL_ROOT := C:/Users/Admin/AppData/Local/Energia15/packages/energia/tools/arm-none-eabi-gcc/6.3.1-20170620
+
+GEN_OPTS__FLAG := 
+GEN_CMDS__FLAG := 
+
+ORDERED_OBJS += \
+"./utility/api_lib.o" \
+"./utility/api_msg.o" \
+"./utility/autoip.o" \
+"./utility/def.o" \
+"./utility/dhcp.o" \
+"./utility/dns.o" \
+"./utility/err.o" \
+"./utility/etharp.o" \
+"./utility/ethernetif.o" \
+"./utility/icmp.o" \
+"./utility/igmp.o" \
+"./utility/inet.o" \
+"./utility/inet_chksum.o" \
+"./utility/init.o" \
+"./utility/ip.o" \
+"./utility/ip_addr.o" \
+"./utility/ip_frag.o" \
+"./utility/lwiplib.o" \
+"./utility/mem.o" \
+"./utility/memp.o" \
+"./utility/netbuf.o" \
+"./utility/netdb.o" \
+"./utility/netif.o" \
+"./utility/netifapi.o" \
+"./utility/pbuf.o" \
+"./utility/perf.o" \
+"./utility/raw.o" \
+"./utility/slipif.o" \
+"./utility/sockets.o" \
+"./utility/stats.o" \
+"./utility/sys.o" \
+"./utility/sys_arch.o" \
+"./utility/tcp.o" \
+"./utility/tcp_in.o" \
+"./utility/tcp_out.o" \
+"./utility/tcpip.o" \
+"./utility/timers.o" \
+"./utility/tiva-tm4c129.o" \
+"./utility/udp.o" \
+"./Ethernet.o" \
+"./EthernetClient.o" \
+"./EthernetServer.o" \
+"./EthernetUdp.o" \
+
+-include ../makefile.init
+
+RM := DEL /F
+RMDIR := RMDIR /S/Q
+
+# All of the sources participating in the build are defined here
+-include sources.mk
+-include subdir_vars.mk
+-include utility/subdir_vars.mk
+-include subdir_rules.mk
+-include utility/subdir_rules.mk
+-include objects.mk
+
+ifneq ($(MAKECMDGOALS),clean)
+ifneq ($(strip $(C55_DEPS)),)
+-include $(C55_DEPS)
+endif
+ifneq ($(strip $(C_UPPER_DEPS)),)
+-include $(C_UPPER_DEPS)
+endif
+ifneq ($(strip $(S67_DEPS)),)
+-include $(S67_DEPS)
+endif
+ifneq ($(strip $(S62_DEPS)),)
+-include $(S62_DEPS)
+endif
+ifneq ($(strip $(S_DEPS)),)
+-include $(S_DEPS)
+endif
+ifneq ($(strip $(OPT_DEPS)),)
+-include $(OPT_DEPS)
+endif
+ifneq ($(strip $(C??_DEPS)),)
+-include $(C??_DEPS)
+endif
+ifneq ($(strip $(ASM_UPPER_DEPS)),)
+-include $(ASM_UPPER_DEPS)
+endif
+ifneq ($(strip $(S??_DEPS)),)
+-include $(S??_DEPS)
+endif
+ifneq ($(strip $(C64_DEPS)),)
+-include $(C64_DEPS)
+endif
+ifneq ($(strip $(CXX_DEPS)),)
+-include $(CXX_DEPS)
+endif
+ifneq ($(strip $(S64_DEPS)),)
+-include $(S64_DEPS)
+endif
+ifneq ($(strip $(INO_DEPS)),)
+-include $(INO_DEPS)
+endif
+ifneq ($(strip $(CLA_DEPS)),)
+-include $(CLA_DEPS)
+endif
+ifneq ($(strip $(S55_DEPS)),)
+-include $(S55_DEPS)
+endif
+ifneq ($(strip $(SV7A_DEPS)),)
+-include $(SV7A_DEPS)
+endif
+ifneq ($(strip $(C62_DEPS)),)
+-include $(C62_DEPS)
+endif
+ifneq ($(strip $(C67_DEPS)),)
+-include $(C67_DEPS)
+endif
+ifneq ($(strip $(PDE_DEPS)),)
+-include $(PDE_DEPS)
+endif
+ifneq ($(strip $(K_DEPS)),)
+-include $(K_DEPS)
+endif
+ifneq ($(strip $(C_DEPS)),)
+-include $(C_DEPS)
+endif
+ifneq ($(strip $(CC_DEPS)),)
+-include $(CC_DEPS)
+endif
+ifneq ($(strip $(C++_DEPS)),)
+-include $(C++_DEPS)
+endif
+ifneq ($(strip $(C43_DEPS)),)
+-include $(C43_DEPS)
+endif
+ifneq ($(strip $(S43_DEPS)),)
+-include $(S43_DEPS)
+endif
+ifneq ($(strip $(ASM_DEPS)),)
+-include $(ASM_DEPS)
+endif
+ifneq ($(strip $(S_UPPER_DEPS)),)
+-include $(S_UPPER_DEPS)
+endif
+ifneq ($(strip $(CPP_DEPS)),)
+-include $(CPP_DEPS)
+endif
+ifneq ($(strip $(SA_DEPS)),)
+-include $(SA_DEPS)
+endif
+endif
+
+-include ../makefile.defs
+
+# Add inputs and outputs from these tool invocations to the build variables 
+LIB_OUTPUTS += \
+libtivac_EK-TM4C123GXL_Ethernet.a \
+
+LIB_OUTPUTS__QUOTED += \
+"libtivac_EK-TM4C123GXL_Ethernet.a" \
+
+
+# All Target
+all: libtivac_EK-TM4C123GXL_Ethernet.a
+
+# Tool invocations
+libtivac_EK-TM4C123GXL_Ethernet.a: $(OBJS)
+ifneq ($(strip $(ORDERED_OBJS)),)
+	@echo 'Building target: "$@"'
+	@echo 'Invoking: GNU Librarian'
+	"C:/Users/Admin/AppData/Local/Energia15/packages/energia/tools/arm-none-eabi-gcc/6.3.1-20170620/bin/arm-none-eabi-ar.exe" -r "libtivac_EK-TM4C123GXL_Ethernet.a" $(ORDERED_OBJS)
+	@echo 'Finished building target: "$@"'
+	@echo ' '
+endif
+
+# Other Targets
+clean:
+	-$(RM) $(LIB_OUTPUTS__QUOTED)
+	-$(RM) "Ethernet.o" "EthernetClient.o" "EthernetServer.o" "EthernetUdp.o" "utility\api_lib.o" "utility\api_msg.o" "utility\autoip.o" "utility\def.o" "utility\dhcp.o" "utility\dns.o" "utility\err.o" "utility\etharp.o" "utility\ethernetif.o" "utility\icmp.o" "utility\igmp.o" "utility\inet.o" "utility\inet_chksum.o" "utility\init.o" "utility\ip.o" "utility\ip_addr.o" "utility\ip_frag.o" "utility\lwiplib.o" "utility\mem.o" "utility\memp.o" "utility\netbuf.o" "utility\netdb.o" "utility\netif.o" "utility\netifapi.o" "utility\pbuf.o" "utility\perf.o" "utility\raw.o" "utility\slipif.o" "utility\sockets.o" "utility\stats.o" "utility\sys.o" "utility\sys_arch.o" "utility\tcp.o" "utility\tcp_in.o" "utility\tcp_out.o" "utility\tcpip.o" "utility\timers.o" "utility\tiva-tm4c129.o" "utility\udp.o" 
+	-$(RM) "utility\api_lib.d" "utility\api_msg.d" "utility\autoip.d" "utility\def.d" "utility\dhcp.d" "utility\dns.d" "utility\err.d" "utility\etharp.d" "utility\ethernetif.d" "utility\icmp.d" "utility\igmp.d" "utility\inet.d" "utility\inet_chksum.d" "utility\init.d" "utility\ip.d" "utility\ip_addr.d" "utility\ip_frag.d" "utility\lwiplib.d" "utility\mem.d" "utility\memp.d" "utility\netbuf.d" "utility\netdb.d" "utility\netif.d" "utility\netifapi.d" "utility\pbuf.d" "utility\perf.d" "utility\raw.d" "utility\slipif.d" "utility\sockets.d" "utility\stats.d" "utility\sys.d" "utility\sys_arch.d" "utility\tcp.d" "utility\tcp_in.d" "utility\tcp_out.d" "utility\tcpip.d" "utility\timers.d" "utility\tiva-tm4c129.d" "utility\udp.d" 
+	-$(RM) "Ethernet.d" "EthernetClient.d" "EthernetServer.d" "EthernetUdp.d" 
+	-@echo 'Finished clean'
+	-@echo ' '
+
+.PHONY: all clean dependents
+.SECONDARY:
+
+-include ../makefile.targets
+

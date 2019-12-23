@@ -1,0 +1,143 @@
+//*****************************************************************************
+//
+// freertos_demo.c - Simple FreeRTOS example.
+//
+// Copyright (c) 2012-2017 Texas Instruments Incorporated.  All rights reserved.
+// Software License Agreement
+// 
+// Texas Instruments (TI) is supplying this software for use solely and
+// exclusively on TI's microcontroller products. The software is owned by
+// TI and/or its suppliers, and is protected under applicable copyright
+// laws. You may not combine this software with "viral" open-source
+// software in order to form a larger program.
+// 
+// THIS SOFTWARE IS PROVIDED "AS IS" AND WITH ALL FAULTS.
+// NO WARRANTIES, WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDING, BUT
+// NOT LIMITED TO, IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+// A PARTICULAR PURPOSE APPLY TO THIS SOFTWARE. TI SHALL NOT, UNDER ANY
+// CIRCUMSTANCES, BE LIABLE FOR SPECIAL, INCIDENTAL, OR CONSEQUENTIAL
+// DAMAGES, FOR ANY REASON WHATSOEVER.
+// 
+// This is part of revision 2.1.4.178 of the EK-TM4C123GXL Firmware Package.
+//
+//*****************************************************************************
+
+#include <stdbool.h>
+#include <stdint.h>
+#include "driverlib/interrupt.h"
+#include "driverlib/fpu.h"
+#include "inc/hw_memmap.h"
+#include "inc/hw_types.h"
+#include "driverlib/gpio.h"
+#include "driverlib/pin_map.h"
+#include "driverlib/rom.h"
+#include "driverlib/sysctl.h"
+#include "driverlib/uart.h"
+#include "utils/uartstdio.h"
+#include "led_task.h"
+#include "switch_task.h"
+#include "FreeRTOS.h"
+#include "task.h"
+#include "queue.h"
+#include "semphr.h"
+#include "inc/hw_ints.h"
+#include "at/at.h"
+#include "systick.h"
+#include "esp/esp_uart.h"
+#include "mqtt/mqtt_client.h"
+#include "tasks/config_task.h"
+#include "utils/uart_config.h"
+#include "tasks/mqtt/mqtt_task.h"
+#include <tasks/nrf/nrf_rcv_task.h>
+#include "tasks/nrf/nrf_snd_task.h"
+#include "tasks/esp/esp_logic_task.h"
+#include "tasks/mqtt/mqtt_task.h"
+#include "tasks/esp/esp_logic_task.h"
+#include "nrf/nrf24l01.h"
+#include "tasks/esp/esp_rcv_task.h"
+
+bool brokerConnection = false;
+bool configurationRunning = true;
+xSemaphoreHandle g_pUARTSemaphore;
+
+void vApplicationStackOverflowHook(xTaskHandle *pxTask, char *pcTaskName)
+{
+    while (1)
+    {
+    }
+}
+
+//*****************************************************************************
+//
+// Initialize FreeRTOS and start the initial set of tasks.
+//
+//*****************************************************************************
+int main(void)
+{
+
+    ROM_FPUEnable();
+    ROM_FPULazyStackingEnable();
+
+    ROM_SysCtlClockSet(
+    SYSCTL_SYSDIV_1 | SYSCTL_USE_OSC | SYSCTL_OSC_MAIN | SYSCTL_XTAL_16MHZ);
+
+    ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOF);
+    ROM_GPIOPinTypeGPIOOutput(GPIO_PORTF_BASE, GPIO_PIN_2);
+
+    ConfigureUART();
+
+    //ENABLE NRF
+    if (configureRadio() == 0)
+    {
+        UARTprintf("\nNRF CONFIGURED!\n");
+    }
+    else
+    {
+        UARTprintf("\nNRF NOT CONFIGURED!\n");
+        while (1)
+        {
+        }
+    }
+
+    /*if (NrfSndTaskInit() != 0)
+     {
+     UARTprintf("\nERROR INITIALIZING NRF SEND TASK!\n");
+     while (1)
+     {
+     }
+     }*/
+
+    if (EspLogicTaskInit() != 0)
+    {
+        UARTprintf("\nERROR INITIALIZING LOGIC TASK TASK!\n");
+        while (1)
+        {
+        }
+    }
+
+    if (EspRcvTaskInit() != 0)
+    {
+        UARTprintf("\nERROR INITIALIZING NRF SEND TASK!\n");
+        while (1)
+        {
+        }
+
+    }
+
+    /*if (ConfigTaskInit() != 0)
+    {
+        UARTprintf("\nERROR INITIALIZING CONFIG TASK!\n");
+        while (1)
+        {
+        }
+    }*/
+
+    NrfSndTaskInit();
+    NrfRcvTaskInit();
+
+    vTaskStartScheduler();
+
+    while (1)
+    {
+    }
+}

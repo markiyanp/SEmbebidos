@@ -1,0 +1,8 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+USER_OBJS :=
+
+LIBS := -Wl,-T"C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/variants/EK-TM4C123GXL/lm4fcpp_blizzard.ld" -ltivac_EK-TM4C123GXL_Adafruit_TMP006 -ltivac_EK-TM4C123GXL_MQTTClient -ltivac_EK-TM4C123GXL_SPI -ltivac_EK-TM4C123GXL_Wire -ltivac_EK-TM4C123GXL_Ethernet -ltivac_EK-TM4C123GXL_WiFi -ltivac_EK-TM4C123GXL_core -ldriverlib -lm -lc -lgcc
+

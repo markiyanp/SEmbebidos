@@ -1,0 +1,40 @@
+
+**** Build of configuration Debug for project nRF24L01_GATEWAY_TEST ****
+
+"C:\\TI\\ccs920\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/TI/ccs920/ccs/tools/compiler/ti-cgt-arm_18.12.3.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Admin/Desktop/TECNICO/1-Semestre/SEMB/IOT Project/3- codeComposerWorkSpace/nRF24L01_GATEWAY_TEST" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/TI/CC3100SDK_1.3.0/cc3100-sdk/platform/tiva-c-launchpad" --include_path="C:/TI/ccs920/ccs/tools/compiler/ti-cgt-arm_18.12.3.LTS/include" --define=ccs="ccs" --define=TARGET_IS_TM4C123_RB1 --define=PART_TM4C123BH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'main.obj' failed
+gmake: *** No rule to make target 'C:/TI/TivaWare_C_Series-2.1.4.178/utils/uartstdio.c', needed by 'utils/uartstdio.obj'.
+gmake: *** No rule to make target 'C:/TI/TivaWare_C_Series-2.1.4.178/utils/ustdlib.c', needed by 'utils/ustdlib.obj'.
+"../main.c", line 4: fatal error #1965: cannot open source file "inc/hw_memmap.h"
+1 catastrophic error detected in the compilation of "../main.c".
+Compilation terminated.
+gmake: *** [main.obj] Error 1
+Building file: "../nrf24l01.c"
+Invoking: ARM Compiler
+"C:/TI/ccs920/ccs/tools/compiler/ti-cgt-arm_18.12.3.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Admin/Desktop/TECNICO/1-Semestre/SEMB/IOT Project/3- codeComposerWorkSpace/nRF24L01_GATEWAY_TEST" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/TI/CC3100SDK_1.3.0/cc3100-sdk/platform/tiva-c-launchpad" --include_path="C:/TI/ccs920/ccs/tools/compiler/ti-cgt-arm_18.12.3.LTS/include" --define=ccs="ccs" --define=TARGET_IS_TM4C123_RB1 --define=PART_TM4C123BH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="nrf24l01.d_raw"  "../nrf24l01.c"
+ 
+>> Compilation failure
+subdir_rules.mk:9: recipe for target 'nrf24l01.obj' failed
+"../nrf24l01.c", line 26: fatal error #1965: cannot open source file "inc/hw_memmap.h"
+1 catastrophic error detected in the compilation of "../nrf24l01.c".
+Compilation terminated.
+gmake: *** [nrf24l01.obj] Error 1
+Building file: "C:/TI/CC3100SDK_1.3.0/cc3100-sdk/platform/tiva-c-launchpad/uart.c"
+Invoking: ARM Compiler
+"C:/TI/ccs920/ccs/tools/compiler/ti-cgt-arm_18.12.3.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Admin/Desktop/TECNICO/1-Semestre/SEMB/IOT Project/3- codeComposerWorkSpace/nRF24L01_GATEWAY_TEST" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/TI/CC3100SDK_1.3.0/cc3100-sdk/platform/tiva-c-launchpad" --include_path="C:/TI/ccs920/ccs/tools/compiler/ti-cgt-arm_18.12.3.LTS/include" --define=ccs="ccs" --define=TARGET_IS_TM4C123_RB1 --define=PART_TM4C123BH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="uart/uart.d_raw" --obj_directory="uart"  "C:/TI/CC3100SDK_1.3.0/cc3100-sdk/platform/tiva-c-launchpad/uart.c"
+Finished building: "C:/TI/CC3100SDK_1.3.0/cc3100-sdk/platform/tiva-c-launchpad/uart.c"
+ 
+Building file: "../tm4c123bh6pm_startup_ccs.c"
+Invoking: ARM Compiler
+"C:/TI/ccs920/ccs/tools/compiler/ti-cgt-arm_18.12.3.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/Admin/Desktop/TECNICO/1-Semestre/SEMB/IOT Project/3- codeComposerWorkSpace/nRF24L01_GATEWAY_TEST" --include_path="C:/ti/TivaWare_C_Series-2.1.4.178" --include_path="C:/TI/CC3100SDK_1.3.0/cc3100-sdk/platform/tiva-c-launchpad" --include_path="C:/TI/ccs920/ccs/tools/compiler/ti-cgt-arm_18.12.3.LTS/include" --define=ccs="ccs" --define=TARGET_IS_TM4C123_RB1 --define=PART_TM4C123BH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="tm4c123bh6pm_startup_ccs.d_raw"  "../tm4c123bh6pm_startup_ccs.c"
+Finished building: "../tm4c123bh6pm_startup_ccs.c"
+ 
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****

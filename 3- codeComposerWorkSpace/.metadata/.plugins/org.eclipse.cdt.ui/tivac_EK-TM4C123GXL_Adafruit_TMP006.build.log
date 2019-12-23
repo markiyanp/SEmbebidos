@@ -1,0 +1,18 @@
+
+**** Build of configuration Debug for project tivac_EK-TM4C123GXL_Adafruit_TMP006 ****
+
+"C:\\TI\\ccs920\\ccs\\utils\\bin\\gmake" -k -j 8 all -O 
+ 
+Building file: "C:/Users/Admin/Desktop/energia-1.8.7E21/libraries/Adafruit_TMP006/Adafruit_TMP006.cpp"
+Invoking: GNU Compiler
+"C:/Users/Admin/AppData/Local/Energia15/packages/energia/tools/arm-none-eabi-gcc/6.3.1-20170620/bin/arm-none-eabi-gcc-6.3.1.exe" -c -mcpu=cortex-m4 -march=armv7e-m -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -Dprintf=iprintf -DF_CPU=80000000L -DENERGIA_EK_TM4C123GXL -DENERGIA_ARCH_TIVAC -DENERGIA=21 -DARDUINO=10610 -I"C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/system/driverlib" -I"C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/system/inc" -I"C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/system" -I"C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/cores/tivac" -I"C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/variants/EK-TM4C123GXL" -I"C:/Users/Admin/Desktop/TECNICO/1-Semestre/SEMB/IOT Project/3- codeComposerWorkSpace/tivac_EK-TM4C123GXL_Adafruit_TMP006" -I"C:/Users/Admin/AppData/Local/Energia15/packages/energia/hardware/tivac/1.0.3/libraries/Wire" -I"C:/Users/Admin/Desktop/energia-1.8.7E21/libraries/Adafruit_TMP006" -I"C:/Users/Admin/AppData/Local/Energia15/packages/energia/tools/arm-none-eabi-gcc/6.3.1-20170620/arm-none-eabi/include" -Os -ffunction-sections -fdata-sections -g -gdwarf-3 -gstrict-dwarf -w -Wall --param max-inline-insns-single=500 -mabi=aapcs -MMD -MP -MF"Adafruit_TMP006.d" -MT"Adafruit_TMP006.d" -std=gnu++11 -fno-rtti -fno-threadsafe-statics -fno-exceptions  -o"Adafruit_TMP006.o" "C:/Users/Admin/Desktop/energia-1.8.7E21/libraries/Adafruit_TMP006/Adafruit_TMP006.cpp"
+Finished building: "C:/Users/Admin/Desktop/energia-1.8.7E21/libraries/Adafruit_TMP006/Adafruit_TMP006.cpp"
+ 
+Building target: "libtivac_EK-TM4C123GXL_Adafruit_TMP006.a"
+Invoking: GNU Librarian
+"C:/Users/Admin/AppData/Local/Energia15/packages/energia/tools/arm-none-eabi-gcc/6.3.1-20170620/bin/arm-none-eabi-ar.exe" -r "libtivac_EK-TM4C123GXL_Adafruit_TMP006.a" "./Adafruit_TMP006.o" 
+C:/Users/Admin/AppData/Local/Energia15/packages/energia/tools/arm-none-eabi-gcc/6.3.1-20170620/bin/arm-none-eabi-ar.exe: creating libtivac_EK-TM4C123GXL_Adafruit_TMP006.a
+Finished building target: "libtivac_EK-TM4C123GXL_Adafruit_TMP006.a"
+ 
+
+**** Build Finished ****

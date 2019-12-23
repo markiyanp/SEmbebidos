@@ -1,0 +1,15 @@
+
+**** Build of configuration Debug for project FreeRTOS_tiva_demo ****
+
+"C:\\ti\\ccs910\\ccs\\utils\\bin\\gmake" -k all 
+ 
+astyle --options="C:/Users/Admin/Desktop/TECNICO/1-Semestre/SEMB/IOT Project/codeComposerWorkSpace/FreeRTOS_tiva_demo/astyle_options" "C:/Users/Admin/Desktop/TECNICO/1-Semestre/SEMB/IOT Project/codeComposerWorkSpace/FreeRTOS_tiva_demo/*.c" "C:/Users/Admin/Desktop/TECNICO/1-Semestre/SEMB/IOT Project/codeComposerWorkSpace/FreeRTOS_tiva_demo/*.h" --exclude="C:/Users/Admin/Desktop/TECNICO/1-Semestre/SEMB/IOT Project/codeComposerWorkSpace/FreeRTOS_tiva_demo/driverlib" --exclude="C:/Users/Admin/Desktop/TECNICO/1-Semestre/SEMB/IOT Project/codeComposerWorkSpace/FreeRTOS_tiva_demo/FreeRTOS"
+makefile:227: recipe for target 'pre-build' failed
+process_begin: CreateProcess(NULL, astyle "--options=C:/Users/Admin/Desktop/TECNICO/1-Semestre/SEMB/IOT Project/codeComposerWorkSpace/FreeRTOS_tiva_demo/astyle_options" "C:/Users/Admin/Desktop/TECNICO/1-Semestre/SEMB/IOT Project/codeComposerWorkSpace/FreeRTOS_tiva_demo/*.c" "C:/Users/Admin/Desktop/TECNICO/1-Semestre/SEMB/IOT Project/codeComposerWorkSpace/FreeRTOS_tiva_demo/*.h" "--exclude=C:/Users/Admin/Desktop/TECNICO/1-Semestre/SEMB/IOT Project/codeComposerWorkSpace/FreeRTOS_tiva_demo/driverlib" "--exclude=C:/Users/Admin/Desktop/TECNICO/1-Semestre/SEMB/IOT Project/codeComposerWorkSpace/FreeRTOS_tiva_demo/FreeRTOS", ...) failed.
+make (e=2): Не удается найти указанный файл.
+ 
+gmake[1]: [pre-build] Error 2 (ignored)
+ 
+gmake[1]: Nothing to be done for 'main-build'.
+
+**** Build Finished ****

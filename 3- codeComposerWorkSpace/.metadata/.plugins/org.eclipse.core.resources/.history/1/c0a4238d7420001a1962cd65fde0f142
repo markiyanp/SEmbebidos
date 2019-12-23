@@ -1,0 +1,71 @@
+#include <stdbool.h>
+#include <stdint.h>
+#include "inc/hw_memmap.h"
+#include "inc/hw_types.h"
+#include "inc/hw_gpio.h"
+#include "driverlib/sysctl.h"
+#include "driverlib/gpio.h"
+#include "driverlib/rom.h"
+#include "drivers/buttons.h"
+#include "utils/uartstdio.h"
+#include "switch_task.h"
+#include "led_task.h"
+#include "priorities.h"
+#include "FreeRTOS.h"
+#include "task.h"
+#include "queue.h"
+#include "semphr.h"
+#include "mqtt/mqtt_client.h"
+
+#include "nrf/nrf24l01.h"
+
+//*****************************************************************************
+//
+// The stack size for the display task.
+//
+//*****************************************************************************
+#define NRFTASKSTACKSIZE        128         // Stack size in words
+
+#define NRF_ITEM_SIZE           sizeof(data)
+#define NRF_QUEUE_SIZE          5
+
+xQueueHandle g_pRadioSndQueue;
+extern xQueueHandle g_pRadioRcvQueue;
+extern bool configurationRunning;
+extern xSemaphoreHandle g_pUARTSemaphore;
+
+extern struct nrf24l01p nrf;
+
+struct DATA
+{
+    uint8_t id;
+    uint8_t hum;
+    uint8_t tmp;
+};
+struct DATA data;
+
+static void NrfSndTask(void *pvParameters)
+{
+    while (1)
+    {
+        if (xQueueReceive(g_pRadioRcvQueue, &data, portMAX_DELAY) == pdPASS)
+        {
+            MQTT_PUB("semb/temphum", "temp/hum");
+        }
+    }
+}
+
+//*****************************************************************************
+//
+// Initializes the NRF RCV task.
+//
+//*****************************************************************************
+uint32_t NrfSndTaskInit(void)
+{
+    if (xTaskCreate(NrfSndTask, (const portCHAR *)"RadioSND", NRFTASKSTACKSIZE, NULL,
+            tskIDLE_PRIORITY + PRIORITY_NRF_SND_TASK, NULL) != pdTRUE)
+    {
+        return (1);
+    }
+    return (0);
+}

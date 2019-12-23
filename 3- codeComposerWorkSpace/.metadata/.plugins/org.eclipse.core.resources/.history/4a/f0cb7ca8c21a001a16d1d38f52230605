@@ -1,0 +1,30 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+SHELL = cmd.exe
+
+# Add inputs and outputs from these tool invocations to the build variables 
+CPP_SRCS += \
+./QuickstartWiFi.cpp 
+
+INO_SRCS += \
+../QuickstartWiFi.ino 
+
+OBJS += \
+./QuickstartWiFi.o 
+
+CPP_DEPS += \
+./QuickstartWiFi.d 
+
+OBJS__QUOTED += \
+"QuickstartWiFi.o" 
+
+CPP_DEPS__QUOTED += \
+"QuickstartWiFi.d" 
+
+CPP_SRCS__QUOTED += \
+"./QuickstartWiFi.cpp" \
+"QuickstartWiFi.cpp" 
+
+
